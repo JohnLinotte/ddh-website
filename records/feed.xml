@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<channel>
+  <title>Records · Section des Carnets</title>
+  <link>https://harness.zip/records/</link>
+  <description>Carnet de veille IA quotidien. Département des Harnais, Bruxelles, mmxxvi.</description>
+  <language>fr-BE</language>
+  <copyright>carnet © john linotte · trace cc-by 4.0</copyright>
+  <managingEditor>[à figer] (John Linotte)</managingEditor>
+  <webMaster>[à figer] (John Linotte)</webMaster>
+  <lastBuildDate>Sat, 24 May 2026 08:00:00 +0200</lastBuildDate>
+  <ttl>1440</ttl>
+
+  <atom:link href="https://harness.zip/records/feed.xml" rel="self" type="application/rss+xml"/>
+
+  <image>
+    <url>https://harness.zip/assets/favicon.png</url>
+    <title>Records · Section des Carnets</title>
+    <link>https://harness.zip/records/</link>
+  </image>
+
+  <!-- ===== CARNETS ===== -->
+
+  <item>
+    <title>La mesure qui tient face au modèle qui s'emballe</title>
+    <link>https://harness.zip/records/2026-05-24/</link>
+    <guid isPermaLink="true">https://harness.zip/records/2026-05-24/</guid>
+    <pubDate>Sat, 24 May 2026 08:00:00 +0200</pubDate>
+    <author>[à figer] (John Linotte)</author>
+    <dc:creator>John Linotte</dc:creator>
+    <category>carnet</category>
+    <description>Trois études publiées cette semaine convergent sur un même constat : les agents autonomes dérivent plus vite quand la latence est basse. Le rapport coût-fiabilité n'est pas là où les vendors l'affichent.</description>
+  </item>
+
+  <item>
+    <title>Contraindre le contexte, ou comment les 128k deviennent un piège</title>
+    <link>https://harness.zip/records/2026-05-23/</link>
+    <guid isPermaLink="true">https://harness.zip/records/2026-05-23/</guid>
+    <pubDate>Fri, 23 May 2026 08:00:00 +0200</pubDate>
+    <author>[à figer] (John Linotte)</author>
+    <dc:creator>John Linotte</dc:creator>
+    <category>carnet</category>
+    <description>À partir d'une note technique et d'un preprint arXiv, le carnet examine pourquoi la fenêtre de contexte étendue aggrave les hallucinations sur les tâches à forte dépendance temporelle.</description>
+  </item>
+
+  <item>
+    <title>Trois harnais, deux philosophies, un angle mort commun</title>
+    <link>https://harness.zip/records/2026-05-22/</link>
+    <guid isPermaLink="true">https://harness.zip/records/2026-05-22/</guid>
+    <pubDate>Thu, 22 May 2026 08:00:00 +0200</pubDate>
+    <author>[à figer] (John Linotte)</author>
+    <dc:creator>John Linotte</dc:creator>
+    <category>carnet</category>
+    <description>Revue des pratiques LangChain, CrewAI et AutoGen sur la gestion du budget token. Les trois partagent le même angle mort : la fenêtre de défaillance entre le dispatch et la synthèse reste non-observable.</description>
+  </item>
+
+</channel>
+</rss>
