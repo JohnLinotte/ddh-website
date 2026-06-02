@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Bride — les garde-fous au seuil pour agents IA (Aegis-Core) · Département des Harnais</title>
+<meta name="description" content="La Bride (aegis-core) : les garde-fous déterministes au seuil de Claude Code. La pièce qui retient l'agent — ce qu'il écrit, lance, dit, garde. Souveraineté des identifiants, gel de l'irréversible, anti-injection, trace forensique, continuité. Quinze hooks, zéro appel LLM dans la boucle de sécurité. Département des Harnais, Bruxelles, mmxxvi.">
+<meta name="author" content="John Linotte">
+<link rel="stylesheet" href="../assets/ddh.css">
+</head>
+
+<body>
+<div class="page">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="lf"><span class="dot"></span>atelier d'auteur · bruxelles · mmxxvi</div>
+    <nav>
+      <a href="/">Index</a><span class="sep">·</span><a href="/records/">Records</a><span class="sep">·</span><a class="on" href="/atelier/">L'Atelier</a><span class="sep">·</span><a href="/cabinet/">Le Cabinet</a>
+    </nav>
+  </div>
+
+  <!-- [SLOT NAMEPLATE] -->
+  <div class="cartel">
+    <div class="cartel-apparatus">
+      <span class="lhs">
+        <span class="gx">Dt</span>
+        <span class="fig">fig.&nbsp;<span class="onum">II</span></span>
+        <span class="ord">no.&nbsp;<span class="onum">02</span></span>
+        <span> - fiche d'instrument</span>
+      </span>
+      <span class="rule"></span>
+      <span class="place onum">bruxelles · mmxxvi</span>
+    </div>
+
+    <h1 class="cartel-name">
+      <span class="l1">Département</span>
+      <span class="joint">des</span>
+      <span class="word2">Harnais</span>
+    </h1>
+
+    <div class="cartel-section tagline">atelier d'auteur · harnais d'agents ia</div>
+    <div class="cartel-section">
+      <span><span class="g">section</span>&nbsp;des harnais · <em>la bride · les garde-fous d'aegis</em></span>
+    </div>
+  </div>
+  <!-- [/SLOT NAMEPLATE] -->
+
+  <!-- FILET balise -->
+  <div class="xml-rule">
+    <span class="br">&lt;</span><span class="tg">garde-fous</span>
+    <span class="at">plugin</span><span class="br">=</span><span class="vl">"aegis-core"</span>
+    <span class="at">place</span><span class="br">=</span><span class="vl">"au-seuil"</span>
+    <span class="br">/&gt;</span>
+    <span class="spacer"></span>
+    <span class="meta">l'atelier · fiche no. 02</span>
+  </div>
+
+  <!-- TITRE -->
+  <header class="section-head">
+    <p class="kicker">
+      <span class="g">l'atelier</span>
+      <span>·</span>
+      <span>fiche d'instrument</span>
+      <span class="rule"></span>
+      <span>aegis-core · garde-fous au seuil</span>
+    </p>
+    <h1>La Bride</h1>
+    <p class="lede">
+      Les garde-fous d'Aegis, au seuil de Claude Code — le plugin <code>aegis-core</code>. La pièce qui <strong>retient l'agent</strong> : ce qu'il écrit, ce qu'il lance, ce qu'il dit, ce qu'il garde. <em>Déterministe — aucun modèle dans la boucle de sécurité.</em>
+    </p>
+  </header>
+
+  <article class="essay">
+
+    <p class="standfirst">
+      Un agent, au seuil, fait des choses qu'on ne voit qu'après coup : il écrit une clé dans un fichier, lance une commande qu'on ne rejouera pas, se laisse souffler une consigne par un texte tiers, agit sans laisser de trace, puis oublie au tour suivant. <strong>La Bride retient chacun de ces gestes</strong> — à l'entrée, à la sortie, au fil de la session. Quinze hooks, en Python, sans jamais convoquer un modèle pour décider.
+    </p>
+
+    <!-- GRILLE DE CAPACITÉS -->
+    <div class="section-cards">
+
+      <div class="section-card">
+        <div class="meta"><span class="g">01</span><span>souveraineté</span></div>
+        <h3>Le secret ne transite pas</h3>
+        <div class="sub">la retenue · détection inversée</div>
+        <p>Une clé, un jeton, un identifiant ne quitte jamais votre machine par l'agent — ni dans un fichier qu'il écrit, ni dans une phrase qu'il dit. Là où les scanners tolèrent <code>‹votre-clé-ici›</code>, La Bride le refuse.</p>
+      </div>
+
+      <div class="section-card">
+        <div class="meta"><span class="g">02</span><span>agents</span></div>
+        <h3>Chacun dans son couloir</h3>
+        <div class="sub">structure · écriture · shell audité</div>
+        <p>Contraintes structurelles sur chaque agent, ouvriers interdits d'écrire dans le cœur, exécution shell auditée. Un agent ne déborde pas de son mandat.</p>
+      </div>
+
+      <div class="section-card">
+        <div class="meta"><span class="g">03</span><span>irréversible</span></div>
+        <h3>Le destructeur est gelé</h3>
+        <div class="sub">confirmation obligatoire</div>
+        <p>Toute action irréversible — suppression, écrasement, envoi — passe par une confirmation explicite. Rien de définitif ne se fait dans le dos de l'opérateur.</p>
+      </div>
+
+      <div class="section-card">
+        <div class="meta"><span class="g">04</span><span>injection</span></div>
+        <h3>Le texte tiers ne pilote pas</h3>
+        <div class="sub">entrée mémoire · sortie d'outil</div>
+        <p>Les entrées mémoire et les sorties d'outils sont assainies. Ce qu'un document ou une page web tente de glisser à l'agent n'en prend pas le contrôle.</p>
+      </div>
+
+      <div class="section-card">
+        <div class="meta"><span class="g">05</span><span>forensique</span></div>
+        <h3>Rien qui ne soit consigné</h3>
+        <div class="sub">trace opposable</div>
+        <p>Chaque appel d'outil — natif ou MCP — est enregistré, écrit atomiquement. Pas un journal de debug : une pièce qu'on peut produire devant un tiers.</p>
+      </div>
+
+      <div class="section-card">
+        <div class="meta"><span class="g">06</span><span>continuité</span></div>
+        <h3>Le seuil se souvient</h3>
+        <div class="sub">compaction · modèle mental</div>
+        <p>Sauvegarde et restauration du contexte autour de la compaction, complétude vérifiée avant l'arrêt, modèle mental mis à jour après chaque dispatch. La mémoire de travail survit au tour.</p>
+      </div>
+
+    </div>
+
+    <h2><span class="tag">pourquoi au seuil</span>Le garde-fou est à la passerelle, pas dans le code</h2>
+
+    <p>
+      Le consensus de 2026 est net : un garde-fou efficace ne vit pas dans le code de l'application — il est à la passerelle. La Bride s'installe au seuil de Claude Code : elle voit passer chaque écriture, chaque commande, chaque sortie, chaque fin de tour, et applique la même discipline partout, sans réécrire l'agent. Déterministe — aucun modèle dans la boucle de sécurité —, donc rejouable, auditable, sans coût de jeton.
+    </p>
+
+    <p>
+      Et la contrainte ne coûte pas la liberté. Elle porte sur <em>l'irréversible</em> — l'écriture, l'état, l'action — jamais sur le raisonnement. L'agent reste libre entre les rails : c'est précisément ce qui permet de faire tourner un opérateur autonome à pleine latitude sans rien céder sur ce qui ne se rejoue pas.
+    </p>
+
+    <h2><span class="tag">preuve à froid</span>Elle arrête la main qui code</h2>
+
+    <p>
+      Pendant son propre développement, La Bride a refusé une écriture qui contenait l'instruction « collez votre jeton ici ». Le refus, livré mot pour mot à l'agent :
+    </p>
+
+    <pre><code>DENY · credential_scanner
+(Credential placeholder / fill-me assignment)
+
+The assistant must never be the conduit for secrets or
+config values — not in files, not in chat, not in
+prose / guides.
+
+Safe pattern: user → the tool's config file (or an env
+var) → the tool's code reads it at runtime. Identifiers
+like account_id / zone_id belong in the config file too
+— never relayed through the conversation.</code></pre>
+
+    <h2><span class="tag">fiche technique</span>Spécifications</h2>
+
+    <dl>
+      <dt>produit</dt><dd>la bride — plugin aegis-core · les garde-fous au seuil de claude code</dd>
+      <dt>la pièce</dt><dd>une bride, pas un harnais : elle retient l'agent · le runtime qui le mène, c'est Le Harnais</dd>
+      <dt>hooks</dt><dd>15 hooks déterministes (gardes d'entrée · forensique · cycle de vie) + diagnostic d'installation</dd>
+      <dt>familles</dt><dd>souveraineté des identifiants · contrainte des agents · gel de l'irréversible · anti-injection · trace forensique · continuité</dd>
+      <dt>moteur</dt><dd>100 % python · règles déterministes · zéro appel llm dans la boucle de sécurité</dd>
+      <dt>écritures d'état</dt><dd>atomiques (temp + rename) · audit immuable</dd>
+      <dt>mode dégradé</dt><dd>fail-open si le venv est absent (warn-once + continue)</dd>
+      <dt>pour qui</dt><dd>secteur régulé (finance, santé, public) · exigences rgpd / ai act · posture souveraine</dd>
+      <dt>socle</dt><dd>claude code · plugin · runtime frère : Le Harnais (aegis-runtime)</dd>
+      <dt>license</dt><dd>méthode cc-by 4.0 · instrument © john linotte</dd>
+    </dl>
+
+    <h2><span class="tag">périmètre</span>Ce que La Bride ne fait pas</h2>
+
+    <p>
+      Une bride retient ; elle ne fait pas le travail des autres pièces de l'attelage — et le dit.
+    </p>
+
+    <ul>
+      <li><strong>Pas un coffre.</strong> La Bride ne stocke, ne chiffre ni ne fait tourner les secrets : elle agit à la source, pour qu'ils n'entrent pas dans le tuyau. Le coffre, la rotation, le chiffrement au repos sont le métier d'un gestionnaire de secrets, pas le sien.</li>
+      <li><strong>Le garde de parole corrige, il ne mure pas.</strong> Sur la réponse de l'agent, il signale et fait reprendre avant la fin du tour ; il s'active au démarrage de session.</li>
+      <li><strong>Les détecteurs attrapent des formes, pas des intentions</strong> — ils ont, comme tout détecteur, leurs angles morts. Les composants relèvent de techniques connues : la valeur tient à l'assemblage, à la détection inversée et au déterminisme de bout en bout, pas à une nouveauté brevetable.</li>
+    </ul>
+
+    <!-- RENVOI PRODUIT — le plugin frère -->
+    <div class="section-cards">
+      <a class="section-card" href="/atelier/le-harnais/">
+        <div class="meta"><span class="g">aegis-runtime</span><span>le plugin frère</span></div>
+        <h3>Le Harnais</h3>
+        <div class="sub">une bride n'est pas le harnais</div>
+        <p>La Bride retient l'agent ; Le Harnais le mène — auto-routage déterministe, orchestration par vagues, 39 agents, gates de qualité, mémoire structurée. La bride et le runtime : ensemble, l'attelage.</p>
+        <div class="go">découvrir Le Harnais</div>
+      </a>
+    </div>
+
+  </article>
+
+  <!-- PIED LEGAL — personne physique (Art. XII.6 + III.74 CDE) -->
+  <footer class="legal-footer">
+    <p><span class="org">Département des Harnais — John Linotte, personne physique</span></p>
+    <p>{{ADRESSE}}</p>
+    <p>n&deg; entreprise (<span class="sigle">BCE</span>) {{BCE}}<span class="sep">·</span><span class="sigle">TVA</span> {{TVA}}</p>
+    <p>contact : contact@harnais.be<span class="sep">·</span><a href="/mentions-legales">mentions légales</a></p>
+    <p class="license"><span class="sigle">fiche</span> © john linotte<span class="sep">·</span>méthode cc-by 4.0</p>
+    <p class="colophon">atelier d'auteur · bruxelles · mmxxvi</p>
+  </footer>
+
+</div>
+</body>
+</html>

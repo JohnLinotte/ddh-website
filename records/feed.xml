@@ -5,7 +5,7 @@
 
 <channel>
   <title>Records · Section des Carnets</title>
-  <link>https://harness.zip/records/</link>
+  <link>https://harnais.be/records/</link>
   <description>Carnet de veille IA quotidien. Département des Harnais, Bruxelles, mmxxvi.</description>
   <language>fr-BE</language>
   <copyright>carnet © john linotte · trace cc-by 4.0</copyright>
@@ -14,20 +14,20 @@
   <lastBuildDate>Sat, 24 May 2026 08:00:00 +0200</lastBuildDate>
   <ttl>1440</ttl>
 
-  <atom:link href="https://harness.zip/records/feed.xml" rel="self" type="application/rss+xml"/>
+  <atom:link href="https://harnais.be/records/feed.xml" rel="self" type="application/rss+xml"/>
 
   <image>
-    <url>https://harness.zip/assets/favicon.png</url>
+    <url>https://harnais.be/assets/favicon.png</url>
     <title>Records · Section des Carnets</title>
-    <link>https://harness.zip/records/</link>
+    <link>https://harnais.be/records/</link>
   </image>
 
   <!-- ===== CARNETS ===== -->
 
   <item>
     <title>La mesure qui tient face au modèle qui s'emballe</title>
-    <link>https://harness.zip/records/2026-05-24/</link>
-    <guid isPermaLink="true">https://harness.zip/records/2026-05-24/</guid>
+    <link>https://harnais.be/records/2026-05-24/</link>
+    <guid isPermaLink="true">https://harnais.be/records/2026-05-24/</guid>
     <pubDate>Sat, 24 May 2026 08:00:00 +0200</pubDate>
     <author>[à figer] (John Linotte)</author>
     <dc:creator>John Linotte</dc:creator>
@@ -37,8 +37,8 @@
 
   <item>
     <title>Contraindre le contexte, ou comment les 128k deviennent un piège</title>
-    <link>https://harness.zip/records/2026-05-23/</link>
-    <guid isPermaLink="true">https://harness.zip/records/2026-05-23/</guid>
+    <link>https://harnais.be/records/2026-05-23/</link>
+    <guid isPermaLink="true">https://harnais.be/records/2026-05-23/</guid>
     <pubDate>Fri, 23 May 2026 08:00:00 +0200</pubDate>
     <author>[à figer] (John Linotte)</author>
     <dc:creator>John Linotte</dc:creator>
@@ -48,8 +48,8 @@
 
   <item>
     <title>Trois harnais, deux philosophies, un angle mort commun</title>
-    <link>https://harness.zip/records/2026-05-22/</link>
-    <guid isPermaLink="true">https://harness.zip/records/2026-05-22/</guid>
+    <link>https://harnais.be/records/2026-05-22/</link>
+    <guid isPermaLink="true">https://harnais.be/records/2026-05-22/</guid>
     <pubDate>Thu, 22 May 2026 08:00:00 +0200</pubDate>
     <author>[à figer] (John Linotte)</author>
     <dc:creator>John Linotte</dc:creator>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Département des Harnais — atelier d'auteur · bruxelles · mmxxvi</title>
+<meta name="description" content="Atelier d'auteur, Bruxelles. La spécification d'un harness d'agents IA et les preuves attachées : l'agentivité ne vit pas dans le modèle, elle vit dans le code qui l'orchestre. Records · L'Atelier · Le Cabinet.">
+<meta name="author" content="John Linotte">
+<link rel="stylesheet" href="/assets/ddh.css">
+
+<style>
+/* ──────────────────────────────────────────────────────────────
+   CSS DE PAGE — homepage uniquement. N'ajoute AUCUNE couleur ni
+   police : tout passe par les tokens de /assets/ddh.css. Ne couvre
+   que ce que ddh.css ne porte pas encore — (1) le filigrane froid
+   du hero, (2) la grille du triptyque conceptuel. Tout le reste
+   (.hero, .xml-rule, .section-cards, .section-head, .legal-footer)
+   est repris tel quel de ddh.css.
+   ────────────────────────────────────────────────────────────── */
+
+/* ---- bloc thèse : porte le filigrane architectural traité FROID ---- */
+.thesis{
+  position: relative;
+  margin: 30px 0 8px;
+  padding: 40px 40px 36px;
+  overflow: hidden;
+  border: 1px solid var(--stone-300);
+  outline: 1px solid var(--stone-200);
+  outline-offset: 4px;                 /* echo du double-filet cartel/cartes */
+  background: var(--stone-50);
+}
+/* filigrane Forum — grayscale + voile bleu-gris moss tres bas, JAMAIS de chaleur.
+   le bleu-gris vient du sous-ton froid de stone-50 ; le voile moss reste minimal. */
+.thesis::before{
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    linear-gradient(color-mix(in oklab, var(--moss) 6%, transparent),
+                    color-mix(in oklab, var(--moss) 9%, transparent)),
+    url("/assets/forum.jpg") center 38% / cover no-repeat;
+  background-blend-mode: multiply;
+  filter: grayscale(1) contrast(0.92);
+  opacity: .12;
+}
+.thesis > *{ position: relative; z-index: 1; }
+
+/* la thèse en grand serif — reprend la grammaire .hero de ddh.css, montee en echelle.
+   (la taille n'est pas un token verrouille ; couleur + police restent ceux de la maison) */
+.thesis .claim{
+  margin: 0;
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 60, "wght" 460;
+  font-size: 40px; line-height: 1.16; letter-spacing: -0.012em;
+  color: var(--ink);
+  max-width: 22ch;
+  text-wrap: balance;
+}
+.thesis .claim .turn{ display: block; color: var(--moss-deep); }  /* 2e phrase = renversement, accent porteur AA */
+
+.thesis .gloss{
+  margin: 22px 0 30px;
+  font-family: var(--serif);
+  font-variation-settings: "opsz" 20, "wght" 380;
+  font-size: 18px; line-height: 1.55; letter-spacing: 0;
+  color: var(--ink-soft);              /* secondaire porteur — AA */
+  max-width: 58ch;
+}
+.thesis .gloss em{ font-style: italic; color: var(--moss-deep); }
+
+/* ---- triptyque conceptuel en balises XML : un humain · l'architecture · la trace ----
+   reprend STRICTEMENT la grammaire de couleur .xml-rule de ddh.css
+   (.br = chevrons, .tg = nom de balise, .at/.vl = corps), montee en grille de 3. */
+.triptych{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin: 0;
+  border: 1px solid color-mix(in oklab, var(--moss) 30%, transparent);
+  background: color-mix(in oklab, var(--moss) 22%, transparent);   /* devient les filets inter-colonnes */
+}
+.triptych .col{
+  background: var(--stone-50);
+  padding: 22px 22px 24px;
+  display: flex; flex-direction: column;
+}
+.triptych .tagline-xml{
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+.triptych .br{ color: var(--moss-deep); font-weight: 600; }   /* < /> */
+.triptych .tg{ color: var(--moss); font-weight: 500; }        /* operator / harness / artifact */
+.triptych .role{
+  font-family: var(--serif);
+  font-variation-settings: "opsz" 20, "wght" 540;
+  font-size: 18px; line-height: 1.2; letter-spacing: 0.003em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.triptych .role em{ font-style: italic; font-weight: 400; color: var(--moss-deep); }
+.triptych .desc{
+  font-family: var(--serif);
+  font-size: 14.5px; line-height: 1.5;
+  color: var(--ink-soft);             /* porteur — AA */
+  margin: 0;
+}
+
+/* ouverture de la triade NAV sous le triptyque */
+.cards-lede{
+  margin: 40px 0 0;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-soft);
+  display: flex; align-items: baseline; gap: 12px;
+}
+.cards-lede .g{ color: var(--moss-deep); }
+.cards-lede .rule{ flex: 1; height: 1px; align-self: center;
+  background: color-mix(in oklab, var(--moss) 32%, transparent); }
+
+@media (max-width: 860px){
+  .thesis .claim{ font-size: 32px; }
+}
+@media (max-width: 640px){
+  .thesis{ padding: 26px 22px 24px; }
+  .thesis .claim{ font-size: 26px; max-width: none; }
+  .thesis .gloss{ font-size: 17px; }
+  .triptych{ grid-template-columns: 1fr; }   /* empile au tel */
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="lf"><span class="dot"></span>atelier d'auteur · bruxelles · mmxxvi</div>
+  <nav>
+    <a class="on" href="/">Index</a><span class="sep">·</span><a href="/records/">Records</a><span class="sep">·</span><a href="/atelier/">L'Atelier</a><span class="sep">·</span><a href="/cabinet/">Le Cabinet</a>
+  </nav>
+</div>
+
+<!-- [SLOT NAMEPLATE] direction C · plaque / cartel de musée -->
+<div class="cartel">
+
+  <div class="cartel-apparatus">
+    <span class="lhs">
+      <span class="gx">Dt</span>
+      <span class="fig">fig.&nbsp;<span class="onum">I</span></span>
+      <span class="ord">no.&nbsp;<span class="onum">01</span></span>
+      <span> - intitulé de département</span>
+    </span>
+    <span class="rule"></span>
+    <span class="place onum">bruxelles · mmxxvi</span>
+  </div>
+
+  <h1 class="cartel-name">
+    <span class="l1">Département</span>
+    <span class="joint">des</span>
+    <span class="word2">Harnais</span>
+  </h1>
+
+  <!-- tagline -->
+  <div class="cartel-section tagline">atelier d'auteur · harnais d'agents ia</div>
+  <div class="cartel-section">
+    <span><span class="g">section</span>&nbsp;des harnais · <em>texte-comme-image</em></span>
+  </div>
+
+</div>
+<!-- [/SLOT NAMEPLATE] -->
+
+<!-- ════════ THÈSE — le cœur conceptuel (distinct de la nav) ════════ -->
+<section class="thesis" aria-label="Thèse de l'atelier">
+  <p class="claim">L'agentivité ne vit pas dans le modèle.<span class="turn">Elle vit dans le code qui l'orchestre.</span></p>
+  <p class="gloss">Un harness route une force brute en travail dirigé. Le modèle lit, propose, reformule&nbsp;; le code <em>déterministe</em> tranche, écrit, garde la trace. Cet atelier publie ce déplacement sous deux matières attachées — la spécification d'un harness, et les dossiers qui la démontrent en train de tenir.</p>
+
+  <!-- triptyque conceptuel : un humain · l'architecture déterministe · la trace certifiée -->
+  <div class="triptych" role="list" aria-label="Triptyque : opérateur, harness, artefact">
+    <div class="col" role="listitem">
+      <div class="tagline-xml"><span class="br">&lt;</span><span class="tg">operator</span><span class="br">&nbsp;/&gt;</span></div>
+      <div class="role">un humain qui <em>répond</em></div>
+      <p class="desc">Les décisions de goût et d'arbitrage ne se délèguent pas à une probabilité. Elles tiennent à une signature qui répond en première personne.</p>
+    </div>
+    <div class="col" role="listitem">
+      <div class="tagline-xml"><span class="br">&lt;</span><span class="tg">harness</span><span class="br">&nbsp;/&gt;</span></div>
+      <div class="role">l'architecture <em>déterministe</em></div>
+      <p class="desc">Test avant inférence, écritures atomiques, permissions stratifiées, gates par type de sortie. La contrainte est lisible, datable, opposable.</p>
+    </div>
+    <div class="col" role="listitem">
+      <div class="tagline-xml"><span class="br">&lt;</span><span class="tg">artifact</span><span class="br">&nbsp;/&gt;</span></div>
+      <div class="role">la trace <em>certifiée</em></div>
+      <p class="desc">Chaque pièce arrive avec son dossier zippé, anonymisé, vérifiable. On ne raconte pas la fabrication&nbsp;: on la pose à plat, à côté de l'œuvre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ LES TROIS SECTIONS — la triade NAV (distincte de la thèse) ════════ -->
+<p class="cards-lede"><span class="g">trois sections</span> · une seule posture<span class="rule"></span><span>contraindre le modèle, ou ne pas être un harness</span></p>
+
+<div class="section-cards">
+
+  <a class="section-card" href="/records/">
+    <div class="meta"><span class="g">records</span> · section des carnets</div>
+    <h3>Le carnet de veille</h3>
+    <p class="sub">chronique IA quotidienne</p>
+    <p>Les faits du jour de l'écosystème agent IA, narrés et sourcés. L'auteur sélectionne et met en regard&nbsp;; jamais l'agrégat à puces.</p>
+    <span class="go">lire le carnet</span>
+  </a>
+
+  <a class="section-card" href="/atelier/">
+    <div class="meta"><span class="g">l'atelier</span> · section des essais</div>
+    <h3>Les essais</h3>
+    <p class="sub">essais numérotés, T0…Tn</p>
+    <p>Des essais long-form contre des sources nommées. Une position défendue sur ce qu'un harness doit faire, et l'œuvre typographiée qui l'accompagne.</p>
+    <span class="go">entrer dans l'atelier</span>
+  </a>
+
+  <a class="section-card" href="/cabinet/">
+    <div class="meta"><span class="g">le cabinet</span> · section des cahiers</div>
+    <h3>Les cahiers</h3>
+    <p class="sub">rapports forensics sur mandat</p>
+    <p>L'audit cross-source d'un harness, d'un framework, d'un incident. Cartographie, citations file:line, chaîne de garde. Sur mandat.</p>
+    <span class="go">ouvrir le cabinet</span>
+  </a>
+
+</div>
+
+<!-- PIED LEGAL — personne physique (Art. XII.6 + III.74 CDE) -->
+<footer class="legal-footer">
+  <p><span class="org">Département des Harnais — John Linotte, personne physique</span></p>
+  <p>{{ADRESSE}}</p>
+  <p>n&deg; entreprise (<span class="sigle">BCE</span>) {{BCE}}<span class="sep">·</span><span class="sigle">TVA</span> {{TVA}}</p>
+  <p>contact : contact@harnais.be<span class="sep">·</span><a href="/mentions-legales">mentions légales</a></p>
+  <p class="license"><span class="sigle">essay</span> © john linotte<span class="sep">·</span>trace cc-by 4.0</p>
+  <p class="colophon">atelier d'auteur · bruxelles · mmxxvi</p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -6,436 +6,145 @@
 <title>La mesure qui tient face au modèle qui s'emballe — Records · Département des Harnais</title>
 <meta name="description" content="Trois études publiées cette semaine convergent sur un même constat : les agents autonomes dérivent plus vite quand la latence est basse. Le rapport coût-fiabilité n'est pas là où les vendors l'affichent.">
 <meta name="author" content="John Linotte">
-<link rel="canonical" href="https://harness.zip/records/2026-05-24/">
+<link rel="canonical" href="https://harnais.be/records/2026-05-24/">
 <link rel="alternate" type="application/rss+xml" title="Records · Section des Carnets" href="/records/feed.xml">
-
-<!-- Typographie -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500;1,8..60,600&family=IBM+Plex+Mono:wght@300;400;500&display=swap">
-
-<style>
-/* ===== TOKENS ===== */
-:root {
-  --cream:      #F4F1E8;
-  --cream-warm: #EDE9DC;
-  --cream-deep: #E5E0D0;
-  --ink:        #1B2418;
-  --ink-soft:   #2D3328;
-  --moss:       #3B5437;
-  --moss-deep:  #2A3D27;
-  --moss-pale:  #B8C4B0;
-  --stone:      #A8A496;
-  --muted:      #6B7165;
-
-  --serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
-  --mono:  "IBM Plex Mono", "JetBrains Mono", Menlo, monospace;
-
-  --max-w: 1120px;
-  --gutter: 56px;
-}
-
-/* ===== RESET ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html {
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ===== BODY ===== */
-body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 19px;
-  line-height: 1.75;
-  font-feature-settings: "kern", "liga", "calt", "onum";
-  position: relative;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* ===== HEADER ===== */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px var(--gutter);
-  border-bottom: 1px solid var(--moss-pale);
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--moss);
-  letter-spacing: 0.005em;
-}
-
-.site-header .wordmark {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--ink);
-  text-decoration: none;
-  font-feature-settings: "kern", "liga", "calt", "onum";
-}
-
-.site-header .wordmark:hover { color: var(--moss); }
-
-.site-header nav {
-  display: flex;
-  gap: 24px;
-}
-
-.site-header nav a {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--ink-soft);
-  text-decoration: none;
-  letter-spacing: 0.04em;
-}
-
-.site-header nav a:hover { color: var(--ink); }
-
-.site-header nav a.active {
-  color: var(--ink);
-  border-bottom: 1px solid var(--moss);
-  padding-bottom: 2px;
-}
-
-.site-header .status-line {
-  font-size: 11px;
-  color: var(--stone);
-  letter-spacing: 0.06em;
-}
-
-/* ===== BREADCRUMB ===== */
-.breadcrumb {
-  padding: 14px var(--gutter);
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--stone);
-  letter-spacing: 0.06em;
-  border-bottom: 1px solid var(--cream-deep);
-}
-
-.breadcrumb a { color: var(--moss); text-decoration: none; }
-.breadcrumb a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-.breadcrumb .sep { color: var(--stone); margin: 0 8px; }
-.breadcrumb .current { color: var(--ink-soft); }
-
-/* ===== LAYOUT CARNET ===== */
-.carnet-wrap {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 64px var(--gutter);
-}
-
-/* ===== EYEBROW ===== */
-.eyebrow {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--stone);
-  letter-spacing: 0.18em;
-  text-transform: lowercase;
-  margin-bottom: 24px;
-  line-height: 1.7;
-}
-
-.eyebrow span {
-  color: var(--moss);
-}
-
-/* ===== TITRE ===== */
-h1.carnet-title {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 48px;
-  font-weight: 400;
-  color: var(--ink);
-  line-height: 1.15;
-  margin-bottom: 24px;
-  font-feature-settings: "kern", "liga", "calt", "onum";
-  letter-spacing: -0.01em;
-}
-
-/* ===== STANDFIRST ===== */
-.standfirst {
-  font-family: var(--serif);
-  font-size: 21px;
-  font-weight: 400;
-  color: var(--ink-soft);
-  line-height: 1.6;
-  margin-bottom: 40px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid var(--cream-deep);
-}
-
-/* ===== CORPS ===== */
-.carnet-body {
-  font-family: var(--serif);
-  font-size: 19px;
-  color: var(--ink);
-  line-height: 1.78;
-}
-
-.carnet-body p {
-  margin-bottom: 1.4em;
-}
-
-.carnet-body a {
-  color: var(--moss);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-.carnet-body cite {
-  font-style: normal;
-  font-family: var(--mono);
-  font-size: 14px;
-  color: var(--stone);
-  letter-spacing: 0.02em;
-}
-
-/* ===== SOURCES CITÉES ===== */
-.sources-section {
-  margin-top: 56px;
-  padding-top: 32px;
-  border-top: 1px solid var(--cream-deep);
-}
-
-.sources-section h2 {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--moss);
-  letter-spacing: 0.18em;
-  text-transform: lowercase;
-  margin-bottom: 16px;
-  font-weight: 500;
-}
-
-.sources-section ol {
-  list-style: decimal;
-  padding-left: 20px;
-}
-
-.sources-section li {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--ink-soft);
-  line-height: 1.8;
-  letter-spacing: 0.02em;
-  margin-bottom: 4px;
-}
-
-.sources-section li a {
-  color: var(--moss);
-  text-decoration: none;
-}
-
-.sources-section li a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-/* ===== BLOC MÉTADONNÉES (Tokyo Toilet) ===== */
-.metadata-block {
-  margin-top: 56px;
-  padding: 28px 32px;
-  background: var(--cream-warm);
-  border-top: 2px solid var(--moss-pale);
-  border-bottom: 1px solid var(--moss-pale);
-}
-
-.metadata-block dl {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 6px 16px;
-  font-family: var(--mono);
-  font-size: 11px;
-  line-height: 1.6;
-  letter-spacing: 0.02em;
-}
-
-.metadata-block dt {
-  color: var(--moss);
-  font-weight: 400;
-  align-self: start;
-  padding-top: 2px;
-}
-
-.metadata-block dd {
-  color: var(--ink-soft);
-  margin: 0;
-  word-break: break-word;
-}
-
-/* ===== FOOTER ===== */
-.site-footer {
-  border-top: 1px solid var(--moss-pale);
-  padding: 32px var(--gutter);
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--stone);
-  letter-spacing: 0.04em;
-  line-height: 1.9;
-  text-transform: lowercase;
-}
-
-.site-footer p { margin: 0; }
-
-.site-footer a {
-  color: var(--moss);
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 840px) {
-  :root { --gutter: 24px; }
-
-  h1.carnet-title { font-size: 32px; }
-  .standfirst { font-size: 18px; }
-
-  .metadata-block dl {
-    grid-template-columns: 120px 1fr;
-  }
-
-  .site-header {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-    padding: 20px var(--gutter);
-  }
-}
-</style>
+<link rel="stylesheet" href="/assets/ddh.css">
 </head>
 
 <body>
+<div class="page">
 
-<!-- EN-TÊTE -->
-<header class="site-header">
-  <a href="/" class="wordmark">Département des Harnais</a>
-  <nav aria-label="Navigation principale">
-    <a href="/">index</a>
-    <a href="/records/" class="active">records</a>
-    <a href="/atelier/">l'atelier</a>
-    <a href="/cabinet/">le cabinet</a>
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="lf"><span class="dot"></span>atelier d'auteur · bruxelles · mmxxvi</div>
+  <nav>
+    <a href="/">Index</a><span class="sep">·</span><a class="on" href="/records/">Records</a><span class="sep">·</span><a href="/atelier/">L'Atelier</a><span class="sep">·</span><a href="/cabinet/">Le Cabinet</a>
   </nav>
-  <span class="status-line">bruxelles · mmxxvi</span>
-</header>
+</div>
 
-<!-- FIL D'ARIANE -->
-<nav class="breadcrumb" aria-label="Fil d'ariane">
-  <a href="/">département des harnais</a>
-  <span class="sep">›</span>
-  <a href="/records/">records · section des carnets</a>
-  <span class="sep">›</span>
-  <span class="current">2026-05-24</span>
-</nav>
+<!-- [SLOT NAMEPLATE] direction C · plaque / cartel de musée -->
+<div class="cartel">
+
+  <div class="cartel-apparatus">
+    <span class="lhs">
+      <span class="gx">Dt</span>
+      <span class="fig">fig.&nbsp;<span class="onum">I</span></span>
+      <span class="ord">no.&nbsp;<span class="onum">01</span></span>
+      <span> - intitulé de département</span>
+    </span>
+    <span class="rule"></span>
+    <span class="place onum">bruxelles · mmxxvi</span>
+  </div>
+
+  <h1 class="cartel-name">
+    <span class="l1">Département</span>
+    <span class="joint">des</span>
+    <span class="word2">Harnais</span>
+  </h1>
+
+  <!-- tagline -->
+  <div class="cartel-section tagline">atelier d'auteur · harnais d'agents ia</div>
+  <div class="cartel-section">
+    <span><span class="g">section</span>&nbsp;des harnais · <em>texte-comme-image</em></span>
+  </div>
+
+</div>
+<!-- [/SLOT NAMEPLATE] -->
+
+<!-- TITRE DE SECTION — propre à la page, sous le masthead -->
+<div class="section-head">
+  <div class="kicker">
+    <span class="g">records</span>
+    <span>section des carnets</span>
+    <span class="rule"></span>
+    <span>paru le 24 mai 2026 · john linotte</span>
+  </div>
+  <h1>La mesure qui tient face au modèle qui s'emballe</h1>
+  <p class="lede">Trois études publiées cette semaine convergent sur un même constat : les agents autonomes dérivent plus vite quand la latence est basse. Le rapport coût-fiabilité n'est pas là où les vendors l'affichent.</p>
+</div>
 
 <!-- CARNET -->
-<article class="carnet-wrap">
-
-  <p class="eyebrow">records · section des carnets · <span>paru le 2026-05-24</span> · john linotte</p>
-
-  <h1 class="carnet-title">La mesure qui tient face au modèle qui s'emballe</h1>
+<article class="carnet">
 
   <p class="standfirst">
-    Trois études publiées cette semaine convergent sur un même constat : les agents autonomes dérivent plus vite quand la latence est basse. Le rapport coût-fiabilité n'est pas là où les vendors l'affichent.
+    22 mai 2026 — la mesure la plus factuelle du jour vient d'un preprint arXiv signé par une équipe de Stanford : sur une suite de tâches à horizon long (planification, révision, correction multi-étapes), les modèles opérés à latence réduite (&lt;1&nbsp;s par step) produisent 23&nbsp;% de sorties hors-spec supplémentaires comparés aux mêmes modèles opérés avec un délai imposé de 4&nbsp;s. <cite>(arXiv cs.AI · 2026-05-21 · § 3.2)</cite>
   </p>
 
-  <div class="carnet-body">
+  <p>
+    La conclusion des auteurs est prudente — le mécanisme de causalité n'est pas établi — mais la corrélation est robuste sur 4&nbsp;000 runs. Ce n'est pas un papier qui accuse la vitesse ; c'est un papier qui mesure ce qu'on ne mesure pas.
+  </p>
 
-    <p>
-      22 mai 2026 — la mesure la plus factuelle du jour vient d'un preprint arXiv signé par une équipe de Stanford : sur une suite de tâches à horizon long (planification, révision, correction multi-étapes), les modèles opérés à latence réduite (<1 s par step) produisent 23 % de sorties hors-spec supplémentaires comparés aux mêmes modèles opérés avec un délai imposé de 4 s. <cite>(arXiv cs.AI · 2026-05-21 · § 3.2)</cite> La conclusion des auteurs est prudente — le mécanisme de causalité n'est pas établi — mais la corrélation est robuste sur 4 000 runs. Ce n'est pas un paper qui accuse la vitesse ; c'est un paper qui mesure ce qu'on ne mesure pas.
-    </p>
+  <p>
+    Le problème de ce genre de résultat, c'est qu'il est immédiatement réinterprété dans une direction qui n'est pas celle qu'il propose. Hacker News, le même soir, se divise en deux camps : ceux qui y lisent une défense de l'humanisation forcée du workflow (« on devrait ralentir l'IA »), et ceux qui y lisent un argument pour des LLM plus lents donc moins chers. Ni l'un ni l'autre ne reprend la thèse des auteurs, qui est beaucoup plus froide : l'observabilité des étapes intermédiaires est insuffisante pour savoir pourquoi la dérive arrive. Ce n'est pas une question de vitesse — c'est une question d'instrumentation. <cite>(HN thread · 2026-05-21 · commentaire ID 44128xx)</cite>
+  </p>
 
-    <p>
-      Le problème de ce genre de résultat, c'est qu'il est immédiatement réinterprété dans une direction qui n'est pas celle qu'il propose. Hacker News, le même soir, se divise en deux camps : ceux qui y lisent une défense de l'humanisation forcée du workflow (« on devrait ralentir l'IA »), et ceux qui y lisent un argument pour des LLMs plus lents donc moins chers. Ni l'un ni l'autre ne reprend la thèse des auteurs, qui est beaucoup plus froide : l'observabilité des étapes intermédiaires est insuffisante pour savoir pourquoi la dérive arrive. Ce n'est pas une question de vitesse — c'est une question d'instrumentation. <cite>(HN thread · 2026-05-21 · commentaire ID 44128xx)</cite>
-    </p>
+  <p>
+    Stratechery, cette semaine, pose une question adjacente par un autre biais. Ben Thompson revient sur la distinction entre « agent qui complète une tâche » et « agent qui tient un état ». La distinction est simple mais opératoire : un agent qui complète est évalué sur le résultat terminal ; un agent qui tient un état est évalué sur la cohérence de son comportement à travers le temps. Les deux évaluations sont incompatibles — un score terminal peut masquer des contradictions internes accumulées qui ne se verront qu'au run suivant. <cite>(Stratechery · 2026-05-22 · §2)</cite> Il ne dit pas que les uns valent mieux que les autres. Il dit qu'on mélange les deux dans les benchmarks, et que ça rend les comparaisons inégales.
+  </p>
 
-    <p>
-      Stratechery, cette semaine, pose une question adjacente par un autre biais. Ben Thompson revient sur la distinction entre « agent qui complète une tâche » et « agent qui tient un état ». La distinction est simple mais opératoire : un agent qui complète est évalué sur le résultat terminal ; un agent qui tient un état est évalué sur la cohérence de son comportement à travers le temps. Les deux évaluations sont incompatibles — un score terminal peut masquer des contradictions internes accumulées qui ne se verront qu'au run suivant. <cite>(Stratechery · 2026-05-22 · §2)</cite> Il ne dit pas que les uns valent mieux que les autres. Il dit qu'on mélange les deux dans les benchmarks, et que ça rend les comparaisons inégales.
-    </p>
+  <p>
+    Le troisième signal vient du MIT Technology Review, sur le marché des « AI agents as a service ». Les vendors qui publient des métriques de coût par tâche le font systématiquement sur des tâches à horizon court — moins de 10 steps, résultat binaire (succès/échec). Les tâches longues (&gt; 30 steps, résultat gradué) ne font pas l'objet de benchmarks publics comparables. Ce n'est pas une accusation de mauvaise foi ; c'est une observation sur la structure des incentives. Un benchmark court est mesurable, reproductible, publiable. Un benchmark long coûte cher à faire tourner et produit des résultats moins nets. <cite>(MIT Technology Review · 2026-05-23 · §4)</cite>
+  </p>
 
-    <p>
-      Le troisième signal vient du MIT Technology Review, sur le marché des « AI agents as a service ». Les vendors qui publient des métriques de coût par tâche le font systématiquement sur des tâches à horizon court — moins de 10 steps, résultat binaire (succès/échec). Les tâches longues (> 30 steps, résultat gradué) ne font pas l'objet de benchmarks publics comparables. Ce n'est pas une accusation de mauvaise foi ; c'est une observation sur la structure des incentives. Un benchmark court est mesurable, reproductible, publiable. Un benchmark long coûte cher à faire tourner et produit des résultats moins nets. <cite>(MIT Technology Review · 2026-05-23 · §4)</cite>
-    </p>
+  <p>
+    Ce que ces trois lectures mises ensemble suggèrent — sans le dire — c'est que la prochaine frontière de l'évaluation des systèmes d'agents n'est pas le bench de performance mais le bench d'observabilité. Pas « est-ce que ça marche » mais « est-ce qu'on sait pourquoi ça marche ou ne marche pas ». Ce carnet ne prétend pas trancher. Il pose les trois sources sur la table pour qu'on puisse revenir dessus quand la question deviendra impossible à éviter.
+  </p>
 
-    <p>
-      Ce que ces trois lectures mises ensemble suggèrent — sans le dire — c'est que la prochaine frontière de l'évaluation des systèmes d'agents n'est pas le bench de performance mais le bench d'observabilité. Pas « est-ce que ça marche » mais « est-ce qu'on sait pourquoi ça marche ou ne marche pas ». Ce carnet ne prétend pas trancher. Il pose les trois sources sur la table pour qu'on puisse revenir dessus quand la question deviendra impossible à éviter.
-    </p>
+  <h2><span class="tag">appareil critique</span>sources citées</h2>
+  <ol>
+    <li>
+      <a href="https://arxiv.org/abs/2026.xxxxx">arXiv cs.AI 2026-05-21</a> — Latency-Accuracy Trade-offs in Autonomous Agent Pipelines (Stanford, preprint) · § 3.2
+    </li>
+    <li>
+      Hacker News · thread 44128xx · 2026-05-21 · commentaires sur le preprint Stanford
+    </li>
+    <li>
+      <a href="https://stratechery.com/">Stratechery</a> · Ben Thompson · 2026-05-22 · « Task Completion vs. State Maintenance » · § 2
+    </li>
+    <li>
+      MIT Technology Review · 2026-05-23 · « The AI Agent Benchmark Problem » · § 4
+    </li>
+  </ol>
 
-  </div>
+  <!-- bloc métadonnées (colophon de carnet) -->
+  <dl>
+    <dt>date</dt>
+    <dd>2026-05-24</dd>
 
-  <!-- SOURCES CITÉES -->
-  <section class="sources-section">
-    <h2>sources citées</h2>
-    <ol>
-      <li>
-        <a href="https://arxiv.org/abs/2026.xxxxx">arXiv cs.AI 2026-05-21</a> — Latency-Accuracy Trade-offs in Autonomous Agent Pipelines (Stanford, preprint) · § 3.2
-      </li>
-      <li>
-        Hacker News · thread 44128xx · 2026-05-21 · commentaires sur le preprint Stanford
-      </li>
-      <li>
-        <a href="https://stratechery.com/">Stratechery</a> · Ben Thompson · 2026-05-22 · « Task Completion vs. State Maintenance » · § 2
-      </li>
-      <li>
-        MIT Technology Review · 2026-05-23 · « The AI Agent Benchmark Problem » · § 4
-      </li>
-    </ol>
-  </section>
+    <dt>auteur</dt>
+    <dd>john linotte</dd>
 
-  <!-- BLOC MÉTADONNÉES (Tokyo Toilet) -->
-  <div class="metadata-block">
-    <dl>
-      <dt>date</dt>
-      <dd>2026-05-24</dd>
+    <dt>commission</dt>
+    <dd>records (carnet quotidien)</dd>
 
-      <dt>auteur</dt>
-      <dd>john linotte</dd>
+    <dt>durée production</dt>
+    <dd>~45 min veille + ~30 min édition</dd>
 
-      <dt>commission</dt>
-      <dd>atelier (carnet quotidien)</dd>
+    <dt>atelier</dt>
+    <dd>département des harnais</dd>
 
-      <dt>durée production</dt>
-      <dd>~45 min veille + ~30 min édition</dd>
+    <dt>trace</dt>
+    <dd><a href="/records/2026-05-24/trace.zip">/records/2026-05-24/trace.zip</a></dd>
 
-      <dt>atelier</dt>
-      <dd>département des harnais</dd>
+    <dt>license</dt>
+    <dd>carnet © john linotte · trace cc-by 4.0</dd>
 
-      <dt>trace</dt>
-      <dd>/records/2026-05-24/trace.zip</dd>
-
-      <dt>license</dt>
-      <dd>carnet © john linotte · trace cc-by 4.0</dd>
-
-      <dt>contact</dt>
-      <dd>[à figer]</dd>
-    </dl>
-  </div>
+    <dt>contact</dt>
+    <dd>contact@harnais.be</dd>
+  </dl>
 
 </article>
 
-<!-- PIED DE PAGE -->
-<footer class="site-footer">
-  <p>département des harnais · john linotte · bruxelles · mmxxvi</p>
-  <p>carnet © john linotte · trace cc-by 4.0</p>
-  <p>contact : [à figer] · flux : <a href="/records/feed.xml">/records/feed.xml</a></p>
+<!-- PIED LEGAL — personne physique (Art. XII.6 + III.74 CDE) -->
+<footer class="legal-footer">
+  <p><span class="org">Département des Harnais — John Linotte, personne physique</span></p>
+  <p>{{ADRESSE}}</p>
+  <p>n&deg; entreprise (<span class="sigle">BCE</span>) {{BCE}}<span class="sep">·</span><span class="sigle">TVA</span> {{TVA}}</p>
+  <p>contact : contact@harnais.be<span class="sep">·</span><a href="/mentions-legales">mentions légales</a></p>
+  <p class="license"><span class="sigle">essay</span> © john linotte<span class="sep">·</span>trace cc-by 4.0</p>
+  <p class="colophon">atelier d'auteur · bruxelles · mmxxvi</p>
 </footer>
 
+</div>
 </body>
 </html>

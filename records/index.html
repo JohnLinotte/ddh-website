@@ -4,675 +4,121 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Records · Section des Carnets — Département des Harnais</title>
-<meta name="description" content="Carnet de veille IA quotidien. Chronique narrée, sourcée, publiée du lundi au vendredi. Département des Harnais, Bruxelles, mmxxvi.">
+<meta name="description" content="Carnet de veille IA narré et sourcé, publié du lundi au vendredi. Index des carnets — Département des Harnais, John Linotte, Bruxelles, mmxxvi.">
 <meta name="author" content="John Linotte">
 <link rel="alternate" type="application/rss+xml" title="Records · Section des Carnets" href="/records/feed.xml">
-
-<!-- Typographie -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500;1,8..60,600&family=IBM+Plex+Mono:wght@300;400;500&display=swap">
-
-<style>
-/* ===== TOKENS ===== */
-:root {
-  --cream:      #F4F1E8;
-  --cream-warm: #EDE9DC;
-  --cream-deep: #E5E0D0;
-  --ink:        #1B2418;
-  --ink-soft:   #2D3328;
-  --moss:       #3B5437;
-  --moss-deep:  #2A3D27;
-  --moss-pale:  #B8C4B0;
-  --stone:      #A8A496;
-  --muted:      #6B7165;
-
-  --serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
-  --mono:  "IBM Plex Mono", "JetBrains Mono", Menlo, monospace;
-
-  --max-w: 1120px;
-  --gutter: 56px;
-}
-
-/* ===== RESET ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html {
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-}
-
-/* ===== FILIGRANE FORUM ===== */
-body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 18px;
-  line-height: 1.7;
-  font-feature-settings: "kern", "liga", "calt", "onum";
-  position: relative;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* ===== HEADER ===== */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px var(--gutter);
-  border-bottom: 1px solid var(--moss-pale);
-  font-family: var(--mono);
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--moss);
-  letter-spacing: 0.005em;
-}
-
-.site-header .wordmark {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--ink);
-  text-decoration: none;
-  letter-spacing: 0;
-  font-feature-settings: "kern", "liga", "calt", "onum";
-}
-
-.site-header .wordmark:hover {
-  color: var(--moss);
-}
-
-.site-header nav {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
-
-.site-header nav a {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--ink-soft);
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  transition: color 0.15s;
-}
-
-.site-header nav a:hover {
-  color: var(--ink);
-}
-
-.site-header nav a.active {
-  color: var(--ink);
-  border-bottom: 1px solid var(--moss);
-  padding-bottom: 2px;
-}
-
-.site-header .status-line {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--stone);
-  letter-spacing: 0.06em;
-}
-
-/* ===== BREADCRUMB ===== */
-.breadcrumb {
-  padding: 14px var(--gutter);
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--stone);
-  letter-spacing: 0.06em;
-  border-bottom: 1px solid var(--cream-deep);
-}
-
-.breadcrumb a {
-  color: var(--moss);
-  text-decoration: none;
-}
-.breadcrumb a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-.breadcrumb .sep {
-  color: var(--stone);
-  margin: 0 8px;
-}
-.breadcrumb .current {
-  color: var(--ink-soft);
-}
-
-/* ===== LAYOUT PRINCIPAL ===== */
-.page-body {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 56px var(--gutter);
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 72px;
-  align-items: start;
-}
-
-/* ===== EN-TÊTE DE SECTION ===== */
-.section-header {
-  grid-column: 1 / -1;
-  border-bottom: 1px solid var(--moss-pale);
-  padding-bottom: 24px;
-  margin-bottom: 8px;
-}
-
-.section-eyebrow {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--moss);
-  letter-spacing: 0.18em;
-  text-transform: lowercase;
-  margin-bottom: 10px;
-}
-
-.section-title {
-  font-family: var(--serif);
-  font-size: 36px;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--ink);
-  line-height: 1.2;
-  font-feature-settings: "kern", "liga", "calt", "onum";
-}
-
-.section-title em {
-  font-style: normal;
-}
-
-.section-desc {
-  margin-top: 12px;
-  font-family: var(--serif);
-  font-size: 16px;
-  color: var(--ink-soft);
-  line-height: 1.6;
-  max-width: 560px;
-}
-
-/* ===== LISTING CHRONIQUE ===== */
-.chronicle-list {
-  list-style: none;
-}
-
-.carnet-entry {
-  padding: 40px 0;
-  border-bottom: 1px solid var(--cream-deep);
-}
-
-.carnet-entry:first-child {
-  padding-top: 0;
-}
-
-.carnet-entry:last-child {
-  border-bottom: none;
-}
-
-.carnet-date {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--stone);
-  letter-spacing: 0.18em;
-  text-transform: lowercase;
-  margin-bottom: 10px;
-}
-
-.carnet-date .weekday {
-  color: var(--moss);
-}
-
-.carnet-title {
-  font-family: var(--serif);
-  font-size: 26px;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--ink);
-  line-height: 1.25;
-  margin-bottom: 12px;
-  font-feature-settings: "kern", "liga", "calt", "onum";
-}
-
-.carnet-title a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s;
-}
-
-.carnet-title a:hover {
-  border-bottom-color: var(--moss);
-}
-
-.carnet-standfirst {
-  font-family: var(--serif);
-  font-size: 17px;
-  color: var(--ink-soft);
-  line-height: 1.65;
-  max-width: 600px;
-}
-
-/* Lien archives */
-.archives-link {
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid var(--cream-deep);
-  font-family: var(--mono);
-  font-size: 12px;
-}
-
-.archives-link a {
-  color: var(--moss);
-  text-decoration: none;
-  letter-spacing: 0.04em;
-}
-
-.archives-link a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-/* ===== SIDEBAR MARGINALIA ===== */
-.sidebar {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--ink-soft);
-  position: sticky;
-  top: 32px;
-}
-
-.sidebar-bloc {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--cream-deep);
-}
-
-.sidebar-bloc:first-child {
-  padding-top: 0;
-}
-
-.sidebar-bloc:last-child {
-  border-bottom: none;
-}
-
-.sidebar-label {
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: var(--stone);
-  text-transform: lowercase;
-  margin-bottom: 10px;
-}
-
-.sidebar-text {
-  line-height: 1.6;
-  color: var(--ink-soft);
-}
-
-/* Bloc flux */
-.flux-link {
-  display: block;
-  color: var(--moss);
-  text-decoration: none;
-  margin-bottom: 16px;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-}
-.flux-link:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-.buttondown-form {
-  margin-top: 8px;
-}
-
-.buttondown-label {
-  display: block;
-  font-size: 11px;
-  color: var(--stone);
-  margin-bottom: 6px;
-  letter-spacing: 0.04em;
-}
-
-.buttondown-input {
-  width: 100%;
-  background: var(--cream-warm);
-  border: 1px solid var(--moss-pale);
-  color: var(--ink);
-  font-family: var(--mono);
-  font-size: 12px;
-  padding: 8px 10px;
-  outline: none;
-  margin-bottom: 8px;
-}
-
-.buttondown-input::placeholder {
-  color: var(--stone);
-}
-
-.buttondown-input:focus {
-  border-color: var(--moss);
-}
-
-.buttondown-submit {
-  background: transparent;
-  border: 1px solid var(--moss);
-  color: var(--moss);
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  padding: 6px 12px;
-  cursor: pointer;
-  text-transform: lowercase;
-  transition: background 0.15s, color 0.15s;
-}
-
-.buttondown-submit:hover {
-  background: var(--moss);
-  color: var(--cream);
-}
-
-/* Sources veille */
-.sources-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sources-list li {
-  font-size: 11px;
-  color: var(--ink-soft);
-  line-height: 1.8;
-  letter-spacing: 0.02em;
-}
-
-.sources-list li::before {
-  content: "·";
-  color: var(--moss);
-  margin-right: 6px;
-}
-
-.sources-toggle {
-  display: block;
-  margin-top: 8px;
-  font-size: 11px;
-  color: var(--moss);
-  text-decoration: none;
-  cursor: pointer;
-  letter-spacing: 0.03em;
-  background: none;
-  border: none;
-  padding: 0;
-  font-family: var(--mono);
-}
-
-.sources-toggle:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-.sources-hidden {
-  display: none;
-}
-
-/* Sections voisines */
-.sections-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sections-list li {
-  margin-bottom: 12px;
-}
-
-.sections-list a {
-  display: block;
-  color: var(--moss);
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-}
-
-.sections-list a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-.sections-list .section-blurb {
-  display: block;
-  font-size: 11px;
-  color: var(--stone);
-  margin-top: 2px;
-  letter-spacing: 0.02em;
-}
-
-/* ===== FOOTER ===== */
-.site-footer {
-  border-top: 1px solid var(--moss-pale);
-  padding: 32px var(--gutter);
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--stone);
-  letter-spacing: 0.04em;
-  line-height: 1.9;
-  text-transform: lowercase;
-}
-
-.site-footer p {
-  margin: 0;
-}
-
-.site-footer a {
-  color: var(--moss);
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 840px) {
-  :root {
-    --gutter: 24px;
-  }
-
-  .page-body {
-    grid-template-columns: 1fr;
-    gap: 48px;
-    padding: 40px var(--gutter);
-  }
-
-  .section-header {
-    grid-column: 1;
-  }
-
-  .sidebar {
-    position: static;
-    border-top: 1px solid var(--cream-deep);
-    padding-top: 32px;
-  }
-
-  .site-header {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-    padding: 20px var(--gutter);
-  }
-
-  .section-title {
-    font-size: 28px;
-  }
-}
-</style>
+<link rel="stylesheet" href="/assets/ddh.css">
 </head>
 
 <body>
+<div class="page">
 
-<!-- EN-TÊTE -->
-<header class="site-header">
-  <a href="/" class="wordmark">Département des Harnais</a>
-  <nav aria-label="Navigation principale">
-    <!-- [DPA-18] nav site-wide à consolider après les 3 landings -->
-    <a href="/">index</a>
-    <a href="/records/" class="active">records</a>
-    <a href="/atelier/">l'atelier</a>
-    <a href="/cabinet/">le cabinet</a>
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="lf"><span class="dot"></span>atelier d'auteur · bruxelles · mmxxvi</div>
+  <nav>
+    <a href="/">Index</a><span class="sep">·</span><a class="on" href="/records/">Records</a><span class="sep">·</span><a href="/atelier/">L'Atelier</a><span class="sep">·</span><a href="/cabinet/">Le Cabinet</a>
   </nav>
-  <span class="status-line">bruxelles · mmxxvi</span>
-</header>
-
-<!-- FIL D'ARIANE -->
-<nav class="breadcrumb" aria-label="Fil d'ariane">
-  <a href="/">département des harnais</a>
-  <span class="sep">›</span>
-  <span class="current">records · section des carnets</span>
-</nav>
-
-<!-- CORPS DE PAGE -->
-<div class="page-body">
-
-  <!-- EN-TÊTE DE SECTION -->
-  <header class="section-header">
-    <p class="section-eyebrow">records · section des carnets</p>
-    <h1 class="section-title">Carnets de veille IA</h1>
-    <p class="section-desc">Chronique quotidienne narrée. L'auteur observe, sélectionne, source et met en regard. Paraît du lundi au vendredi à 08h, Bruxelles.</p>
-  </header>
-
-  <!-- LISTING CHRONIQUE -->
-  <main>
-    <ol class="chronicle-list" reversed>
-
-      <!-- carnet 2026-05-24 -->
-      <li class="carnet-entry">
-        <p class="carnet-date">2026-05-24 · <span class="weekday">vendredi</span></p>
-        <h2 class="carnet-title">
-          <a href="/records/2026-05-24/">La mesure qui tient face au modèle qui s'emballe</a>
-        </h2>
-        <p class="carnet-standfirst">
-          Trois études publiées cette semaine convergent sur un même constat : les agents autonomes dérivent plus vite quand la latence est basse. Le rapport coût-fiabilité n'est pas là où les vendors l'affichent.
-        </p>
-      </li>
-
-      <!-- carnet 2026-05-23 -->
-      <li class="carnet-entry">
-        <p class="carnet-date">2026-05-23 · <span class="weekday">jeudi</span></p>
-        <h2 class="carnet-title">
-          <a href="/records/2026-05-23/">Contraindre le contexte, ou comment les 128k deviennent un piège</a>
-        </h2>
-        <p class="carnet-standfirst">
-          À partir d'une note technique d'Anthropic et d'un preprint arXiv, le carnet examine pourquoi la fenêtre de contexte étendue aggrave les hallucinations sur les tâches à forte dépendance temporelle.
-        </p>
-      </li>
-
-      <!-- carnet 2026-05-22 -->
-      <li class="carnet-entry">
-        <p class="carnet-date">2026-05-22 · <span class="weekday">jeudi</span></p>
-        <h2 class="carnet-title">
-          <a href="/records/2026-05-22/">Trois harnais, deux philosophies, un angle mort commun</a>
-        </h2>
-        <p class="carnet-standfirst">
-          Revue des pratiques LangChain, CrewAI et AutoGen sur la gestion du budget token. Les trois partagent le même angle mort : la fenêtre de défaillance entre le dispatch et la synthèse reste non-observable.
-        </p>
-      </li>
-
-    </ol>
-
-    <p class="archives-link">
-      <a href="/records/archives/">voir les carnets antérieurs →</a>
-    </p>
-  </main>
-
-  <!-- SIDEBAR MARGINALIA -->
-  <aside class="sidebar" aria-label="Marginalia">
-
-    <!-- Bloc 1 — paraît à -->
-    <div class="sidebar-bloc">
-      <p class="sidebar-label">cadence</p>
-      <p class="sidebar-text">paraît à 08h bruxelles,<br>du lundi au vendredi</p>
-    </div>
-
-    <!-- Bloc 2 — sub flux -->
-    <div class="sidebar-bloc">
-      <p class="sidebar-label">recevoir le carnet</p>
-      <a class="flux-link" href="/records/feed.xml">flux rss</a>
-      <form class="buttondown-form" action="https://buttondown.email/api/emails/embed-subscribe/records-ddh" method="POST" target="_blank">
-        <label class="buttondown-label" for="bd-email">par courrier</label>
-        <input class="buttondown-input" type="email" id="bd-email" name="email" placeholder="adresse@domaine.tld" required>
-        <button class="buttondown-submit" type="submit">recevoir le carnet</button>
-        <!-- [à figer] compte Buttondown Records · Section des Carnets — cf DPA-20 §5.2 -->
-      </form>
-    </div>
-
-    <!-- Bloc 3 — sources veille -->
-    <div class="sidebar-bloc">
-      <p class="sidebar-label">sources sous-jacentes</p>
-      <ul class="sources-list" id="sources-list">
-        <li>Le Monde</li>
-        <li>Stratechery</li>
-        <li>arXiv cs.AI</li>
-        <li>arXiv cs.LG</li>
-        <li>Hacker News</li>
-        <li>WIRED</li>
-        <li>MIT Technology Review</li>
-        <li>The Verge</li>
-        <!-- sources masquées par défaut -->
-        <li class="sources-hidden">Bloomberg Technology</li>
-        <li class="sources-hidden">Ars Technica</li>
-        <li class="sources-hidden">ACM Digital Library</li>
-        <li class="sources-hidden">IEEE Spectrum</li>
-        <li class="sources-hidden">Anthropic Research (blog.anthropic.com)</li>
-        <li class="sources-hidden">DeepMind Research</li>
-      </ul>
-      <button class="sources-toggle" id="sources-toggle" onclick="toggleSources()" type="button">voir les 14 sources</button>
-    </div>
-
-    <!-- Bloc 4 — sections voisines -->
-    <div class="sidebar-bloc">
-      <p class="sidebar-label">sections voisines</p>
-      <ul class="sections-list">
-        <li>
-          <a href="/atelier/">l'atelier · section des essais</a>
-          <span class="section-blurb">essais épisodiques</span>
-        </li>
-        <li>
-          <a href="/cabinet/">le cabinet · section des cahiers</a>
-          <span class="section-blurb">rapports forensics sur mandat</span>
-        </li>
-      </ul>
-    </div>
-
-  </aside>
-
 </div>
 
-<!-- PIED DE PAGE -->
-<footer class="site-footer">
-  <p>département des harnais · john linotte · bruxelles · mmxxvi</p>
-  <p>carnet © john linotte · trace cc-by 4.0</p>
-  <p>contact : [à figer] · flux : <a href="/records/feed.xml">/records/feed.xml</a></p>
+<!-- [SLOT NAMEPLATE] direction C · plaque / cartel de musée -->
+<div class="cartel">
+
+  <div class="cartel-apparatus">
+    <span class="lhs">
+      <span class="gx">Dt</span>
+      <span class="fig">fig.&nbsp;<span class="onum">I</span></span>
+      <span class="ord">no.&nbsp;<span class="onum">01</span></span>
+      <span> - intitulé de département</span>
+    </span>
+    <span class="rule"></span>
+    <span class="place onum">bruxelles · mmxxvi</span>
+  </div>
+
+  <h1 class="cartel-name">
+    <span class="l1">Département</span>
+    <span class="joint">des</span>
+    <span class="word2">Harnais</span>
+  </h1>
+
+  <!-- tagline -->
+  <div class="cartel-section tagline">atelier d'auteur · harnais d'agents ia</div>
+  <div class="cartel-section">
+    <span><span class="g">section</span>&nbsp;des harnais · <em>texte-comme-image</em></span>
+  </div>
+
+</div>
+<!-- [/SLOT NAMEPLATE] -->
+
+<!-- TITRE DE SECTION — propre à la page, sous le masthead -->
+<div class="section-head">
+  <div class="kicker">
+    <span class="g">records</span>
+    <span>section des carnets</span>
+    <span class="rule"></span>
+    <span>carnet du lundi au vendredi</span>
+  </div>
+  <h1>La veille comme tenue, pas comme flux</h1>
+  <p class="lede">L'auteur lit, retient, met en regard. Chaque jour ouvré, un <em>carnet</em> : une chronique narrée, datée, ses sources nommées au fil du texte. Pas d'agrégat, pas de fil sans fin — la matière du jour, posée.</p>
+</div>
+
+<!-- INDEX DES CARNETS -->
+<main>
+  <div class="section-cards">
+
+    <!-- carnet 2026-05-24 -->
+    <a class="section-card" href="/records/2026-05-24/">
+      <div class="meta">
+        <span class="g">vendredi</span>
+        <span>24 mai 2026</span>
+      </div>
+      <h3>La mesure qui tient face au modèle qui s'emballe</h3>
+      <p class="sub">arXiv · stratechery · mit technology review</p>
+      <p>Trois études publiées cette semaine convergent sur un même constat : les agents autonomes dérivent plus vite quand la latence est basse. Le rapport coût-fiabilité n'est pas là où les vendors l'affichent.</p>
+      <span class="go">lire le carnet</span>
+    </a>
+
+    <!-- carnet 2026-05-23 -->
+    <a class="section-card" href="/records/2026-05-23/">
+      <div class="meta">
+        <span class="g">jeudi</span>
+        <span>23 mai 2026</span>
+      </div>
+      <h3>Contraindre le contexte, ou comment les 128k deviennent un piège</h3>
+      <p class="sub">anthropic · arXiv</p>
+      <p>À partir d'une note technique d'Anthropic et d'un preprint arXiv, le carnet examine pourquoi la fenêtre de contexte étendue aggrave les hallucinations sur les tâches à forte dépendance temporelle.</p>
+      <span class="go">lire le carnet</span>
+    </a>
+
+    <!-- carnet 2026-05-22 -->
+    <a class="section-card" href="/records/2026-05-22/">
+      <div class="meta">
+        <span class="g">jeudi</span>
+        <span>22 mai 2026</span>
+      </div>
+      <h3>Trois harnais, deux philosophies, un angle mort commun</h3>
+      <p class="sub">revue de pratiques</p>
+      <p>Revue des pratiques d'orchestration sur la gestion du budget token. Trois écoles partagent le même angle mort : la fenêtre de défaillance entre le dispatch et la synthèse reste non-observable.</p>
+      <span class="go">lire le carnet</span>
+    </a>
+
+  </div>
+
+  <div class="essay">
+    <p>Le carnet paraît à 08h, heure de Bruxelles, du lundi au vendredi. Les carnets antérieurs s'archivent par date sous <a href="/records/">/records/</a>. Le flux complet est disponible en <a href="/records/feed.xml">rss</a>.</p>
+  </div>
+</main>
+
+<!-- PIED LEGAL — personne physique (Art. XII.6 + III.74 CDE) -->
+<footer class="legal-footer">
+  <p><span class="org">Département des Harnais — John Linotte, personne physique</span></p>
+  <p>{{ADRESSE}}</p>
+  <p>n&deg; entreprise (<span class="sigle">BCE</span>) {{BCE}}<span class="sep">·</span><span class="sigle">TVA</span> {{TVA}}</p>
+  <p>contact : contact@harnais.be<span class="sep">·</span><a href="/mentions-legales">mentions légales</a></p>
+  <p class="license"><span class="sigle">essay</span> © john linotte<span class="sep">·</span>trace cc-by 4.0</p>
+  <p class="colophon">atelier d'auteur · bruxelles · mmxxvi</p>
 </footer>
 
-<script>
-function toggleSources() {
-  const hidden = document.querySelectorAll('.sources-hidden');
-  const btn = document.getElementById('sources-toggle');
-  const isHidden = getComputedStyle(hidden[0]).display === 'none';
-  hidden.forEach(el => { el.style.display = isHidden ? 'list-item' : 'none'; });
-  btn.textContent = isHidden ? 'masquer' : 'voir les 14 sources';
-}
-</script>
-
+</div>
 </body>
 </html>

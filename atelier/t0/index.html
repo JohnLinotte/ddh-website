@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Un harness, ses sections — Département des Harnais</title>
+<meta name="description" content="Essai T0. Où vit l'agentivité opérationnelle d'un système d'agents : dans le code qui orchestre, pas dans le modèle. Contraindre le modèle, ou ne pas être un harness. John Linotte, Bruxelles, mmxxvi.">
+<meta name="author" content="John Linotte">
+<link rel="stylesheet" href="/assets/ddh.css">
+</head>
+
+<body>
+<div class="page">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="lf"><span class="dot"></span>atelier d'auteur · bruxelles · mmxxvi</div>
+  <nav>
+    <a href="/">Index</a><span class="sep">·</span><a href="/records/">Records</a><span class="sep">·</span><a class="on" href="/atelier/">L'Atelier</a><span class="sep">·</span><a href="/cabinet/">Le Cabinet</a>
+  </nav>
+</div>
+
+<!-- [SLOT NAMEPLATE] direction C · plaque / cartel de musée -->
+<div class="cartel">
+
+  <div class="cartel-apparatus">
+    <span class="lhs">
+      <span class="gx">Dt</span>
+      <span class="fig">fig.&nbsp;<span class="onum">I</span></span>
+      <span class="ord">no.&nbsp;<span class="onum">01</span></span>
+      <span> - intitulé de département</span>
+    </span>
+    <span class="rule"></span>
+    <span class="place onum">bruxelles · mmxxvi</span>
+  </div>
+
+  <h1 class="cartel-name">
+    <span class="l1">Département</span>
+    <span class="joint">des</span>
+    <span class="word2">Harnais</span>
+  </h1>
+
+  <!-- tagline -->
+  <div class="cartel-section tagline">atelier d'auteur · harnais d'agents ia</div>
+  <div class="cartel-section">
+    <span><span class="g">section</span>&nbsp;des harnais · <em>texte-comme-image</em></span>
+  </div>
+
+</div>
+<!-- [/SLOT NAMEPLATE] -->
+
+<!-- TITRE DE SECTION — propre à la page, sous le header -->
+<div class="section-head">
+  <div class="kicker">
+    <span class="g">l'atelier · essai t0</span>
+    <span>section des essais</span>
+    <span class="rule"></span>
+    <span>2026-05-20</span>
+  </div>
+  <h1>Un harness, ses sections</h1>
+  <p class="lede"><em>Contraindre le modèle, ou ne pas être un harness.</em> Où vit l'agentivité opérationnelle dans un système d'agents qui travaille — et ce que le mot <em>harness</em> redevient quand on l'admet.</p>
+</div>
+
+<!-- CORPS LONG-FORM — essai reproduit verbatim -->
+<article class="essay">
+
+  <p class="standfirst">Un agent IA est un Large Language Model auquel on donne des outils, une boucle, et l'autonomie de décider quels outils appeler, dans quel ordre, et quand s'arrêter. Ce qui le distingue d'un simple <em>workflow</em> est précisément que le modèle dirige lui-même son propre processus, plutôt que de suivre un chemin de code prédéfini.</p>
+
+  <p><em>Du vieux français </em><em>harnois</em><em> attesté autour de 1300, emprunté à l'ancien scandinave </em><em>hernest</em><em> « provisions pour l'armée », le harnais désigne l'équipement du soldat ou le réseau de sangles qui route la force du cheval. Dans les deux cas : une </em><strong>structure de contrainte qui convertit une force brute en travail dirigé</strong><em>.</em></p>
+
+  <p>Le <em>harness</em>, dans ce cadre, est l'enveloppe qui <em>donne</em> au modèle ce qu'il faut pour agir — <em>« the system that turns a model into something that can take actions »</em>, écrit MindStudio ; <em>« an agent harness wraps around a model to manage long-running tasks »</em>, écrit Aakash Gupta ; <em>« Think of the model as an engine. The harness is the car »</em>, écrit-il encore dans la même note. Anthropic, dans une publication d'ingénierie de novembre 2025 (<em>Effective Harnesses for Long-Running Agents</em>), parle du Claude Agent SDK comme d'<em>« a powerful, general-purpose agent harness »</em>.</p>
+
+  <h2>L'inversion : où vit la décision</h2>
+
+  <p>Dans les systèmes d'agents qui travaillent en production, et je dis bien <em>qui travaillent</em>, pas qui démontrent, ce qui décide <em>quoi faire ensuite</em> n'est presque jamais le modèle. C'est du code, une fonction qui regarde une entrée, vérifie des conditions, et tranche.</p>
+
+  <p>Le modèle, dans ces systèmes, fait une chose tout aussi essentielle : il <em>infère</em>. Il lit un texte ambigu, il en extrait un sens, il propose une formulation, il évalue une qualité, il reformule... C'est un classifieur sophistiqué, parfois un rédacteur, parfois un évaluateur. Mais la décision opérationnelle d'appeler tel outil avec tels arguments à tel moment, est prise par du code procédural qui consomme la sortie du modèle. Et quand le harnais évalue ce que le modèle a produit, le verdict — "recevable", "à reprendre", "bloqué" — ne sort pas du modèle non plus : il sort de tests déterministes qui parsent sa sortie. Le modèle fournit la matière ; le test rend le verdict.</p>
+
+  <p>L'autonomie attribuée au modèle est donc, dans les systèmes <em>qui travaillent</em>, une métaphore. Le système tourne parce que du code a décidé ce qu'il devait faire de la sortie du modèle. C'est ici que le mot harnais reprend tout son sens. Si l'agentivité opérationnelle vit dans le code, alors le <em>harness</em>, au sens premier, est exactement ce dispositif de code : ce qui tient le modèle dans son rôle de lecteur, et qui route sa sortie vers un travail dirigé.</p>
+
+  <p>Cette intuition n'est pas neuve. Léon Bottou, dès 2011 (<em>From Machine Learning to Machine Reasoning</em>), anticipait que la composition algébrique des modules produit du raisonnement que les modules seuls n'ont pas. Très récemment, elle a cristallisé comme discipline sous le nom de <em>harness engineering</em> — Mitchell Hashimoto, dans <em>My AI Adoption Journey</em> (5 février 2026), pose le terme. Ryan Lopopolo, six jours plus tard, le reprend dans un texte d'OpenAI (<em>Harness Engineering</em>, 11 février). Birgitta Böckeler en propose une grille analytique (<em>Harness engineering for coding agent users</em>), le 2 avril 2026, en deux dimensions : <em>guides</em> qui orientent l'agent avant qu'il agisse et <em>sensors</em> qui mesurent ce qu'il a produit, chacun pouvant être computationnel — dont les résultats, écrit-elle, sont <em>« reliable »</em> — ou inférentiel — qui reste <em>« more non-deterministic »</em>. La grille est utile et sa diffusion rapide dans l'industrie en témoigne. Mais elle reste descriptive : elle dit ce qu'un harnais contient, sans trancher où l'agentivité opérationnelle doit vivre.</p>
+
+  <p>La position adjacente, <em>le code décide, le modèle infère</em>, a, en parallèle, été tenue publiquement par plusieurs équipes. Nathan Sportsman, chez Praetorian, pose, le même jour que Mitchell Hashimoto, la formule : <em>« We transform the LLM from a "creative assistant" into a deterministic component of the software supply chain. »</em> Microsoft, avec son framework Conductor publié le 14 mai 2026, prend la même direction : le routage entre agents y est défini en YAML et reste déterministe, <em>« the orchestration layer consumes zero tokens »</em>. Bhattarai et Vu, dans un papier arXiv de février 2026 (<em>Trustworthy Agentic AI Requires Deterministic Architectural Boundaries</em>), articulent une thèse adjacente : la fiabilité d'un système agentique ne procède pas de l'entraînement à la sûreté des modèles mais de l'enforcement architectural des limites. Cao et al., dans le papier ESAA (février 2026), formalisent l'idée dans des termes presque identiques : <em>« strict separation between the Cognitive Blueprint… and the Runtime Engine.  »</em>. Et en amont, l'article <em>The Plausibility Trap</em> (janvier 2026) propose une <em>Deterministic-Probabilistic Decision Matrix</em> pour décider, à chaque embranchement, quand convoquer un modèle et quand ne pas le faire.</p>
+
+  <p>Ma position est tranchée : elle pose qu'un <em>sensor</em> qui rend un verdict doit être computationnel par défaut, parce que la décision opérationnelle n'admet pas d'être probabiliste sans renoncer à l'audit.</p>
+
+  <p><strong><em>L'agentivité ne vit pas dans le modèle. Elle vit dans le code qui l'orchestre. Et l'admettre explicitement — la déplacer là où elle vit déjà de fait — n'est pas un compromis pragmatique sur un idéal d'autonomie. C'est récupérer le sens du mot qu'on emploie.</em></strong></p>
+
+  <h2>Pourquoi ce déplacement n'est pas verbal</h2>
+
+  <p>On pourrait dire : <em>bon, d'accord, c'est une question de mots. Que ce soit le code ou le modèle qui décide, le résultat est le même.</em> Il ne l'est pas, et c'est ce point qui vaut la peine d'être établi, parce qu'il fait la différence entre une querelle de vocabulaire et une décision d'architecture.</p>
+
+  <p>Considérons une question concrète : <em>peut-on auditer la décision qui vient d'être prise</em> ?</p>
+
+  <p>Si la décision a été prise par un LLM, on peut rejouer le prompt, on peut examiner la sortie, on peut éventuellement obtenir des log-probs, mais on ne peut pas répondre proprement à la question <em>pourquoi</em>. Le modèle a généré des tokens parce que ce sont les tokens probables étant donné le prompt et son état interne. Il n'y a pas, en deçà, de raisonnement formalisable qu'on puisse extraire et opposer à un audit. <strong><em>On ne peut pas auditer une probabilité</em></strong>. Le modèle suppose. Il suppose bien, souvent, mais il suppose.</p>
+
+  <p>Si la décision a été prise par du code, alors l'audit consiste à lire ce code. Il y a un fichier, il y a une ligne, il y a une logique, il y a un test unitaire. La décision a une provenance qu'on peut nommer.</p>
+
+  <p>Ce n'est pas une différence de degré. C'est une différence de nature épistémique de la décision. Et cette différence, en 2026, n'est plus seulement esthétique : l'EU AI Act, bien que reporté pour partie, et pour partie seulement, et son article 11, couplé à l'annexe IV, exige un dossier technique de conformité qui décrit le système. Son article 12 demande un logging <em>intégré au design</em>, c'est-à-dire un logging dont la structure découle de l'architecture, pas un logging <em>bolt-on</em> qu'on ajoute après coup. Un système dans lequel les décisions opérationnelles vivent dans du code peut produire ce dossier en lisant son propre code. Un système dans lequel elles vivent dans le modèle ne le peut pas, sauf à enregistrer ses appels et à prier pour que l'enregistrement explique quoi que ce soit, ce qui ne marchera pas devant un régulateur informé.</p>
+
+  <h2>Le harnais — et ce qu'il devient quand on l'admet</h2>
+
+  <p>Si l'agentivité vit dans le code, le mot <em>harness</em> récupère son sens premier, et on appelle ce dispositif une architecture.</p>
+
+  <p>Concrètement, dans le harnais que je décris, quelques règles doivent se tenir d'elles-mêmes. Avant tout appel au modèle, tenter un routage déterministe. La règle, en première ligne du guide du contributeur : try_script() avant tout LLM. Cela empêche qu'une décision triviale emprunte un chemin probabiliste là où un chemin certain suffisait. Des collecteurs de contexte tournent en parallèle, déterministes, avant tout jeton d'inférence ; le modèle ne décide pas quel contexte est pertinent, il le reçoit. Le verdict d'un validateur ne sort pas du modèle mais des tests qui consomment sa sortie. APPROVE, REVISE, BLOCKED, STALL, ABSTAIN sont les valeurs produites par du code déterministe. Les permissions sont stratifiées : READ_ONLY, WRITE_SAFE, WRITE_DANGEROUS, IRREVERSIBLE. Et le seuil de confiance pour la dernière est posé à 1.0, c'est-à-dire à l'approbation humaine explicite. Une action sans retour ne se déclenche pas depuis un raisonnement. Les écritures d'état passent par un temp + rename : on écrit dans un fichier temporaire, on renomme atomiquement. Une coupure ne laisse plus un état partiel sur le disque ; un crash redevient un crash, et non une corruption.</p>
+
+  <p>Aucune de ces décisions n'est exotique. Toutes existent dans des systèmes industriels classiques, de longue date. Ce qui est nouveau, et qui mérite à mon sens d'être articulé comme position, c'est de les appliquer à un système d'agents en assumant qu'elles ne sont pas des contraintes posées sur l'autonomie d'un modèle, mais l'architecture de l'agentivité elle-même — c'est-à-dire, au pied de la lettre, ce que fait un harnais.</p>
+
+  <p>Je ne décris pas un système terminé, avec des règles posées d'un coup, a priori, comme une étoile sur tableau blanc. Le harnais, comme l'a noté Hashimoto, croît par accrétion : il décrit ce que le système a appris à ne plus faire, et pourquoi. Pour l'audit, c'est une propriété, et pas un sous-produit : la justification de chaque contrainte est, par construction, datable et opposable.</p>
+
+  <h2>L'objection inverse, et son renversement</h2>
+
+  <p>L'objection adverse est connue, elle se présente à peu près ainsi. <em>Si vous mettez toute l'intelligence dans le code, vous perdez ce qui rend les LLM intéressants. Vous reconstruisez un système des années quatre-vingt, simplement avec des LLM en sous-routine.</em></p>
+
+  <p>C'est une objection sérieuse mais je crois qu'elle se trompe d'un cran. Les possibilités du modèle ne sont pas perdues, mais utilisées dans un système où le code décide. Le modèle est convoqué partout où il y a une décision qui exige de la lecture, extraction de sens, classification d'intention, reformulation, synthèse, évaluation qualitative. Ce sont des tâches difficiles, parfois irréductiblement difficiles, et le modèle les fait mieux que tout ce qu'on savait faire avant. Mais ces tâches ne sont <em>pas</em> la décision opérationnelle. Elles en sont la matière première. La stratification des permissions n'est pas une précaution accessoire ; elle est ce qui transforme cette rigidité en vertu. Un cas non prévu ne déclenche pas une action improvisée ; il déclenche un STALL, une ABSTAIN ou une escalade. Le système, devant l'inconnu, refuse au lieu de broder.</p>
+
+  <p>Une seconde objection circule, plus récente, et il vaut la peine d'y répondre brièvement. L'équipe de Ryan Lopopolo, chez OpenAI, a montré en février 2026 qu'un produit d'un million de lignes de code pouvait être bâti en cinq mois par trois ingénieurs, sans une ligne écrite à la main, dans un harnais qui repose massivement sur des guides et sensors inférentiels. Conclusion possible : le déterministe n'est pas nécessaire à l'échelle. Mais l'expérience Codex est, par construction, un travail interactif, avec humain dans la boucle à chaque pull request. C'est précisément le cas où l'agentivité peut, légitimement, glisser vers le modèle, parce qu'un humain en aval rend le verdict opérationnel. Ce n'est pas le cas long-running autonome dans lequel un système doit, sans supervision continue, écrire dans un état partagé, déclencher une action irréversible, ou rendre compte d'une décision à un régulateur. Ce sont deux régimes, et ce que je défends ici concerne le second.</p>
+
+  <p>L'erreur de la position adverse — dans les deux variantes — est de confondre <em>capacité d'interprétation</em> et <em>capacité de décision</em>. Un modèle qui lit bien un courriel n'a aucun titre, par cette compétence, à décider de le classer dans tel dossier, de vous convoquer à telle heure, ou d'envoyer telle réponse. Ce sont des décisions différentes, qui exigent une connaissance du système, de ses contraintes et de vos préférences, que le modèle n'a pas. Quelqu'un, du code en l'occurrence, doit articuler explicitement ces préférences et brancher la sortie du modèle dessus. Et il se trouve que ce <em>quelqu'un</em>, dans tous les systèmes qui marchent sans humain à chaque pas, est du code. La question n'est pas si on l'écrit ou non ; c'est si on l'écrit explicitement ou si on prétend qu'il n'existe pas.</p>
+
+  <h2>Ce sont des décisions de goût</h2>
+
+  <p>Construire un harnais comme celui que je décris exige, à chaque embranchement, des décisions qui ne sont pas réductibles à des optima techniques. Faut-il que l'enum <code>Verdict</code> ait cinq valeurs ou six ? Faut-il que le seuil de confiance pour les actions irréversibles soit 1.0 ou 0.95 ? Faut-il que l'écriture du journal soit synchrone ou différée ? Etc, etc. On peut argumenter chacune de ces questions, et on doit le faire, mais aucune ne tranche définitivement. Il y a, à la fin, une décision de goût, une cohérence de style architectural, qui détermine ce que le système est et ce qu'il n'est pas.</p>
+
+  <p>Ces décisions de goût ne peuvent pas être déléguées à un modèle. Elles peuvent être discutées avec un modèle ou mises à l'épreuve par un modèle, mais elles appartiennent à un humain qui tient un système dans le temps et qui répond, en première personne, des conséquences de ces choix. C'est exactement pour cela, je crois, que la métaphore de l'agent autonome est attrayante : elle promet de retirer cette charge. Elle ne la retire pas, parce qu'on ne la peut pas retirer, elle la cache. La position que je défends consiste, au minimum, à ne pas cacher cette charge, à la nommer, à la documenter et à la rendre auditable.</p>
+
+  <blockquote>
+    <p>— Depuis Bruxelles, ville qui rédige l'AI Act, et qui depuis le XX° siècle, a fait de la forme administrative un outil critique. —</p>
+  </blockquote>
+
+  <h2>Sources</h2>
+
+  <ul>
+    <li>Léon Bottou, <em>From Machine Learning to Machine Reasoning</em>, arXiv 1102.1808, février 2011. <a href="https://arxiv.org/abs/1102.1808">https://arxiv.org/abs/1102.1808</a></li>
+    <li>Anthropic (Schluntz &amp; Zhang), <em>Building Effective Agents</em>, décembre 2024. <a href="https://www.anthropic.com/engineering/building-effective-agents">https://www.anthropic.com/engineering/building-effective-agents</a></li>
+    <li>Anthropic (Young), <em>Effective Harnesses for Long-Running Agents</em>, novembre 2025. <a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents</a></li>
+    <li>Aakash Gupta, <em>2025 Was Agents. 2026 Is Agent Harnesses. Here's Why That Changes Everything</em>, janvier 2026. <a href="https://aakashgupta.medium.com/2025-was-agents-2026-is-agent-harnesses-heres-why-that-changes-everything-073e9877655e">https://aakashgupta.medium.com/2025-was-agents-2026-is-agent-harnesses-heres-why-that-changes-everything-073e9877655e</a></li>
+    <li><em>The Plausibility Trap: Using Probabilistic Engines for Deterministic Tasks</em>, arXiv 2601.15130, janvier 2026. <a href="https://arxiv.org/abs/2601.15130">https://arxiv.org/abs/2601.15130</a></li>
+    <li>Mitchell Hashimoto, <em>My AI Adoption Journey</em>, 5 février 2026. <a href="https://mitchellh.com/writing/my-ai-adoption-journey">https://mitchellh.com/writing/my-ai-adoption-journey</a></li>
+    <li>Nathan Sportsman (Praetorian), <em>Deterministic AI Orchestration: A Platform Architecture for Autonomous Development</em>, 5 février 2026. <a href="https://www.praetorian.com/blog/deterministic-ai-orchestration-a-platform-architecture-for-autonomous-development/">https://www.praetorian.com/blog/deterministic-ai-orchestration-a-platform-architecture-for-autonomous-development/</a></li>
+    <li>Manish Bhattarai &amp; Minh Vu, <em>Trustworthy Agentic AI Requires Deterministic Architectural Boundaries</em>, arXiv 2602.09947, février 2026. <a href="https://arxiv.org/abs/2602.09947">https://arxiv.org/abs/2602.09947</a></li>
+    <li>Ryan Lopopolo (OpenAI), <em>Harness engineering: leveraging Codex in an agent-first world</em>, 11 février 2026. <a href="https://openai.com/index/harness-engineering/">https://openai.com/index/harness-engineering/</a></li>
+    <li>Sheng Cao et al., <em>The Auton Agentic AI Framework</em>, arXiv 2602.23720, février 2026. <a href="https://arxiv.org/abs/2602.23720">https://arxiv.org/abs/2602.23720</a></li>
+    <li>Birgitta Böckeler (Thoughtworks), <em>Harness engineering for coding agent users</em>, 2 avril 2026. <a href="https://martinfowler.com/articles/harness-engineering.html">https://martinfowler.com/articles/harness-engineering.html</a></li>
+    <li>Microsoft, <em>Conductor: Deterministic orchestration for multi-agent AI workflows</em>, 14 mai 2026. <a href="https://opensource.microsoft.com/blog/2026/05/14/conductor-deterministic-orchestration-for-multi-agent-ai-workflows/">https://opensource.microsoft.com/blog/2026/05/14/conductor-deterministic-orchestration-for-multi-agent-ai-workflows/</a></li>
+    <li>Règlement (UE) 2024/1689 (EU AI Act), articles 11-12, annexe IV. Calendrier d'application révisé par l'accord politique du 7 mai 2026 (Digital Omnibus on AI) : obligations Annexe III repoussées au 2 décembre 2027 ; Annexe I au 2 août 2028 ; watermarking de l'article 50(2) au 2 décembre 2026 ; autres obligations de transparence maintenues au 2 août 2026. <a href="https://artificialintelligenceact.eu/implementation-timeline/">https://artificialintelligenceact.eu/implementation-timeline/</a></li>
+  </ul>
+
+  <!-- COLOPHON — bloc métadonnées (Tokyo Toilet pattern), champs atelier repliés -->
+  <dl>
+    <dt>étiquette</dt><dd>Département des Harnais · Section des Essais · Records · T0</dd>
+    <dt>date</dt><dd>2026-05-20</dd>
+    <dt>auteur</dt><dd>John Linotte</dd>
+    <dt>commission</dt><dd>atelier d'auteur — Section des Essais</dd>
+    <dt>atelier</dt><dd>département des harnais</dd>
+    <dt>tagline</dt><dd>un harness, ses sections · bruxelles · mmxxvi</dd>
+    <dt>wedge</dt><dd>Contraindre le modèle, ou ne pas être un harness.</dd>
+    <dt>licence</dt><dd>essay © john linotte · trace cc-by 4.0</dd>
+    <dt>étalon</dt><dd><a href="/atelier/t0/etalon">zip étalon — exposition typographiée des traces</a></dd>
+  </dl>
+
+  <p><em>— John Linotte · Département des Harnais · Bruxelles · 2026-05-20</em></p>
+
+</article>
+
+<!-- PIED LEGAL — personne physique (Art. XII.6 + III.74 CDE) -->
+<footer class="legal-footer">
+  <p><span class="org">Département des Harnais — John Linotte, personne physique</span></p>
+  <p>{{ADRESSE}}</p>
+  <p>n&deg; entreprise (<span class="sigle">BCE</span>) {{BCE}}<span class="sep">·</span><span class="sigle">TVA</span> {{TVA}}</p>
+  <p>contact : contact@harnais.be<span class="sep">·</span><a href="/mentions-legales">mentions légales</a></p>
+  <p class="license"><span class="sigle">essay</span> © john linotte<span class="sep">·</span>trace cc-by 4.0</p>
+  <p class="colophon">atelier d'auteur · bruxelles · mmxxvi</p>
+</footer>
+
+</div>
+</body>
+</html>

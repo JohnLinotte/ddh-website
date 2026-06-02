@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root{
+  /* base = stone gris froid, sous-ton bleute, zero chaleur */
+  --stone-50:  oklch(96.5% 0.004 255);  /* fond de page */
+  --stone-100: oklch(93.5% 0.005 255);
+  --stone-200: oklch(88%   0.006 255);
+  --stone-300: oklch(79%   0.007 252);  /* filets / dividers */
+  --ink:       oklch(27%   0.012 255);  /* texte primaire */
+  --ink-soft:  oklch(44%   0.012 255);  /* labels / secondaire — AA sur stone-50 */
+  --ink-faint: oklch(64%   0.010 255);  /* DECORATION pure uniquement */
+  --moss:        oklch(56% 0.14 132);
+  --moss-deep:   oklch(42% 0.11 135);
+  --moss-bright: oklch(68% 0.16 128);
+  --moss-pale:   oklch(94% 0.045 132);
+
+  --serif: "Source Serif 4", Georgia, serif;
+  --mono:  "IBM Plex Mono", Menlo, monospace;
+}
+
+*{ box-sizing: border-box; }
+html, body{
+  margin: 0;
+  background: var(--stone-50);
+  color: var(--ink);
+  font-family: var(--serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* grain papier tres leger — duotone gris froid (encre neutre basse opacite), JAMAIS sepia */
+body::before{
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 1;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.10 0 0 0 0 0.11 0 0 0 0 0.13 0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");
+  mix-blend-mode: multiply; opacity: .045;
+}
+
+.page{
+  position: relative; z-index: 2;
+  max-width: 1120px; margin: 0 auto;
+  padding: 16px 56px 72px;
+}
+
+/* ---------- TOPBAR ---------- */
+.topbar{
+  display: flex; align-items: baseline; justify-content: space-between;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  padding-bottom: 16px;
+}
+.topbar .dot{
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--moss); margin-right: 8px; position: relative; top: 0;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--moss) 20%, transparent);
+}
+.topbar nav a{ color: var(--ink-soft); text-decoration: none; }
+.topbar nav a:hover{ color: var(--moss-deep); }
+.topbar nav a.on{ color: var(--ink); }
+.topbar nav .sep{ color: var(--moss); margin: 0 .5em; }
+
+/* ============================================================
+   [SLOT NAMEPLATE] — direction C · plaque / cartel de musee
+   le nom traite comme l'intitule d'un departement d'institution :
+   serif (le nom) + mono (la mention de section / annotation),
+   cartouche a filets fins, ton administratif-detourne. plat,
+   encre sur stone — aucune ombre, aucun emboss.
+   ============================================================ */
+.cartel{
+  position: relative;
+  margin: 16px 0 0;
+  padding: 16px 38px 16px;
+  border: 1px solid var(--stone-300);
+  /* double-filet interieur facon plaque administrative — filet, pas ombre */
+  outline: 1px solid var(--stone-200);
+  outline-offset: 4px;
+  background:
+    linear-gradient(var(--stone-50), var(--stone-50)) padding-box;
+}
+/* equerres d'angle vertes — coins de cartel, pure ornementation a filet */
+.cartel::before,
+.cartel::after{
+  content: ""; position: absolute; width: 14px; height: 14px;
+  border: 0 solid var(--moss); opacity: .55; pointer-events: none;
+}
+.cartel::before{ top: -1px; left: -1px; border-top-width: 2px; border-left-width: 2px; }
+.cartel::after{ bottom: -1px; right: -1px; border-bottom-width: 2px; border-right-width: 2px; }
+
+/* ligne d'appareil superieure : numerotation institutionnelle detournee */
+.cartel-apparatus{
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 16px; margin-bottom: 26px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.cartel-apparatus .lhs{ display: flex; align-items: baseline; gap: 14px; }
+.cartel-apparatus .gx{ color: var(--moss-deep); }                 /* annotation accent — AA 7.35:1 */
+.cartel-apparatus .fig{ color: var(--ink-soft); }
+.cartel-apparatus .ord{ color: var(--ink-faint); }               /* decoration : numero deco */
+.cartel-apparatus .rule{ flex: 1; height: 1px; align-self: center;
+  background: color-mix(in oklab, var(--moss) 32%, transparent); }
+.cartel-apparatus .place{ color: var(--ink-soft); }
+.cartel-apparatus .onum{ font-feature-settings: "onum" 1, "tnum" 0; } /* chiffres old-style (LRB) */
+
+/* le NOM — intitule de departement.
+   trois temps : DEPARTEMENT . des . HARNAIS (recession du connectif, Monde diplo).
+   interlettrage positif genereux (TLS). majuscules de plaque, serif a pedigree (Source Serif 4 opsz 60). */
+.cartel-name{
+  margin: 0;
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 60, "wght" 560;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  color: var(--ink);
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+.cartel-name .l1{
+  font-size: 60px;
+  letter-spacing: 0.11em;   /* tracking ouvert = respiration et autorite */
+  text-indent: 0.11em;      /* compense le tracking pour aligner a gauche le glyphe */
+}
+/* la charniere "des" : recession par taille + casse + poids + moss-deep (info, donc >= AA) */
+.cartel-name .joint{
+  font-family: var(--mono);
+  font-variation-settings: normal;
+  font-size: 24px; font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: var(--moss-deep);   /* AA 7.35:1 sur stone-50 */
+}
+.cartel-name .word2{
+  font-size: 60px;
+  letter-spacing: 0.11em;
+  font-variation-settings: "opsz" 60, "wght" 560;
+}
+
+/* mention de section sous le nom — mono, ton de cartel administratif detourne */
+.cartel-section{
+  margin-top: 24px;
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.cartel-section .g{ color: var(--moss-deep); }
+.cartel-section em{
+  font-family: var(--serif); font-style: italic; text-transform: none;
+  letter-spacing: 0; font-size: 13px; color: var(--ink-faint);
+}
+/* ============================================================
+   [/SLOT NAMEPLATE]
+   ============================================================ */
+
+/* tagline juste sous le nameplate */
+.tagline{
+  margin: 8px 2px 0;
+  font-family: var(--mono); font-size: 16px; letter-spacing: 0.07em;
+  color: var(--moss-deep);   /* AA 7.35:1 */
+}
+
+/* ---------- FILET separateur facon balise ---------- */
+.xml-rule{
+  display: flex; align-items: center; gap: 14px;
+  margin: 32px 0; padding: 10px 0;
+  border-top: 1px solid color-mix(in oklab, var(--moss) 30%, transparent);
+  border-bottom: 1px dashed color-mix(in oklab, var(--moss) 18%, transparent);
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.04em;
+  color: var(--moss);
+}
+.xml-rule .br{ color: var(--moss-deep); font-weight: 600; }   /* < > */
+.xml-rule .tg{ color: var(--moss); font-weight: 500; }        /* tag name */
+.xml-rule .at{ color: var(--ink-soft); font-weight: 400; }    /* attribut — AA 7.01:1 */
+.xml-rule .vl{ color: var(--ink); font-weight: 400; }         /* valeur */
+.xml-rule .spacer{ flex: 1; height: 1px; background: color-mix(in oklab, var(--moss) 30%, transparent); }
+.xml-rule .meta{ color: var(--ink-soft); letter-spacing: 0.08em; }
+
+/* ---------- AMORCE HERO ---------- */
+.hero{
+  margin: 30px 0 8px;
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 32, "wght" 380;
+  font-size: 30px; line-height: 1.28; letter-spacing: -0.006em;
+  color: var(--ink);
+  max-width: 27ch;
+}
+.hero em{ font-style: italic; color: var(--moss-deep); } /* "infrastructure" referent — AA 7.35:1 */
+
+/* ---------- SIGNATURE pied ---------- */
+.signature{
+  margin-top: 56px; padding-top: 14px;
+  border-top: 1px solid var(--stone-300);
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em;
+  color: var(--ink-faint);   /* pure signature deco — ink-faint OK */
+  text-align: center;
+}
+
+/* ════════════════════════════════════════════════════════════
+   PAGES DE CONTENU — batis sur les MEMES tokens (zero couleur,
+   zero police nouvelle). Cartel + topbar + tokens ci-dessus =
+   constants du site ; ci-dessous = corps long-form, cartes de
+   section, titres de section, pied legal. AA : tout pixel
+   porteur d'info >= --ink-soft ou --moss-deep ; --ink-faint et
+   moss clair = decoration pure.
+   ════════════════════════════════════════════════════════════ */
+
+/* ---------- TITRE DE SECTION (en-tete de page de contenu) ---------- */
+.section-head{
+  margin: 38px 0 28px;
+}
+.section-head .kicker{
+  display: flex; align-items: baseline; gap: 12px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.section-head .kicker .g{ color: var(--moss-deep); }            /* accent porteur — AA */
+.section-head .kicker .rule{ flex: 1; height: 1px; align-self: center;
+  background: color-mix(in oklab, var(--moss) 32%, transparent); }
+.section-head h1{
+  margin: 0;
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 48, "wght" 520;
+  font-size: 42px; line-height: 1.05; letter-spacing: 0.005em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.section-head .lede{
+  margin: 18px 0 0;
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 32, "wght" 380;
+  font-size: 22px; line-height: 1.32; letter-spacing: -0.004em;
+  color: var(--ink-soft);                                       /* secondaire porteur — AA */
+  max-width: 62ch;
+  text-wrap: balance;
+}
+.section-head .lede em{ font-style: italic; color: var(--moss-deep); }
+
+/* ---------- CORPS LONG-FORM (.essay / .carnet) ---------- */
+.essay, .carnet{
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 14, "wght" 400;
+  font-size: 18px; line-height: 1.66; letter-spacing: 0.001em;
+  color: var(--ink);
+  max-width: 68ch;                                              /* mesure de lecture 60-72ch */
+}
+.essay > *:first-child, .carnet > *:first-child{ margin-top: 0; }
+
+.essay p, .carnet p{ margin: 0 0 1.15em; }
+
+/* lettrine douce optionnelle : premier paragraphe en leger retrait de graisse */
+.essay .standfirst, .carnet .standfirst{
+  font-variation-settings: "opsz" 20, "wght" 380;
+  font-size: 20.5px; line-height: 1.5; color: var(--ink);
+  margin-bottom: 1.3em;
+}
+
+.essay h2, .carnet h2{
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 32, "wght" 540;
+  font-size: 27px; line-height: 1.15; letter-spacing: 0.003em;
+  color: var(--ink);
+  margin: 2.2em 0 0.6em;
+  text-wrap: balance;
+}
+.essay h3, .carnet h3{
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 20, "wght" 600;
+  font-size: 20px; line-height: 1.2; letter-spacing: 0.004em;
+  color: var(--ink);
+  margin: 1.8em 0 0.5em;
+}
+/* sur-titre mono optionnel d'une section longue (mobilier de revue) */
+.essay h2 .tag, .carnet h2 .tag{
+  display: block;
+  font-family: var(--mono); font-size: 10px; font-weight: 400;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--moss-deep);                                      /* accent porteur — AA */
+  margin-bottom: 6px;
+}
+
+.essay a, .carnet a, .legal-footer a{
+  color: var(--ink);                                            /* texte du lien porteur — AA */
+  text-decoration: underline;
+  text-decoration-color: var(--moss);                           /* soulignement moss (deco) */
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color .12s ease, text-decoration-color .12s ease;
+}
+.essay a:hover, .carnet a:hover, .legal-footer a:hover{
+  color: var(--moss-deep);
+  text-decoration-color: var(--moss-deep);
+}
+
+.essay blockquote, .carnet blockquote{
+  margin: 1.6em 0;
+  padding: 2px 0 2px 24px;
+  border-left: 2px solid color-mix(in oklab, var(--moss) 45%, transparent);
+  font-style: italic;
+  font-variation-settings: "opsz" 20, "wght" 380;
+  font-size: 20px; line-height: 1.5;
+  color: var(--ink-soft);                                       /* citation = info secondaire — AA */
+}
+.essay blockquote p:last-child, .carnet blockquote p:last-child{ margin-bottom: 0; }
+.essay blockquote cite, .carnet blockquote cite{
+  display: block; margin-top: 0.6em;
+  font-family: var(--mono); font-style: normal;
+  font-size: 11px; letter-spacing: 0.04em; text-transform: lowercase;
+  color: var(--ink-soft);
+}
+
+.essay ul, .essay ol, .carnet ul, .carnet ol{
+  margin: 0 0 1.15em; padding-left: 1.4em;
+}
+.essay li, .carnet li{ margin: 0 0 0.4em; padding-left: 0.2em; }
+.essay ul, .carnet ul{ list-style: none; padding-left: 1.5em; }
+.essay ul > li, .carnet ul > li{ position: relative; }
+.essay ul > li::before, .carnet ul > li::before{
+  content: ""; position: absolute; left: -1.1em; top: 0.62em;
+  width: 5px; height: 5px;
+  background: var(--moss); opacity: .7;                         /* puce moss = deco */
+}
+.essay ol, .carnet ol{ list-style: decimal; }
+.essay ol li::marker, .carnet ol li::marker{
+  font-family: var(--mono); font-size: 0.82em; color: var(--ink-soft);
+}
+
+/* metadonnees long-form : <dl>/<dt>/<dd> facon colophon de revue */
+.essay dl, .carnet dl{
+  margin: 2em 0;
+  padding: 18px 0 6px;
+  border-top: 1px solid var(--stone-300);
+  display: grid; grid-template-columns: minmax(8.5em, max-content) 1fr;
+  gap: 6px 22px;
+  font-family: var(--mono); font-size: 12px; line-height: 1.5;
+}
+.essay dt, .carnet dt{
+  color: var(--moss-deep);                                      /* libelle porteur — AA */
+  letter-spacing: 0.05em; text-transform: lowercase;
+}
+.essay dd, .carnet dd{
+  margin: 0; color: var(--ink-soft);                            /* valeur porteuse — AA */
+  letter-spacing: 0.01em;
+}
+
+/* figure / figcaption */
+.essay figure, .carnet figure{ margin: 2em 0; }
+.essay figure img, .carnet figure img{
+  display: block; max-width: 100%; height: auto;
+  border: 1px solid var(--stone-300);
+}
+.essay figcaption, .carnet figcaption{
+  margin-top: 10px;
+  font-family: var(--mono); font-size: 11px; line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);                                       /* legende porteuse — AA */
+}
+.essay figcaption .fig, .carnet figcaption .fig{
+  color: var(--moss-deep); text-transform: uppercase;
+  letter-spacing: 0.1em; margin-right: 0.7em;
+}
+
+/* code — inline + bloc, mobilier mono sur aplat stone clair */
+.essay code, .carnet code,
+.essay pre, .carnet pre{
+  font-family: var(--mono);
+  font-feature-settings: "onum" 0, "tnum" 1;
+}
+.essay :not(pre) > code, .carnet :not(pre) > code{
+  font-size: 0.86em;
+  padding: 0.12em 0.4em;
+  background: var(--stone-100);
+  border: 1px solid var(--stone-200);
+  color: var(--ink);                                            /* code = info — AA */
+}
+.essay pre, .carnet pre{
+  margin: 1.6em 0; padding: 18px 20px;
+  background: var(--stone-100);
+  border: 1px solid var(--stone-200);
+  border-left: 2px solid color-mix(in oklab, var(--moss) 40%, transparent);
+  overflow-x: auto;
+  font-size: 13px; line-height: 1.6; color: var(--ink);
+}
+.essay pre code, .carnet pre code{
+  padding: 0; background: none; border: 0; font-size: inherit;
+}
+
+/* filet de respiration entre blocs majeurs (optionnel) */
+.essay hr, .carnet hr{
+  border: 0; height: 1px; margin: 2.4em 0;
+  background: var(--stone-300);
+}
+
+/* ---------- CARTES DE SECTION (homepage) ---------- */
+.section-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin: 34px 0;
+}
+.section-card{
+  position: relative;
+  display: flex; flex-direction: column;
+  padding: 24px 26px 22px;
+  background: var(--stone-50);
+  border: 1px solid var(--stone-300);
+  outline: 1px solid var(--stone-200);
+  outline-offset: 4px;                                          /* echo du double-filet cartel */
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color .14s ease, transform .14s ease;
+}
+.section-card:hover{
+  border-color: color-mix(in oklab, var(--moss) 55%, var(--stone-300));
+  transform: translateY(-1px);
+}
+/* equerre moss d'angle — meme grammaire que le cartel */
+.section-card::after{
+  content: ""; position: absolute; bottom: -1px; right: -1px;
+  width: 12px; height: 12px;
+  border: 0 solid var(--moss); opacity: .5; pointer-events: none;
+  border-bottom-width: 2px; border-right-width: 2px;
+}
+.section-card .meta{
+  display: flex; align-items: baseline; gap: 10px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.section-card .meta .g{ color: var(--moss-deep); }              /* accent porteur — AA */
+.section-card h3{
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 32, "wght" 540;
+  font-size: 25px; line-height: 1.1; letter-spacing: 0.004em;
+  color: var(--ink);
+}
+.section-card .sub{
+  margin: 0 0 16px;
+  font-family: var(--serif); font-style: italic;
+  font-variation-settings: "opsz" 16, "wght" 380;
+  font-size: 15px; line-height: 1.45;
+  color: var(--ink-soft);                                       /* sous-titre porteur — AA */
+}
+.section-card p{
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 16px; line-height: 1.55;
+  color: var(--ink);
+}
+.section-card .go{
+  margin-top: auto; padding-top: 16px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
+  color: var(--moss-deep);                                      /* call-to-read porteur — AA */
+}
+.section-card .go::after{ content: " →"; }
+
+/* ---------- PIED LEGAL ---------- */
+.legal-footer{
+  margin-top: 64px;
+  padding-top: 22px;
+  border-top: 1px solid var(--stone-300);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: var(--ink-soft);                                       /* identifiants legaux = info AA — jamais faint */
+}
+.legal-footer p{ margin: 0 0 0.45em; }
+.legal-footer .org{ color: var(--ink); }                        /* denomination = porteur fort */
+.legal-footer .sigle{ text-transform: none; }                   /* preserve BCE / TVA / BE / VAT */
+.legal-footer .sep{ color: var(--moss); margin: 0 .5em; }       /* separateur moss = deco */
+.legal-footer .license{ color: var(--ink-soft); }
+.legal-footer .colophon{
+  margin-top: 0.7em;
+  color: var(--ink-faint);                                      /* colophon = signature deco pure */
+  letter-spacing: 0.06em;
+}
+.legal-footer a{ color: var(--ink-soft); }
+.legal-footer a:hover{ color: var(--moss-deep); }
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE — les rendus partent au tel ; le cartel et la nav
+   degradent proprement < 640px. Ces regles AJOUTENT des
+   surcharges mobiles ; elles ne touchent a aucune valeur desktop.
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 860px){
+  .section-head h1{ font-size: 36px; }
+  .cartel-name .l1, .cartel-name .word2{ font-size: 48px; }
+  .cartel-name .joint{ font-size: 20px; }
+}
+
+@media (max-width: 640px){
+  .page{ padding: 14px 22px 56px; }                             /* 56px lateral = cause #1 d'overflow mobile */
+
+  /* topbar : la nav passe sous l'enseigne et s'aere */
+  .topbar{ flex-direction: column; gap: 10px; }
+  .topbar nav{ line-height: 1.9; }
+
+  /* cartel : padding reduit, appareil qui wrap */
+  .cartel{ padding: 16px 20px; }
+  .cartel-apparatus{ flex-wrap: wrap; gap: 8px 12px; }
+  .cartel-apparatus .rule{ display: none; }                     /* le filet flexible saute au wrap */
+  .cartel-section{ flex-wrap: wrap; gap: 6px 12px; }
+
+  /* le NOM : reduction d'echelle, tracking legerement resserre pour tenir */
+  .cartel-name .l1, .cartel-name .word2{
+    font-size: 34px; letter-spacing: 0.07em;
+  }
+  .cartel-name .l1{ text-indent: 0.07em; }
+  .cartel-name .joint{ font-size: 17px; }
+  .tagline{ font-size: 13px; }
+
+  /* hero + section-head : tailles d'amorce mobiles */
+  .hero{ font-size: 24px; max-width: none; }
+  .section-head h1{ font-size: 30px; }
+  .section-head .lede{ font-size: 19px; }
+
+  /* corps : reglages de lecture mobile */
+  .essay, .carnet{ font-size: 17px; line-height: 1.62; }
+  .essay h2, .carnet h2{ font-size: 23px; }
+  .essay h3, .carnet h3{ font-size: 18px; }
+  .essay blockquote, .carnet blockquote{ padding-left: 18px; font-size: 18px; }
+
+  /* <dl> metadonnees : empile (une colonne) pour ne pas ecraser les valeurs */
+  .essay dl, .carnet dl{ grid-template-columns: 1fr; gap: 2px 0; }
+  .essay dt, .carnet dt{ margin-top: 0.7em; }
+  .essay dd, .carnet dd{ margin-bottom: 0.2em; }
+
+  /* xml-rule : laisse la meta passer dessous proprement */
+  .xml-rule{ flex-wrap: wrap; }
+
+  /* cartes : pleine largeur */
+  .section-cards{ grid-template-columns: 1fr; }
+}
