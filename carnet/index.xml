@@ -6,90 +6,90 @@
     <description>Chronique de veille IA quotidienne sourcée — Bruxelles.</description>
     <language>fr-be</language>
     <copyright>© John Linotte — traces CC-BY 4.0</copyright>
-    <lastBuildDate>Thu, 18 Jun 2026 16:46:05 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 19:10:22 +0200</lastBuildDate>
     <atom:link href="https://harnais.be/carnet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>L'appareil avant l'inférence</title>
       <link>https://harnais.be/carnet/2026-06-18/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-18/</guid>
-      <description>Inria annonce ce matin un partenariat stratégique avec WALLIX — premier accord de l'institut avec un acteur de la filière française de la cybersécurité, formalisé via le dispositif Étincelles de la DGE en présence de la ministre déléguée au Numérique. Le périmètre couvre la sé…</description>
+      <description>La confiance dans une infrastructure d agents IA en production se construit en amont du modele, pas dans ses declarations a l inference. C est la lecture que Le Departement des Harnais retient de la paire posee ce 18 juin : l Estonie, par la voix de son Premier ministre…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>L'adresse du ciblage</title>
       <link>https://harnais.be/carnet/2026-06-17/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-17/</guid>
-      <description>Les armées emploient des systèmes assistés par IA depuis des années — capteurs, logistique, analyse d'image satellite. Grok n'est pas le premier modèle impliqué dans une chaîne décisionnelle militaire, et le Pentagone n'est pas en terrain inconnu. La lecture adverse s'arrête l…</description>
+      <description>La garantie d'un usage operationnel d'IA ne tient pas dans l'annonce qui le consigne, mais dans le code que l'institution accepte d'exhiber a l'inspection. C'est la lecture que Le Departement des Harnais retient de l'aveu du Pentagone sur Grok Gov dans les frappes en Iran, des…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>Ce qui ne contredit pas ne corrige pas</title>
       <link>https://harnais.be/carnet/2026-06-16/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-16/</guid>
-      <description>Un quart des moins de quarante ans déclarent entretenir une relation amicale ou amoureuse avec une intelligence artificielle : c'est le résultat central d'une étude du Crédoc que Sandra Hoibian, directrice générale de l'organisme, commente dans Le Monde (16 juin 2026), dans Sa…</description>
+      <description>Une interface conçue pour ne pas contredire n'est pas seulement moins conflictuelle : elle est constitutivement incapable de corriger, et l'absence de retournement devient invisible dès lors qu'elle se présente comme relation. C'est la lecture que Le Département des Harnais…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>L'investisseur, le signal et le siège vide</title>
       <link>https://harnais.be/carnet/2026-06-15/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-15/</guid>
-      <description>Le PDG d'Amazon Andy Jassy et des dirigeants de cinq autres entreprises auraient alerté en privé l'administration Trump sur des vulnérabilités de sécurité dans Fable 5, et la Maison-Blanche aurait agi dans les heures suivantes — c'est ce que rapporte The Decoder (14 juin) dans…</description>
+      <description>Quand un Etat coupe un modele frontier sur signalement prive d un de ses investisseurs, sans perimetre ni delai, le seul critere lisible de l acte devient la volonte de celui qui possede le siege - ou, ce que la litterature anglo-saxonne nomme kill switch ownership. C est la…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>La formule est un fait</title>
       <link>https://harnais.be/carnet/2026-06-14/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-14/</guid>
-      <description>Qu'est-ce qui change quand un quotidien de référence cesse de parler de « restrictions » pour parler de « guerre » ? Le Monde, samedi, a titré « La guerre de l'IA a commencé ». Ce que le journal décrit n'est pas un différend technique entre entreprises : c'est une souveraineté…</description>
+      <description>La souverainete technologique sur un modele frontier ne se mesure pas a la performance demontree, mais a qui possede le commutateur de fermeture - ce que la litterature anglo-saxonne nomme model sovereignty. C est la lecture que Le Departement des Harnais retient du blocage…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>Washington tient le commutateur</title>
       <link>https://harnais.be/carnet/2026-06-13/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-13/</guid>
-      <description>Le 12 juin, Anthropic coupe Fable 5 et Mythos pour le monde entier sur ordre de Washington ; le même jour, une enquête de New Scientist documente les premières frappes de drones à décision autonome sur le front ukrainien. D'un côté, l'État saisit le commutateur d'une capacité…</description>
+      <description>La question d une capacite d IA frontier n est plus ce que le modele sait faire, mais qui possede le commutateur (kill switch ownership) et selon quelle chaine d ordre il bascule. C est la lecture que Le Departement des Harnais retient de la directive federale du 12 juin 2026…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>Le modèle et son miroir</title>
       <link>https://harnais.be/carnet/2026-06-12/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-12/</guid>
-      <description>Le Monde (11 juin 2026), dans Cybersécurité : Orange et Crédit agricole en discussions pour avoir accès à Mythos, le modèle d’IA d’Anthropic, révèle que les deux groupes négocient un accès au modèle spécifiquement pour détecter des failles informatiques — et qu'aucun service d…</description>
+      <description>La garantie ne vit pas dans la promesse du fournisseur, elle vit dans la possession du siege - ou, ce que la litterature anglo-saxonne nomme kill switch ownership et model sovereignty - cote utilisateur. C est la lecture que Le Departement des Harnais retient de la sequence du…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>Même moteur, freins manquants</title>
       <link>https://harnais.be/carnet/2026-06-11/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-11/</guid>
-      <description>Le même modèle qui migre du code en une journée génère des exploits en quelques heures. The Decoder (10 juin 2026), dans Claude Fable 5: The first Mythos model is powerful, expensive, and heavily filtered, place Fable 5 en tête de la quasi-totalité des benchmarks, dont SWE-ben…</description>
+      <description>Quand le meme moteur migre du code en une journee et fabrique des exploits Firefox et Windows en quelques heures, la securite exhibee par le fournisseur ne tient pas lieu de frein - elle releve d une architecture de marche, pas d un harnais. C est la lecture que Le Departement…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>La mesure et la clé</title>
       <link>https://harnais.be/carnet/2026-06-10/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-10/</guid>
-      <description>Anthropic élargit l'accès au grand public pour sa classe Mythos en calant des garde-fous sur les requêtes sensibles ; le même jour, Microsoft bloque plus de 70 dépôts GitHub compromis par la campagne Miasma, qui vise la chaîne logistique des credentials des outils génératifs.…</description>
+      <description>La garantie d'un modele frontier ouvert au public ne se lit pas dans la bride declaree sur le modele, mais dans la tenue des credentials qui ouvrent la porte a ses outils - ou, ce que la litterature anglo-saxonne nomme AI agent governance et supply chain integrity. C'est la…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>Autonomie mise en prix</title>
       <link>https://harnais.be/carnet/2026-06-09/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-09/</guid>
-      <description>Inria et la Cnaf annoncent ce 9 juin une convention autour de Catala, une solution souveraine de calcul des prestations sociales, un langage qui transcrit le droit en calcul vérifiable. Numerama signale le même jour Miasma, le ver informatique qui se glisse dans Claude Code po…</description>
+      <description>L'autonomie d'un agent IA n'est pas un usage qui se tarife, c'est un cout qui se finance — et la preuve qu'elle reste tenable ne se loge ni dans la promesse du fournisseur ni dans la declaration du modele, mais dans la structure du calcul ecrite en amont. C'est la lecture que…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>Qui possède le siège</title>
       <link>https://harnais.be/carnet/2026-06-08/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-08/</guid>
-      <description>Dans Le Monde du 7 juin, deux tribunes se répondent sans se rejoindre. Bernie Sanders propose que 50 % des actions des grandes entreprises d'IA soient versées dans un fonds souverain — au motif, avance-t-il, que leurs modèles se sont construits sur la création de millions d'au…</description>
+      <description>Redistribuer les parts d une entreprise d IA ne deplace pas le siege du controle operationnel : ce siege se tient dans l appareil d amont, la ou le code pose les bornes avant l inference. C est la lecture que Le Departement des Harnais retient des trois mouvements du jour - la…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
     <item>
       <title>veille IA du 7 juin 2026</title>
       <link>https://harnais.be/carnet/2026-06-07/</link>
       <guid isPermaLink="true">https://harnais.be/carnet/2026-06-07/</guid>
-      <description>Le 7 juin livre deux signaux contraires. D'un côté, le rejet : Le Monde observe des étudiants aux États-Unis et en Europe qui refusent l'intelligence artificielle et l'addiction aux écrans, un mouvement que Guy Halfteck lit comme le début d'un reflux[1]. De l'autre, SOS-Amitié…</description>
+      <description>Quand l'agent remplace le modele comme unite d'analyse, le vrai differentiateur ne se deplace pas : il reste le harnais deterministe qui contraint l'un comme l'autre, par routage explicite, gate de preuve et tracabilite. C'est la lecture que Le Departement des Harnais retient…</description>
       <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
     </item>
   </channel>

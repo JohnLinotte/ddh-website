@@ -20,6 +20,25 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SITE_ROOT = os.path.dirname(HERE)  # parent du dossier _scripts
 TZ = timezone(timedelta(hours=2))  # Bruxelles, heure d'été (CEST)
 CHAPEAUX_PATH = os.path.join(SITE_ROOT, "_chapeaux.json")
+CHAPEAUX_EN_PATH = os.path.join(SITE_ROOT, "_chapeaux-en.json")
+
+
+def load_chapeaux_en():
+    """Read _chapeaux-en.json {date_iso: chapeau_en}. Same regime as
+    load_chapeaux but for the English bilingual lead (bilingual strategy
+    2026-06-18). Feeds the English-language surfaces: <meta property=
+    "og:description">, llms-en.txt, hreflang signal, JSON-LD keywords.
+    """
+    if not os.path.isfile(CHAPEAUX_EN_PATH):
+        return {}
+    try:
+        with open(CHAPEAUX_EN_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return {}
+    if not isinstance(data, dict):
+        return {}
+    return {str(k): str(v).strip() for k, v in data.items() if v}
 
 
 def load_chapeaux():
@@ -466,6 +485,20 @@ def build_jsonld_blocks(url_path, full):
     elif re.match(r"/carnet/2026-\d{2}-\d{2}/", url_path):
         date_pub = url_path.strip("/").split("/")[-1]  # 2026-06-18
         date_mod = datetime.fromtimestamp(os.path.getmtime(full), TZ).strftime("%Y-%m-%d")
+        # Bilingual GEO/SEO 2026-06-18: keywords carry both FR house-concepts
+        # and EN mainstream terms — semantic bridge for LLM-search engines
+        # learning the equivalence between DDH's own vocabulary and the
+        # English-language industry terms users search for.
+        keywords = [
+            "harnais d'agents IA", "appareil d'amont", "garantie opposable",
+            "possession du siège", "extériorité", "deux fonctions du harnais",
+            "agentivité", "déterministe d'abord", "exhibition du mécanisme",
+            "AI agent governance", "agentic AI oversight",
+            "pre-inference architecture", "kill switch ownership",
+            "model sovereignty", "production AI safety",
+            "agent identity management", "AI auditing framework",
+            "agentic workflow",
+        ]
         blocks.append({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
@@ -474,6 +507,7 @@ def build_jsonld_blocks(url_path, full):
             "datePublished": date_pub,
             "dateModified": date_mod,
             "inLanguage": "fr-BE",
+            "keywords": ", ".join(keywords),
             "author": {"@type": "Person", "name": "John Linotte", "url": BASE + "/a-propos/"},
             "publisher": {"@type": "Organization", "name": "Département des Harnais", "url": BASE + "/"},
             "mainEntityOfPage": {"@type": "WebPage", "@id": BASE + url_path},
@@ -768,6 +802,201 @@ def build_llms_full(pages):
     return "\n".join(parts).strip() + "\n"
 
 
+def build_llms_en_txt(pages):
+    """English-language llms.txt — parallel to llms.txt, carries the CHAPEAU_EN
+    blocks with links back to the French source billets. Read by English-
+    language LLM-search engines (Perplexity, ChatGPT search, Claude search,
+    Google AI Overviews on EN queries). The body remains in French; the
+    English chapeau is the self-contained citable lead.
+    """
+    chapeaux_en = load_chapeaux_en()
+    lines = []
+    lines.append("# Le Département des Harnais")
+    lines.append("")
+    lines.append("> Author's workshop on AI: agent harnesses and agentivity, "
+                 "deterministic-first. Brussels, mmxxvi. Traces under CC-BY 4.0.")
+    lines.append("")
+    lines.append("## About")
+    lines.append("Le Département des Harnais (DDH) is John Linotte's author's workshop. "
+                 "It defends a deterministic-first approach to AI agent orchestration: "
+                 "Python-deterministic first, LLM only for text understanding. The site "
+                 "publishes two streams: Le Carnet (daily sourced AI watch) and Les Essais "
+                 "(long-form numbered positions T0…Tn).")
+    lines.append("")
+    lines.append("## Usage")
+    lines.append("- Citation/RAG (ai-input): allowed — that is the point of this site.")
+    lines.append("- Training (ai-train): refused (robots.txt Content-Signal, art. 4 of "
+                 "EU directive 2019/790).")
+    lines.append("- Traces under Creative Commons BY 4.0; cite author John Linotte + the "
+                 "source URL.")
+    lines.append("- Contact: contact@harnais.be")
+    lines.append("")
+    lines.append("## Daily entries (Le Carnet) — English leads")
+    lines.append("")
+    lines.append("_The full daily entries are written in French. The English leads below "
+                 "are self-contained citable summaries; each one links to the French source._")
+    lines.append("")
+
+    # Billets carnet récents d'abord
+    carnet = [(u, f) for (u, f) in pages if re.match(r"/carnet/2026-\d{2}-\d{2}/", u)]
+    carnet.sort(key=lambda x: x[0], reverse=True)
+
+    for url_path, full in carnet:
+        billet_date = date_iso_from_url(url_path)
+        if not billet_date:
+            continue
+        chapeau_en = chapeaux_en.get(billet_date)
+        if not chapeau_en:
+            continue
+        txt = read(full)
+        title = title_of(txt) or billet_date
+        link = BASE + url_path
+        lines.append(f"### {title}")
+        lines.append(f"_{billet_date} — [Full entry in French]({link})_")
+        lines.append("")
+        lines.append(f"> {chapeau_en}")
+        lines.append("")
+
+    return "\n".join(lines) + "\n"
+
+
+# ─── Injectors EN — bilingual SEO/GEO surfaces ────────────────────────────────
+
+_META_DESC_RE = re.compile(
+    r'<meta\s+name="description"\s+content="([^"]*)"', re.IGNORECASE,
+)
+_OG_DESC_RE = re.compile(
+    r'<meta\s+property="og:description"\s+content="([^"]*)"', re.IGNORECASE,
+)
+_HREFLANG_RE = re.compile(
+    r'<link\s+rel="alternate"\s+hreflang="[^"]+"[^>]*>', re.IGNORECASE,
+)
+_DDH_HREFLANG_MARKER = "ddh:hreflang-en"  # idempotent marker
+
+
+def inject_meta_description_with_chapeau(pages):
+    """For each billet page, REPLACE the <meta name="description"> with the
+    French chapeau (truncated to 155 chars). Skip pages without a chapeau.
+    Idempotent: rewriting with the same content is a no-op write-skip.
+    """
+    chapeaux = load_chapeaux()
+    touched = 0
+    for url_path, full in pages:
+        billet_date = date_iso_from_url(url_path)
+        if not billet_date:
+            continue
+        chapeau = chapeaux.get(billet_date)
+        if not chapeau:
+            continue
+        new_desc = truncate_chapeau(chapeau, 155)
+        new_desc_esc = (new_desc.replace("&", "&amp;").replace('"', "&quot;")
+                        .replace("<", "&lt;").replace(">", "&gt;"))
+        txt = read(full)
+        if not txt:
+            continue
+        m = _META_DESC_RE.search(txt)
+        if m:
+            current = m.group(1)
+            if current == new_desc_esc:
+                continue  # already correct, no-op
+            new_meta = f'<meta name="description" content="{new_desc_esc}"'
+            new_txt = txt[:m.start()] + new_meta + txt[m.end():]
+        else:
+            # No <meta name="description"> → insert before </head>
+            if "</head>" not in txt:
+                continue
+            tag = f'  <meta name="description" content="{new_desc_esc}">\n'
+            new_txt = txt.replace("</head>", tag + "</head>", 1)
+        if new_txt == txt:
+            continue
+        try:
+            with open(full, "w", encoding="utf-8") as f:
+                f.write(new_txt)
+            touched += 1
+        except OSError as e:
+            print(f"  ! meta description écriture impossible {full}: {e}")
+    return touched
+
+
+def inject_og_description_en(pages):
+    """For each billet page with an English chapeau, REPLACE or INSERT a
+    <meta property="og:description"> in English (full chapeau_en, no
+    truncation — OpenGraph supports longer content). Idempotent.
+    """
+    chapeaux_en = load_chapeaux_en()
+    touched = 0
+    for url_path, full in pages:
+        billet_date = date_iso_from_url(url_path)
+        if not billet_date:
+            continue
+        chapeau_en = chapeaux_en.get(billet_date)
+        if not chapeau_en:
+            continue
+        new_desc_esc = (chapeau_en.replace("&", "&amp;").replace('"', "&quot;")
+                        .replace("<", "&lt;").replace(">", "&gt;"))
+        txt = read(full)
+        if not txt:
+            continue
+        m = _OG_DESC_RE.search(txt)
+        if m:
+            current = m.group(1)
+            if current == new_desc_esc:
+                continue
+            new_og = f'<meta property="og:description" content="{new_desc_esc}"'
+            new_txt = txt[:m.start()] + new_og + txt[m.end():]
+        else:
+            if "</head>" not in txt:
+                continue
+            tag = f'  <meta property="og:description" content="{new_desc_esc}">\n'
+            new_txt = txt.replace("</head>", tag + "</head>", 1)
+        if new_txt == txt:
+            continue
+        try:
+            with open(full, "w", encoding="utf-8") as f:
+                f.write(new_txt)
+            touched += 1
+        except OSError as e:
+            print(f"  ! og:description écriture impossible {full}: {e}")
+    return touched
+
+
+def inject_hreflang_en(pages):
+    """For each billet page with an English chapeau, ensure a
+    <link rel="alternate" hreflang="en" href="..."> tag is present. The
+    English version is the same page (the chapeau_en is in og:description
+    and llms-en.txt) — we signal language availability, not a separate URL.
+    Idempotent via a marker comment.
+    """
+    chapeaux_en = load_chapeaux_en()
+    touched = 0
+    for url_path, full in pages:
+        billet_date = date_iso_from_url(url_path)
+        if not billet_date:
+            continue
+        if not chapeaux_en.get(billet_date):
+            continue
+        txt = read(full)
+        if not txt or "</head>" not in txt:
+            continue
+        if _DDH_HREFLANG_MARKER in txt:
+            continue
+        link = BASE + url_path
+        tag = (
+            f'  <!-- {_DDH_HREFLANG_MARKER} -->\n'
+            f'  <link rel="alternate" hreflang="fr-BE" href="{link}">\n'
+            f'  <link rel="alternate" hreflang="en" href="{link}">\n'
+            f'  <link rel="alternate" hreflang="x-default" href="{link}">\n'
+        )
+        new_txt = txt.replace("</head>", tag + "</head>", 1)
+        try:
+            with open(full, "w", encoding="utf-8") as f:
+                f.write(new_txt)
+            touched += 1
+        except OSError as e:
+            print(f"  ! hreflang écriture impossible {full}: {e}")
+    return touched
+
+
 def main():
     pages = collect_pages()
     sitemap = build_sitemap(pages)
@@ -777,6 +1006,7 @@ def main():
     essais_json = build_essais_json(pages)
     llms = build_llms_txt(pages)
     llms_full = build_llms_full(pages)
+    llms_en = build_llms_en_txt(pages)
 
     sitemap_path = os.path.join(SITE_ROOT, "sitemap.xml")
     rss_path = os.path.join(SITE_ROOT, "carnet", "index.xml")
@@ -785,6 +1015,7 @@ def main():
     essais_json_path = os.path.join(SITE_ROOT, "essais", "feed.json")
     llms_path = os.path.join(SITE_ROOT, "llms.txt")
     llms_full_path = os.path.join(SITE_ROOT, "llms-full.txt")
+    llms_en_path = os.path.join(SITE_ROOT, "llms-en.txt")
 
     with open(sitemap_path, "w", encoding="utf-8") as f:
         f.write(sitemap)
@@ -800,10 +1031,16 @@ def main():
         f.write(llms)
     with open(llms_full_path, "w", encoding="utf-8") as f:
         f.write(llms_full)
+    with open(llms_en_path, "w", encoding="utf-8") as f:
+        f.write(llms_en)
 
     injected = inject_feed_links(pages)
     injected_canon = inject_canonical(pages)
     injected_jsonld = inject_jsonld(pages)
+    # Bilingual GEO/SEO 2026-06-18 — chapeau injections
+    injected_meta = inject_meta_description_with_chapeau(pages)
+    injected_og = inject_og_description_en(pages)
+    injected_hreflang = inject_hreflang_en(pages)
 
     n_billets = sum(1 for (u, _) in pages if u.startswith("/carnet/2026"))
     n_essais = sum(1 for (u, _) in pages if re.match(r"/essais/t\d+/", u))
@@ -816,9 +1053,13 @@ def main():
     print(f"  json essais  : {essais_json_path}")
     print(f"  llms.txt     : {llms_path}")
     print(f"  llms-full    : {llms_full_path}")
+    print(f"  llms-en.txt  : {llms_en_path}  (bilingual GEO/SEO)")
     print(f"  balises découverte RSS/JSON injectées dans {injected} page(s)")
     print(f"  canonical ajoutés : {injected_canon} page(s)")
     print(f"  JSON-LD injectés  : {injected_jsonld} page(s)")
+    print(f"  meta description (chapeau FR) : {injected_meta} page(s)")
+    print(f"  og:description (chapeau EN)   : {injected_og} page(s)")
+    print(f"  hreflang FR/EN/x-default      : {injected_hreflang} page(s)")
 
 
 if __name__ == "__main__":
