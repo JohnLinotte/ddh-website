@@ -393,6 +393,20 @@ def build_essais_json(pages):
 
 LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
 
+# sameAs — URLs qui identifient la même entité. Consolidation du Knowledge
+# Graph des answer engines : le profil GitHub et le profil PyPI identifient
+# l'auteur ; les repos sont ses productions publiques. Ajouter Mastodon /
+# Bluesky / LinkedIn ici au fur et à mesure (un seul endroit à maintenir).
+SAMEAS = [
+    "https://github.com/JohnLinotte",
+    "https://pypi.org/user/JohnLinotte/",
+    "https://github.com/JohnLinotte/ddh-website",
+    "https://github.com/JohnLinotte/atomic-json-io",
+    "https://github.com/JohnLinotte/hybrid-retrieval-scoring",
+    "https://github.com/JohnLinotte/prompt-injection-sanitizer",
+    "https://github.com/JohnLinotte/web-article-extractor",
+]
+
 ORG = {
     "@type": "Organization",
     "name": "Département des Harnais",
@@ -403,6 +417,7 @@ ORG = {
     "founder": {"@type": "Person", "name": "John Linotte", "url": BASE + "/a-propos/"},
     "email": "mailto:contact@harnais.be",
     "logo": BASE + "/assets/forum.jpg",
+    "sameAs": SAMEAS,
 }
 
 PERSON = {
@@ -416,6 +431,7 @@ PERSON = {
         "deterministic-first", "trace certifiée",
     ],
     "worksFor": {"@type": "Organization", "name": "Département des Harnais", "url": BASE + "/"},
+    "sameAs": SAMEAS,
 }
 
 
