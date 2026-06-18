@@ -1,0 +1,66 @@
+# harnais.be — Département des Harnais
+# Robots policy : autorise la citation par les moteurs de recherche et les
+# answer engines (RAG/grounding), refuse l'entraînement des modèles.
+# Content-Signal = réservation de droits au titre de l'art. 4 de la directive
+# EU 2019/790 (DSM). Format Cloudflare Content-Signal.
+
+# --- Signal sémantique global (Cloudflare Content-Signal) ---
+# search   = yes : indexation de recherche classique (Google, Bing)
+# ai-input = yes : RAG / grounding — autorise la citation par ChatGPT, Perplexity,
+#                  Claude, Google AI Overviews, Apple Intelligence
+# ai-train = no  : refuse l'entraînement / fine-tuning sur ce contenu
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+# --- Answer engines & crawlers d'IA explicites (on veut être cité) ---
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: PerplexityBot-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# --- Chemins de travail / build : ne pas indexer (hygiène, évite le contenu
+#     dupliqué ou draft dans l'index, même si actuellement 404 publics) ---
+User-agent: *
+Disallow: /_drafts/
+Disallow: /_templates/
+Disallow: /_fiches/
+Disallow: /_site.json
+Disallow: /_deploy.log
+Disallow: /BUILD-REPORT.md
+Disallow: /.wrangler/
+Disallow: /render/
+Disallow: /toolbars/
+Disallow: /templates/
+Disallow: /_scripts/
+Disallow: /*.webprj
+Disallow: /*.session
+
+# --- Sitemap ---
+Sitemap: https://harnais.be/sitemap.xml

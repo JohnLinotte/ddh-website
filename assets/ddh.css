@@ -10,6 +10,7 @@
   --ink-soft:  oklch(44%   0.012 255);  /* labels / secondaire — AA sur stone-50 */
   --ink-faint: oklch(64%   0.010 255);  /* DECORATION pure uniquement */
   --moss:        oklch(56% 0.14 132);
+  --moss-text:   oklch(50% 0.14 132);   /* moss durci pour PETIT TEXTE — passe AA 4.5:1 (vs 4.02 sur --moss) sans changer la signature visible. À n'utiliser que sur du <16-18px non-gras informationnel. */
   --moss-deep:   oklch(42% 0.11 135);
   --moss-bright: oklch(68% 0.16 128);
   --moss-pale:   oklch(94% 0.045 132);
@@ -26,6 +27,7 @@ html, body{
   font-family: var(--serif);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 /* grain papier tres leger — duotone gris froid (encre neutre basse opacite), JAMAIS sepia */
@@ -40,6 +42,8 @@ body::before{
   position: relative; z-index: 2;
   max-width: 1120px; margin: 0 auto;
   padding: 16px 56px 72px;
+  background: #fff;
+  min-height: 100vh;
 }
 
 /* ---------- TOPBAR ---------- */
@@ -74,8 +78,9 @@ body::before{
   /* double-filet interieur facon plaque administrative — filet, pas ombre */
   outline: 1px solid var(--stone-200);
   outline-offset: 4px;
-  background:
-    linear-gradient(var(--stone-50), var(--stone-50)) padding-box;
+  /* Fond cartel un peu translucide pour laisser le filigrane filer
+     derrière la plaque, sans toucher l'opacité du texte. */
+  background: color-mix(in oklab, var(--stone-50) 58%, transparent) padding-box;
 }
 /* equerres d'angle vertes — coins de cartel, pure ornementation a filet */
 .cartel::before,
@@ -170,7 +175,7 @@ body::before{
   color: var(--moss);
 }
 .xml-rule .br{ color: var(--moss-deep); font-weight: 600; }   /* < > */
-.xml-rule .tg{ color: var(--moss); font-weight: 500; }        /* tag name */
+.xml-rule .tg{ color: var(--moss-text); font-weight: 600; }   /* tag name — moss durci AA, weight aligné sur .tw-tag */
 .xml-rule .at{ color: var(--ink-soft); font-weight: 400; }    /* attribut — AA 7.01:1 */
 .xml-rule .vl{ color: var(--ink); font-weight: 400; }         /* valeur */
 .xml-rule .spacer{ flex: 1; height: 1px; background: color-mix(in oklab, var(--moss) 30%, transparent); }
@@ -187,6 +192,22 @@ body::before{
   max-width: 27ch;
 }
 .hero em{ font-style: italic; color: var(--moss-deep); } /* "infrastructure" referent — AA 7.35:1 */
+
+/* Lede de page — phrase d'amorce qui s'insère entre le cartel/xml-rule
+   et le hero (thèse en 3 vagues). Plus large que .hero (27ch), plus
+   « secondaire porteur » côté graisse pour ne pas concurrencer la
+   grande thèse du centre. */
+.page-lede{
+  margin: 14px 0 0;
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 28, "wght" 400;
+  font-size: 22px; line-height: 1.42; letter-spacing: -0.003em;
+  color: var(--ink-soft);
+  text-wrap: balance;
+  text-align: center;
+}
+.page-lede em{ font-style: italic; color: var(--moss-deep); }
 
 /* ---------- SIGNATURE pied ---------- */
 .signature{
@@ -217,9 +238,17 @@ body::before{
   margin-bottom: 14px;
 }
 .section-head .kicker .g{ color: var(--moss-deep); }            /* accent porteur — AA */
+/* Sur la page index du Carnet : tout le kicker (label « records » +
+   « section du carnet » + caption « billets datés · 2026 — en cours »)
+   reprend la couleur faded de l'apparatus (.ord = ink-faint) au lieu du
+   moss-deep + ink-soft par défaut — la ligne entière est un libellé de
+   genre/catalogue décoratif, pas un accent porteur d'info. */
+.section-head .kicker.kicker-records,
+.section-head .kicker.kicker-records .g{ color: var(--ink-faint); }
 .section-head .kicker .rule{ flex: 1; height: 1px; align-self: center;
   background: color-mix(in oklab, var(--moss) 32%, transparent); }
-.section-head h1{
+.section-head h1,
+.section-head h2{
   margin: 0;
   font-family: var(--serif);
   font-optical-sizing: auto;
@@ -409,7 +438,7 @@ body::before{
   position: relative;
   display: flex; flex-direction: column;
   padding: 24px 26px 22px;
-  background: var(--stone-50);
+  background: color-mix(in oklab, var(--stone-50) 58%, transparent);
   border: 1px solid var(--stone-300);
   outline: 1px solid var(--stone-200);
   outline-offset: 4px;                                          /* echo du double-filet cartel */
@@ -435,6 +464,110 @@ body::before{
   margin-bottom: 14px;
 }
 .section-card .meta .g{ color: var(--moss-deep); }              /* accent porteur — AA */
+/* Section-cards du Carnet : enveloppe XML « <artefact role="record"> …
+   </artefact> » qui cadre le résumé du billet à la manière broodthaersienne.
+   Structure flex : [xml-tag] [rule filet] [date]. Le .xml-tag wrap toutes
+   les sous-balises pour qu'elles forment UN seul enfant flex (sinon le
+   `gap: 10px` du .meta espace chaque <span> et on obtient `< artefact
+   role = "record" >` avec des trous). La balise est en couleur faded
+   décorative (ink-faint), la date est l'info porteuse (ink). */
+.section-card .meta .xml-tag{
+  display: inline;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+/* Couleurs + poids alignés sur .tw-tag / .xml-rule pour une grammaire
+   XML unifiée sur tout le site (2026-06-17, John). */
+.section-card .meta .xml-tag .br{ color: var(--moss-deep); font-weight: 600; letter-spacing: 0; text-transform: lowercase; }
+.section-card .meta .xml-tag .tg{ color: var(--moss-text); font-weight: 600; letter-spacing: 0; text-transform: lowercase; }
+.section-card .meta .xml-tag .at{ color: var(--ink-soft); font-weight: 400; letter-spacing: 0; text-transform: lowercase; }
+.section-card .meta .xml-tag .vl{ color: var(--ink); font-weight: 400; letter-spacing: 0; text-transform: lowercase; }
+.section-card .meta .rule{
+  flex: 1; height: 1px; align-self: center;
+  background: color-mix(in oklab, var(--moss) 30%, transparent);
+}
+.section-card .meta .date{
+  color: var(--ink);
+  font-feature-settings: "tnum" 1;
+}
+.section-card p.excerpt{
+  font-family: var(--serif);
+  font-size: 14.5px; line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 12px 0 18px;
+}
+.section-card p.excerpt .br,
+.section-card p.excerpt .tg{
+  color: var(--ink-faint);
+  font-weight: 400;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+/* Bas de card : « Lire → » à gauche + « </artefact> » à droite sur la
+   même ligne. La balise de fermeture ferme l'enveloppe XML ouverte dans
+   .meta — placée en pied de card pour souligner que la card EST l'artefact. */
+.section-card .card-footer{
+  margin-top: auto;
+  padding-top: 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+.section-card .card-footer .go{
+  margin-top: 0;
+  padding-top: 0;
+}
+.section-card .card-footer .close-tag{
+  font-family: var(--mono);
+  white-space: nowrap;
+  opacity: 0.8;
+}
+.section-card .card-footer .close-tag .br{
+  color: var(--moss-deep);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+.section-card .card-footer .close-tag .tg{
+  color: var(--moss-text);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+/* Navigation chronologique dans le kicker d'un billet : « § Le Carnet
+   ─── ← MERCREDI 17 JUIN 2026 → ». Les flèches sont des liens vers le
+   billet précédent / suivant. Couleur ink-faint au repos, moss-deep au
+   hover — assez discrètes pour ne pas charger la ligne, mais cliquables. */
+.section-head .kicker .nav-day{
+  color: var(--ink-faint);
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color .12s ease;
+}
+.section-head .kicker .nav-day:hover{
+  color: var(--moss-deep);
+}
+/* « section du carnet » dans le cartel et dans le bandeau xml-rule
+   pointe vers l'index du Carnet. Lien discret, hérité du registre
+   typographique du cartel. */
+.cartel-section .cartel-link,
+.xml-rule-billet .caption-link{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in oklab, var(--moss) 32%, transparent);
+  padding-bottom: 1px;
+  transition: border-color .12s ease, color .12s ease;
+}
+.cartel-section .cartel-link:hover,
+.xml-rule-billet .caption-link:hover{
+  color: var(--moss-deep);
+  border-bottom-color: var(--moss-deep);
+}
 .section-card h3{
   margin: 0 0 8px;
   font-family: var(--serif);
@@ -494,8 +627,16 @@ body::before{
    degradent proprement < 640px. Ces regles AJOUTENT des
    surcharges mobiles ; elles ne touchent a aucune valeur desktop.
    ════════════════════════════════════════════════════════════ */
+@media (max-width: 1120px){
+  /* Le h1 « DÉPARTEMENT des HARNAIS » à 60px + tracking 0.11em dépasse
+     la zone de contenu (.page max-width 1120px) dès que le viewport
+     descend en dessous. On l'amorce ici pour éviter le scroll horizontal. */
+  .cartel-name .l1, .cartel-name .word2{ font-size: 52px; }
+  .cartel-name .joint{ font-size: 22px; }
+}
 @media (max-width: 860px){
-  .section-head h1{ font-size: 36px; }
+  .section-head h1,
+  .section-head h2{ font-size: 36px; }
   .cartel-name .l1, .cartel-name .word2{ font-size: 48px; }
   .cartel-name .joint{ font-size: 20px; }
 }
@@ -523,7 +664,8 @@ body::before{
 
   /* hero + section-head : tailles d'amorce mobiles */
   .hero{ font-size: 24px; max-width: none; }
-  .section-head h1{ font-size: 30px; }
+  .section-head h1,
+  .section-head h2{ font-size: 30px; }
   .section-head .lede{ font-size: 19px; }
 
   /* corps : reglages de lecture mobile */
@@ -542,4 +684,549 @@ body::before{
 
   /* cartes : pleine largeur */
   .section-cards{ grid-template-columns: 1fr; }
+}
+
+/* ── Sources section — billets Records ──────────────────────────── */
+
+.sources-section{ margin: 2.5rem 0 0; }
+.sources-section .sources{ margin-top: 1rem; }
+.sources-section summary{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.sources-section ul{
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+.sources-section li{
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--stone-200);
+}
+.sources-section li:last-child{ border-bottom: none; }
+.source-title{
+  font-family: var(--serif);
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--moss);
+  text-underline-offset: 0.18em;
+}
+.source-title:hover{ color: var(--moss-deep); text-decoration-color: var(--moss-deep); }
+.source-meta{
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+  margin-left: 0.5em;
+}
+.source-ref{
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--moss);
+  text-underline-offset: 0.18em;
+}
+.source-ref:hover{ color: var(--moss-deep); text-decoration-color: var(--moss-deep); }
+.lang-en, .kind-preprint{
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 1px 4px;
+  border-radius: 2px;
+  vertical-align: super;
+  margin-left: 2px;
+}
+.lang-en{
+  background: var(--stone-200);
+  color: var(--ink-soft);
+}
+.kind-preprint{
+  background: var(--moss-pale);
+  color: var(--moss-deep);
+}
+
+/* === CSS DE PAGE - homepage (migre de index.html, 2026-06-12) === */
+/* ──────────────────────────────────────────────────────────────
+   CSS DE PAGE — homepage. Porte la composition de la landing
+   (filigrane visible + thèse-en-vagues : 3 colonnes, centre large,
+   flèches), bâtie STRICTEMENT sur les tokens de /assets/ddh.css.
+   Aucune couleur ni police nouvelle.
+   ────────────────────────────────────────────────────────────── */
+
+/* le filigrane vit derrière le haut de page ; le contenu passe au-dessus */
+.page{ overflow: clip; }
+.page > *{ position: relative; z-index: 1; }
+
+/* ---- FILIGRANE Forum (rendu 3D de John, 2007) — VISIBLE, traité froid ----
+   grayscale + multiply sur le stone froid = fantôme architectural gris-bleu.
+   couvre le masthead + la thèse ; masqué seulement là où le cartel est opaque. */
+.wm-bg{
+  position: fixed; z-index: 0; pointer-events: none; user-select: none;
+  left: 58%; top: 8px; transform: translateX(-50%);
+  width: min(1340px, 100vw); height: auto;
+  clip-path: inset(0 calc(8vw + 110px) 0 max(0px, calc(110px - 8vw)));
+  mix-blend-mode: multiply;
+  opacity: 0.99;
+}
+
+/* ════ THÈSE-EN-VAGUES — port direct de la landing, recoloré stone froid ════
+   gauche operator → centre harness (la grosse thèse) → droite artifact. */
+.tw{
+  display: grid;
+  grid-template-columns: 1fr 20px 1.55fr 20px 1fr;
+  align-items: stretch;
+  margin: 16px 0 40px;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.tw-col{ padding: 30px 26px 34px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.tw-a{ border-right: 1px dashed var(--stone-300); }
+.tw-c{ border-left: 1px dashed var(--stone-300); }
+.tw-b{ background: color-mix(in oklab, var(--moss-pale) 58%, transparent); padding-left: 34px; padding-right: 34px; }
+.tw-arrow{
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); color: var(--moss-deep); font-size: 20px;
+}
+.tw-tag{
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.04em;
+  padding-bottom: 12px; border-bottom: 1px solid color-mix(in oklab, var(--moss) 40%, transparent);
+  /* La balise XML reste sur une seule ligne, même si la colonne (tw-a/tw-c)
+     est étroite — sinon « <artifact retention="ad-vitam" /> » casse sur le
+     `>` final. Le débordement visuel reste contenu dans la zone tampon de
+     20px entre les colonnes (tw-arrow), donc ça ne pousse pas la grille. */
+  white-space: nowrap;
+  /* Légère désaturation : la balise recule pour que la prose qui suit
+     (titre, description) lise mieux. */
+  opacity: 0.8;
+}
+.tw-tag .br{ color: var(--moss-deep); font-weight: 600; }
+.tw-tag .tg{ color: var(--moss-text); font-weight: 600; }     /* moss durci AA */
+.tw-tag .at{ color: var(--ink-soft); }
+.tw-tag .vl{ color: var(--ink); }
+.tw-kicker{
+  margin: 0; font-family: var(--mono); font-size: 9.5px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft);
+}
+/* le centre : la grosse thèse, échelle landing (hero) */
+.tw-h1{
+  font-family: var(--serif); font-optical-sizing: auto;
+  font-variation-settings: "opsz" 60, "wght" 350;
+  font-size: 38px; line-height: 1.06; letter-spacing: -0.02em;
+  margin: 6px 0 18px; color: var(--ink); text-wrap: balance;
+}
+.tw-h1 em{ font-style: italic; color: var(--moss-deep); font-weight: 400; }
+.tw-sub{
+  font-family: var(--serif); font-size: 16.5px; line-height: 1.5;
+  color: var(--ink-soft); margin: 0; text-wrap: pretty;
+}
+.tw-sub em{ font-style: italic; color: var(--moss-deep); }
+/* les flancs : opérateur / artefact */
+.tw-role{
+  font-family: var(--serif); font-variation-settings: "opsz" 20, "wght" 540;
+  font-size: 19px; line-height: 1.2; color: var(--ink); margin: 0;
+}
+.tw-role em{ font-style: italic; font-weight: 400; color: var(--moss-deep); }
+.tw-desc{
+  font-family: var(--serif); font-size: 14.5px; line-height: 1.52;
+  color: var(--ink-soft); margin: 0;
+}
+.tw-foot{
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em;
+  color: var(--ink-soft); margin: auto 0 0 0; padding-top: 14px;
+  border-top: 1px dashed var(--stone-300);
+}
+
+/* ouverture de la triade NAV */
+.cards-lede{
+  margin: 4px 0 0; font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft);
+  display: flex; align-items: baseline; gap: 12px;
+}
+.cards-lede .g{ color: var(--moss-deep); }
+.cards-lede .rule{ flex: 1; height: 1px; align-self: center;
+  background: color-mix(in oklab, var(--moss) 32%, transparent); }
+
+@media (max-width: 880px){
+  .tw{ grid-template-columns: 1fr; }
+  .tw-arrow{ display: none; }
+  .tw-a{ border-right: none; border-bottom: 1px dashed var(--stone-300); }
+  .tw-c{ border-left: none; border-top: 1px dashed var(--stone-300); }
+  .tw-b{ padding-left: 26px; padding-right: 26px; }
+  .tw-h1{ font-size: 30px; }
+}
+
+/* ===== CSS DE PAGE — colophon : vignettes de références ===== */
+.ref-thumbs{display:flex;gap:16px;margin:14px 0 22px;flex-wrap:wrap}
+.ref-thumbs figure{margin:0}
+.ref-thumbs a{display:block;border:1px solid var(--stone-300);padding:3px;background:var(--stone-50);line-height:0}
+.ref-thumbs img{height:88px;width:auto;display:block;filter:saturate(.85)}
+.ref-thumbs figcaption{font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:6px;line-height:1.3}
+
+/* ============================================================
+   CARTEL DE BAS DE PAGE — la plaque de musée, sur toutes les
+   pages, juste au-dessus du footer. Étiquette + Date construites
+   par site_builder ; Tagline + Wedge depuis le manifeste ;
+   License par enregistrement. Distinct de .cartel (bandeau de
+   tête) : ici une fiche d'œuvre, pas un masthead.
+   ============================================================ */
+.cartel-label{
+  position: relative;
+  margin: 4em 0 1.6em;
+  padding: 20px 30px 18px;
+  border: 1px solid var(--stone-300);
+  outline: 1px solid var(--stone-200);
+  outline-offset: 4px;
+  background: color-mix(in oklab, var(--stone-50) 58%, transparent);
+}
+.cartel-label::before,
+.cartel-label::after{
+  content: ""; position: absolute; width: 13px; height: 13px;
+  border: 0 solid var(--moss); opacity: .55; pointer-events: none;
+}
+.cartel-label::before{ top: -1px; left: -1px; border-top-width: 2px; border-left-width: 2px; }
+.cartel-label::after{ bottom: -1px; right: -1px; border-bottom-width: 2px; border-right-width: 2px; }
+.cartel-label .head{
+  font-family: var(--mono); font-size: 10px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-faint);
+  margin-bottom: 16px;
+}
+.cartel-label dl{
+  margin: 0; padding: 0; border: 0;
+  display: grid; grid-template-columns: minmax(6.5em, max-content) 1fr;
+  gap: 7px 24px;
+  font-family: var(--mono); font-size: 11.5px; line-height: 1.55;
+}
+.cartel-label dt{
+  margin: 0; color: var(--moss-deep);
+  letter-spacing: .05em; text-transform: lowercase;
+}
+.cartel-label dd{ margin: 0; color: var(--ink-soft); letter-spacing: .01em; }
+.cartel-label dd.wedge{ font-style: italic; color: var(--ink); }
+@media (max-width: 640px){
+  .cartel-label dl{ grid-template-columns: 1fr; gap: 2px 0; }
+  .cartel-label dt{ margin-top: .7em; }
+}
+
+/* ============================================================
+   BILLET LAYOUT — sidebar fabrication (gauche, fixe) + main
+   panneau gauche = méta techniques de fabrication (TICKET ID, PIPELINE,
+   PERSONA, MODÈLE, SOURCES, DOMAINES, LANGUES, TAILLE).
+   Distinct du .cartel-label de pied-de-page (méta éditoriales).
+   ============================================================ */
+.billet-layout{
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 56px;
+  /* Marge haute alignée sur celle de .section-head (38px) — la page index
+     du Carnet a une `.section-head` après la `xml-rule-billet` qui ouvre
+     ce 38px ; ici il n'y a pas de section-head global, donc on porte la
+     même valeur sur le grid lui-même pour égaler le gap visuel entre la
+     `<section ref="records">` et la première ligne du contenu. */
+  margin: 38px 0 2em;
+}
+.billet-main{ min-width: 0; }
+/* Dans le billet-layout, la colonne 1fr est déjà bornée par .page max-width
+   et par la largeur du sidebar — on laisse l'article remplir la colonne au
+   lieu d'être plafonné à 68ch, sinon il reste un trou visible à droite du
+   bloc texte (texte ne touche pas la rive droite de la colonne).
+   `overflow-wrap: anywhere` garantit en plus qu'aucun titre/URL long
+   inline ne pousse le `<p>` au-delà de sa mesure. */
+.billet-layout .carnet{ max-width: none; }
+.billet-layout .carnet p,
+.billet-layout .carnet a{ overflow-wrap: anywhere; }
+
+.dispatch-card{
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+/* Dans le billet-layout, le section-head côté droit prend par défaut
+   margin-top: 38px (cf. .section-head) — on l'aligne sur le top du
+   dispatch-card à gauche (padding-top retiré). Les deux filets démarrent
+   à la même hauteur, juste sous le `<section ref="carnet">`. */
+.billet-layout .section-head{
+  margin-top: 0;
+}
+.billet-layout .section-head .kicker{
+  font-size: 13px;
+  letter-spacing: .08em;
+}
+/* La date du billet doit rester au même corps que « § Le Carnet » à
+   gauche du même filet — pas de réduction dédiée. */
+.billet-layout .section-head .kicker .date{
+  font-size: 13px;
+  letter-spacing: .08em;
+}
+/* Sur les pages du Carnet billet : on inverse la hiérarchie typographique
+   des deux lignes du cartel — la 1re (atelier d'auteur · harnais d'agents ia)
+   passe en petit mono, la 2e (section des carnets · le modèle tenu en laisse...)
+   passe en plus grand, en préservant la distinction de famille entre le label
+   uppercase et la précision italique serif. */
+.cartel.cartel-billet .cartel-section.tagline{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  /* La tagline du billet est plus petite que celle de l'index (10px vs 16px).
+     Pour que la hauteur du cartel reste constante entre les pages, on
+     compense le delta (≈ 33px mesuré sur capture comparée) en ajoutant
+     une marge basse explicite. */
+  margin-bottom: 33px;
+}
+.cartel.cartel-billet .cartel-section:not(.tagline){
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+.cartel.cartel-billet .cartel-section:not(.tagline) em{
+  font-size: 10px;
+}
+/* Sur la page index du Carnet : on garde la grande tagline (16px par
+   défaut, demandée explicitement par John) mais on ramène la deuxième
+   ligne (« section des carnets · le modèle tenu en laisse... ») à la
+   taille des billets — 13px mono uppercase + 10px italic em — au lieu
+   du défaut (10px + 13px) qui rend la ligne trop chargée. */
+.cartel.cartel-records .cartel-section:not(.tagline){
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+.cartel.cartel-records .cartel-section:not(.tagline) em{
+  font-size: 10px;
+}
+/* « DÉPARTEMENT des HARNAIS » du cartel = lien vers la home, mais
+   visuellement inchangé : pas de soulignement, couleur héritée des spans
+   internes (.l1/.word2 = ink, .joint = moss-deep). */
+.cartel-name .cartel-name-link{
+  color: inherit;
+  text-decoration: none;
+  display: inline;
+}
+.cartel-name .cartel-name-link:hover{
+  color: inherit;
+}
+/* (Pas de guard 60px ici — la taille du h1 suit les media queries globales :
+   60px desktop ≥ 1120px, 52px entre 860 et 1120, 48px sous 860, 34px sous 640.) */
+/* Tagline carnet sur la MÊME ligne que `<section ref="carnet">` —
+   apparaît juste après la balise et avant le filet horizontal qui
+   mène à `§ carnet`. Même registre mono moss que le reste. */
+.xml-rule .tag-tagline{
+  color: var(--moss-deep);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-left: 4px;
+  font-size: 13px;
+}
+/* Sur les pages du Carnet billet : la xml-rule succède directement au
+   cartel "DÉPARTEMENT des HARNAIS" qui porte déjà sa propre ligne basse.
+   On retire les deux filets pour la transformer en ligne kicker-style
+   (« <section ref="records">  section du carnet ──── billets datés · 2026
+   — en cours »), miroir de la kicker de l'index Carnet — couleur ink-faint
+   décorative côté caption, le tag XML garde ses couleurs moss pour le
+   caractère « XML sourcé ». */
+.xml-rule.xml-rule-billet{
+  border-top: none;
+  border-bottom: none;
+  margin-top: 12px;
+  padding: 6px 0 0;
+}
+/* Sur la home : le filet `<departement…>` est suivi de la lede + thèse,
+   sans bordure ni espace en bas pour resserrer l'enchaînement
+   xml-rule → lede → .tw. Scope strict à la page index. */
+.xml-rule.xml-rule-home{
+  margin-bottom: 0;
+}
+/* Le span de balise XML (premier enfant du filet, contenant
+   `<departement …>` ou `<section ref="records">`) recule un peu pour
+   laisser respirer la prose qui suit — la balise est un chrome de page,
+   pas l'info porteuse. Appliqué à TOUS les xml-rule-billet (home + billets
+   du Carnet) pour garder un rendu unifié. */
+.xml-rule.xml-rule-billet > span:first-child{
+  opacity: 0.8;
+}
+/* Note 2026-06-17 (John) : l'override ink-faint qui était ici a été
+   retiré — toutes les pages utilisent désormais le même rendu que la
+   home (couleurs moss + opacity 0.62 sur la balise XML, voir règle
+   ci-dessous). Les captions à droite/gauche gardent leur ink-faint via
+   .caption, indépendamment. */
+.xml-rule.xml-rule-billet .caption{
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 10px;
+}
+.xml-rule.xml-rule-billet .spacer{
+  background: color-mix(in oklab, var(--moss) 32%, transparent);
+}
+/* Head: même pattern que .section-head .kicker — label + filet horizontal
+   en flex baseline, plutôt qu'un border-top isolé au-dessus du texte.
+   « FABRICATION ─── » est aligné au début du filet, comme « § Le Carnet ─── date »
+   à droite. */
+.dispatch-card .head{
+  display: flex; align-items: baseline; gap: 12px;
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 12px;
+}
+.dispatch-card .head::after{
+  content: ""; flex: 1; height: 1px;
+  background: color-mix(in oklab, var(--moss) 32%, transparent);
+}
+.dispatch-card dl{
+  margin: 0; padding: 0;
+  font-family: var(--mono);
+}
+.dispatch-card dt{
+  color: var(--moss-deep);
+  margin-top: 12px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  font-size: 9.5px;
+  text-transform: uppercase;
+}
+.dispatch-card dt:first-of-type{ margin-top: 0; }
+.dispatch-card dd{
+  margin: 2px 0 0;
+  color: var(--ink-soft);
+  word-break: break-word;
+}
+
+@media (max-width: 800px){
+  .billet-layout{
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .dispatch-card{
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+/* ── DISPATCH-CARD: waves trace ──────────────────────────────────────── */
+.dispatch-card .meta-top,
+.dispatch-card .meta-bottom{
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: minmax(4.5em, max-content) 1fr;
+  gap: 4px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.dispatch-card .meta-top{ margin-bottom: 16px; }
+.dispatch-card .meta-bottom{ margin-top: 16px; }
+.dispatch-card .meta-top dt,
+.dispatch-card .meta-bottom dt{
+  color: var(--moss-deep);
+  font-size: 9.5px; letter-spacing: .06em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.dispatch-card .meta-top dd,
+.dispatch-card .meta-bottom dd{
+  margin: 0;
+  color: var(--ink-soft);
+  word-break: break-word;
+}
+.dispatch-card .waves{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+.dispatch-card .waves caption{
+  font-size: 9.5px; letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--moss-deep);
+  text-align: left;
+  margin-bottom: 4px;
+}
+.dispatch-card .waves td{
+  padding: 1px 4px 1px 0;
+  vertical-align: top;
+  color: var(--ink-soft);
+}
+.dispatch-card .waves td.w{
+  color: var(--moss-deep);
+  font-weight: 500;
+  width: 1.8em;
+}
+.dispatch-card .waves td.tm{
+  padding-right: 10px;
+  padding-bottom: 2px;
+  vertical-align: top;
+}
+.dispatch-card .waves td.tm .t{
+  display: block;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.dispatch-card .waves td.tm .m{
+  display: block;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  font-size: 9.5px;
+  line-height: 1.3;
+  letter-spacing: .02em;
+}
+.dispatch-card .waves td.v{ width: 1em; text-align: center; }
+.dispatch-card .waves td.v.ok{ color: var(--moss); }
+.dispatch-card .waves td.v.ko{ color: var(--red-faded, #8B3A3A); }
+.dispatch-card .waves td.d{
+  color: var(--ink-faint);
+  text-align: right;
+  white-space: nowrap;
+}
+.dispatch-card .empty{
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-faint);
+  font-style: italic;
+  margin: 8px 0;
+}
+/* Verdict entrelacé dans la chronologie — ligne de table colspan=4 sous
+   la persona qui le porte (editor-in-chief / compliance-officer), pas
+   un bloc séparé. Italique citation pour le distinguer de la ligne agent. */
+.dispatch-card .waves tr.verdict-row td.vt{
+  color: var(--ink);
+  font-style: italic;
+  padding: 0 0 6px 0;
+  line-height: 1.45;
+  white-space: normal;
+  word-break: normal;
+  hyphens: auto;
+}
+.dispatch-card .waves tr.verdict-row td.vt::before{
+  content: "▸ ";
+  color: var(--moss);
+  font-style: normal;
+}
+/* Gate forensic — décision déterministe Python (revise/pass), inscrite
+   entre deux dispatches successifs de la même persona. Distinct des verdicts
+   éditoriaux (qui sont des paroles d'auteur) → label mono uppercase + couleur
+   ink-faint, pas d'italique. */
+.dispatch-card .waves tr.gate-row td.gt{
+  color: var(--ink-faint);
+  font-size: 9.5px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 2px 0 6px 0;
+  line-height: 1.5;
+}
+.dispatch-card .waves tr.gate-row td.gt::before{
+  content: "▸ ";
+  color: var(--moss-deep);
 }

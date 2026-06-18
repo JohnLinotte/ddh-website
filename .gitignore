@@ -1,0 +1,23 @@
+# --- Pinegrow / build internals ---
+.wrangler/
+_deploy.log
+_site.json
+*.webprj
+*.session
+BUILD-REPORT.md
+
+# --- Brouillons et fiches préparatoires (privés) ---
+_drafts/
+_fiches/
+
+# --- Aperçus visuels (générés, pas de valeur pour le repo) ---
+render/
+
+# --- Dossiers vides / legacy Pinegrow ---
+toolbars/
+templates/
+
+# --- Python ---
+__pycache__/
+*.pyc
+_scripts/__pycache__/

@@ -1,0 +1,112 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Le Carnet — Département des Harnais",
+  "home_page_url": "https://harnais.be/carnet/",
+  "feed_url": "https://harnais.be/carnet/feed.json",
+  "description": "Chronique de veille IA quotidienne sourcée — Bruxelles.",
+  "language": "fr-BE",
+  "authors": [
+    {
+      "name": "John Linotte",
+      "url": "https://harnais.be/a-propos/"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://harnais.be/carnet/2026-06-18/",
+      "url": "https://harnais.be/carnet/2026-06-18/",
+      "title": "L'appareil avant l'inférence",
+      "content_text": "Inria annonce ce matin un partenariat stratégique avec WALLIX — premier accord de l'institut avec un acteur de la filière française de la cybersécurité, formalisé via le dispositif Étincelles de la DGE en présence de la ministre déléguée au Numérique. Le périmètre couvre la sé…",
+      "summary": "Inria annonce ce matin un partenariat stratégique avec WALLIX — premier accord de l'institut avec un acteur de la filière française de la cybersécurité, formalisé via le dispositif Étincelles de la DGE en présence de la ministre déléguée au Numérique. Le périmètre couvre la sé…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-17/",
+      "url": "https://harnais.be/carnet/2026-06-17/",
+      "title": "L'adresse du ciblage",
+      "content_text": "Les armées emploient des systèmes assistés par IA depuis des années — capteurs, logistique, analyse d'image satellite. Grok n'est pas le premier modèle impliqué dans une chaîne décisionnelle militaire, et le Pentagone n'est pas en terrain inconnu. La lecture adverse s'arrête l…",
+      "summary": "Les armées emploient des systèmes assistés par IA depuis des années — capteurs, logistique, analyse d'image satellite. Grok n'est pas le premier modèle impliqué dans une chaîne décisionnelle militaire, et le Pentagone n'est pas en terrain inconnu. La lecture adverse s'arrête l…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-16/",
+      "url": "https://harnais.be/carnet/2026-06-16/",
+      "title": "Ce qui ne contredit pas ne corrige pas",
+      "content_text": "Un quart des moins de quarante ans déclarent entretenir une relation amicale ou amoureuse avec une intelligence artificielle : c'est le résultat central d'une étude du Crédoc que Sandra Hoibian, directrice générale de l'organisme, commente dans Le Monde (16 juin 2026), dans Sa…",
+      "summary": "Un quart des moins de quarante ans déclarent entretenir une relation amicale ou amoureuse avec une intelligence artificielle : c'est le résultat central d'une étude du Crédoc que Sandra Hoibian, directrice générale de l'organisme, commente dans Le Monde (16 juin 2026), dans Sa…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-15/",
+      "url": "https://harnais.be/carnet/2026-06-15/",
+      "title": "L'investisseur, le signal et le siège vide",
+      "content_text": "Le PDG d'Amazon Andy Jassy et des dirigeants de cinq autres entreprises auraient alerté en privé l'administration Trump sur des vulnérabilités de sécurité dans Fable 5, et la Maison-Blanche aurait agi dans les heures suivantes — c'est ce que rapporte The Decoder (14 juin) dans…",
+      "summary": "Le PDG d'Amazon Andy Jassy et des dirigeants de cinq autres entreprises auraient alerté en privé l'administration Trump sur des vulnérabilités de sécurité dans Fable 5, et la Maison-Blanche aurait agi dans les heures suivantes — c'est ce que rapporte The Decoder (14 juin) dans…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-14/",
+      "url": "https://harnais.be/carnet/2026-06-14/",
+      "title": "La formule est un fait",
+      "content_text": "Qu'est-ce qui change quand un quotidien de référence cesse de parler de « restrictions » pour parler de « guerre » ? Le Monde, samedi, a titré « La guerre de l'IA a commencé ». Ce que le journal décrit n'est pas un différend technique entre entreprises : c'est une souveraineté…",
+      "summary": "Qu'est-ce qui change quand un quotidien de référence cesse de parler de « restrictions » pour parler de « guerre » ? Le Monde, samedi, a titré « La guerre de l'IA a commencé ». Ce que le journal décrit n'est pas un différend technique entre entreprises : c'est une souveraineté…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-13/",
+      "url": "https://harnais.be/carnet/2026-06-13/",
+      "title": "Washington tient le commutateur",
+      "content_text": "Le 12 juin, Anthropic coupe Fable 5 et Mythos pour le monde entier sur ordre de Washington ; le même jour, une enquête de New Scientist documente les premières frappes de drones à décision autonome sur le front ukrainien. D'un côté, l'État saisit le commutateur d'une capacité…",
+      "summary": "Le 12 juin, Anthropic coupe Fable 5 et Mythos pour le monde entier sur ordre de Washington ; le même jour, une enquête de New Scientist documente les premières frappes de drones à décision autonome sur le front ukrainien. D'un côté, l'État saisit le commutateur d'une capacité…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-12/",
+      "url": "https://harnais.be/carnet/2026-06-12/",
+      "title": "Le modèle et son miroir",
+      "content_text": "Le Monde (11 juin 2026), dans Cybersécurité : Orange et Crédit agricole en discussions pour avoir accès à Mythos, le modèle d’IA d’Anthropic, révèle que les deux groupes négocient un accès au modèle spécifiquement pour détecter des failles informatiques — et qu'aucun service d…",
+      "summary": "Le Monde (11 juin 2026), dans Cybersécurité : Orange et Crédit agricole en discussions pour avoir accès à Mythos, le modèle d’IA d’Anthropic, révèle que les deux groupes négocient un accès au modèle spécifiquement pour détecter des failles informatiques — et qu'aucun service d…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-11/",
+      "url": "https://harnais.be/carnet/2026-06-11/",
+      "title": "Même moteur, freins manquants",
+      "content_text": "Le même modèle qui migre du code en une journée génère des exploits en quelques heures. The Decoder (10 juin 2026), dans Claude Fable 5: The first Mythos model is powerful, expensive, and heavily filtered, place Fable 5 en tête de la quasi-totalité des benchmarks, dont SWE-ben…",
+      "summary": "Le même modèle qui migre du code en une journée génère des exploits en quelques heures. The Decoder (10 juin 2026), dans Claude Fable 5: The first Mythos model is powerful, expensive, and heavily filtered, place Fable 5 en tête de la quasi-totalité des benchmarks, dont SWE-ben…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-10/",
+      "url": "https://harnais.be/carnet/2026-06-10/",
+      "title": "La mesure et la clé",
+      "content_text": "Anthropic élargit l'accès au grand public pour sa classe Mythos en calant des garde-fous sur les requêtes sensibles ; le même jour, Microsoft bloque plus de 70 dépôts GitHub compromis par la campagne Miasma, qui vise la chaîne logistique des credentials des outils génératifs.…",
+      "summary": "Anthropic élargit l'accès au grand public pour sa classe Mythos en calant des garde-fous sur les requêtes sensibles ; le même jour, Microsoft bloque plus de 70 dépôts GitHub compromis par la campagne Miasma, qui vise la chaîne logistique des credentials des outils génératifs.…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-09/",
+      "url": "https://harnais.be/carnet/2026-06-09/",
+      "title": "Autonomie mise en prix",
+      "content_text": "Inria et la Cnaf annoncent ce 9 juin une convention autour de Catala, une solution souveraine de calcul des prestations sociales, un langage qui transcrit le droit en calcul vérifiable. Numerama signale le même jour Miasma, le ver informatique qui se glisse dans Claude Code po…",
+      "summary": "Inria et la Cnaf annoncent ce 9 juin une convention autour de Catala, une solution souveraine de calcul des prestations sociales, un langage qui transcrit le droit en calcul vérifiable. Numerama signale le même jour Miasma, le ver informatique qui se glisse dans Claude Code po…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-08/",
+      "url": "https://harnais.be/carnet/2026-06-08/",
+      "title": "Qui possède le siège",
+      "content_text": "Dans Le Monde du 7 juin, deux tribunes se répondent sans se rejoindre. Bernie Sanders propose que 50 % des actions des grandes entreprises d'IA soient versées dans un fonds souverain — au motif, avance-t-il, que leurs modèles se sont construits sur la création de millions d'au…",
+      "summary": "Dans Le Monde du 7 juin, deux tribunes se répondent sans se rejoindre. Bernie Sanders propose que 50 % des actions des grandes entreprises d'IA soient versées dans un fonds souverain — au motif, avance-t-il, que leurs modèles se sont construits sur la création de millions d'au…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    },
+    {
+      "id": "https://harnais.be/carnet/2026-06-07/",
+      "url": "https://harnais.be/carnet/2026-06-07/",
+      "title": "veille IA du 7 juin 2026",
+      "content_text": "Le 7 juin livre deux signaux contraires. D'un côté, le rejet : Le Monde observe des étudiants aux États-Unis et en Europe qui refusent l'intelligence artificielle et l'addiction aux écrans, un mouvement que Guy Halfteck lit comme le début d'un reflux[1]. De l'autre, SOS-Amitié…",
+      "summary": "Le 7 juin livre deux signaux contraires. D'un côté, le rejet : Le Monde observe des étudiants aux États-Unis et en Europe qui refusent l'intelligence artificielle et l'addiction aux écrans, un mouvement que Guy Halfteck lit comme le début d'un reflux[1]. De l'autre, SOS-Amitié…",
+      "date_published": "2026-06-18T13:23:32+02:00"
+    }
+  ]
+}

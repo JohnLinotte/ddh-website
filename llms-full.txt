@@ -1,0 +1,900 @@
+# Département des Harnais — texte intégral
+
+> Compilation automatique de l'ensemble des pages publiées sur https://harnais.be, destinée aux agents et moteurs de réponse. Traces CC-BY 4.0 — auteur : John Linotte.
+
+
+
+---
+
+## À propos
+
+Source : https://harnais.be/a-propos/
+
+Le Département des Harnais est un atelier d'auteur tenu par un seul
+opérateur, John Linotte, à Bruxelles. Il y construit, opère et théorise ce que
+doit être un harnais d'agents en production — avec ses sources, ses preuves
+et sa lignée théorique et ontologique. La position tient en une
+phrase : l'agentivité d'un système en production vit dans le code, pas
+dans le modèle. La thèse se gagne ; la garantie se construit.
+
+La maison publie. Le Carnet suit l'actualité des systèmes d'agents —
+l'écart entre ce que l'industrie promet et ce qu'elle garantit. Les Essais
+argumentent la position, pièces et lignée à l'appui. Et chaque publication
+embarque ses preuves de fabrication — les traces, sous licence libre, de la
+chaîne qui l'a produite.
+
+**D'où vient le regard.** Plus de vingt ans dans la
+restauration rapide, jusqu'à un poste de manager — les formations, les
+audits, les contrôles d'ouverture et de fermeture. Un univers où la qualité
+ne repose jamais sur le talent de quelqu'un : on n'y fiabilise pas le
+travailleur, on construit l'appareil — procédures, habilitation progressive,
+contrôle extérieur — qui produit un résultat constant à partir de composants
+variables. « L'agent est doué » n'y a jamais été un contrôle
+acceptable. C'est le regard que je pose sur les agents d'intelligence
+artificielle : un modèle de langage est un travailleur brillant et
+variable ; ce qui rend son travail fiable n'est pas son talent, c'est
+l'appareil qu'on construit autour. Et pour un travailleur qui agit à la
+vitesse de la machine, cet appareil ne peut pas être un classeur de
+procédures : il doit vivre dans la boucle d'exécution. Il doit être du
+code. C'est cela, un harnais.
+
+**La main et le jugement.** Formé à l'infographie. La
+typographie, la palette et le filigrane de ce site sont de première main et
+prolongent vingt ans de travail visuel personnel — la généalogie est au
+[colophon](../colophon/index.html). Le harnais qui fabrique ces pages est un
+système Python construit et opéré ici. C'est la thèse au travail :
+parce que l'agentivité vit dans le code, chaque défaillance a une adresse —
+un fichier, une ligne, une fonction — où l'on peut se rendre, constater,
+corriger ; et la correction tient. Le harnais ne s'écrit pas d'avance,
+il sédimente. Chaque
+publication m'arrive avec son dossier de fabrication ; les agents et
+les verdicts du code ne remplacent pas le jugement humain, ils le préparent —
+ils le rendent exerçable à la vitesse de la machine. La validation finale,
+sur la pièce comme sur la façon dont elle a été faite, est humaine, et elle
+est ici.
+
+
+---
+
+## Le Carnet
+
+Source : https://harnais.be/carnet/
+
+atelier d'auteur · bruxelles · mmxxvi
+
+DtH
+fig. II
+records
+- intitulé de section
+
+bruxelles · mmxxvi
+
+# [
+Département
+des
+Harnais
+](/)
+
+chronique de veille IA · sourcée · publiée du lundi au samedi
+
+section du carnet · *le modèle tenu en laisse, la preuve exigée*
+
+<section ref="records">
+section du carnet
+
+billets datés · 2026 — en cours
+
+## Le Carnet
+
+[
+<artefact role="record">2026-06-18
+
+### L'appareil avant l'inférence
+
+Inria annonce ce matin un partenariat stratégique avec WALLIX — premier accord de l'institut avec un acteur de la filière française de la cybersécurité, formalisé via le dispositif Étincelles de la…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-18/)
+
+[
+<artefact role="record">2026-06-17
+
+### L'adresse du ciblage
+
+Les armées emploient des systèmes assistés par IA depuis des années — capteurs, logistique, analyse d'image satellite. Grok n'est pas le premier modèle impliqué dans une chaîne décisionnelle…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-17/)
+
+[
+<artefact role="record">2026-06-16
+
+### Ce qui ne contredit pas ne corrige pas
+
+Un quart des moins de quarante ans déclarent entretenir une relation amicale ou amoureuse avec une intelligence artificielle : c'est le résultat central d'une étude du Crédoc que Sandra Hoibian…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-16/)
+
+[
+<artefact role="record">2026-06-15
+
+### L'investisseur, le signal et le siège vide
+
+Le PDG d'Amazon Andy Jassy et des dirigeants de cinq autres entreprises auraient alerté en privé l'administration Trump sur des vulnérabilités de sécurité dans Fable 5, et la Maison-Blanche aurait…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-15/)
+
+[
+<artefact role="record">2026-06-14
+
+### La formule est un fait
+
+Qu'est-ce qui change quand un quotidien de référence cesse de parler de « restrictions » pour parler de « guerre » ? Le Monde, samedi, a titré « La guerre de l'IA a commencé ». Ce que le journal…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-14/)
+
+[
+<artefact role="record">2026-06-13
+
+### Washington tient le commutateur
+
+Le 12 juin, Anthropic coupe Fable 5 et Mythos pour le monde entier sur ordre de Washington ; le même jour, une enquête de New Scientist documente les premières frappes de drones à décision autonome…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-13/)
+
+[
+<artefact role="record">2026-06-12
+
+### Le modèle et son miroir
+
+Le Monde (11 juin 2026), dans Cybersécurité : Orange et Crédit agricole en discussions pour avoir accès à Mythos, le modèle d’IA d’Anthropic, révèle que les deux groupes négocient un accès au modèle…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-12/)
+
+[
+<artefact role="record">2026-06-11
+
+### Même moteur, freins manquants
+
+Le même modèle qui migre du code en une journée génère des exploits en quelques heures. The Decoder (10 juin 2026), dans Claude Fable 5: The first Mythos model is powerful, expensive, and heavily…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-11/)
+
+[
+<artefact role="record">2026-06-10
+
+### La mesure et la clé
+
+Anthropic élargit l'accès au grand public pour sa classe Mythos en calant des garde-fous sur les requêtes sensibles ; le même jour, Microsoft bloque plus de 70 dépôts GitHub compromis par la campagne…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-10/)
+
+[
+<artefact role="record">2026-06-09
+
+### Autonomie mise en prix
+
+Inria et la Cnaf annoncent ce 9 juin une convention autour de Catala, une solution souveraine de calcul des prestations sociales, un langage qui transcrit le droit en calcul vérifiable. Numerama…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-09/)
+
+[
+<artefact role="record">2026-06-08
+
+### Qui possède le siège
+
+Dans Le Monde du 7 juin, deux tribunes se répondent sans se rejoindre. Bernie Sanders propose que 50 % des actions des grandes entreprises d'IA soient versées dans un fonds souverain — au motif…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-08/)
+
+[
+<artefact role="record">2026-06-07
+
+### veille IA du 7 juin 2026
+
+Le 7 juin livre deux signaux contraires. D'un côté, le rejet : Le Monde observe des étudiants aux États-Unis et en Europe qui refusent l'intelligence artificielle et l'addiction aux écrans, un…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-07/)
+
+
+---
+
+## L'Atelier · Section des Essais
+
+Source : https://harnais.be/essais/
+
+[
+
+t0
+essai · 2026-05-20
+
+### Un harness, ses sections
+
+Contraindre le modèle, ou ne pas être un harness.
+
+Où vit l'agentivité opérationnelle dans un système d'agents qui travaille ? La position est tranchée : dans le code qui orchestre, pas dans le modèle. Le mot *harness* y retrouve son sens premier.
+
+lire l'essai
+](t0/index.html)
+
+t1
+essai · à paraître
+
+### À paraître
+
+titre à venir
+
+Le deuxième essai de la section. Publié quand il est passé les revues de voix et de fond — pas selon un calendrier annoncé.
+
+à paraître
+
+t2
+essai · à paraître
+
+### À paraître
+
+titre à venir
+
+Le troisième essai de la section. La numérotation continue tient lieu de sommaire : un essai, un numéro, une position.
+
+à paraître
+
+
+---
+
+## Un harness, ses sections
+
+Source : https://harnais.be/essais/t0/
+
+Un agent IA est un Large Language Model auquel on donne des outils, une boucle, et l'autonomie de décider quels outils appeler, dans quel ordre, et quand s'arrêter. Ce qui le distingue d'un simple *workflow* est précisément que le modèle dirige lui-même son propre processus, plutôt que de suivre un chemin de code prédéfini.
+
+*Du vieux français **harnois** attesté autour de 1300, emprunté à l'ancien scandinave **hernest** « provisions pour l'armée », le harnais désigne l'équipement du soldat ou le réseau de sangles qui route la force du cheval. Dans les deux cas : une ***structure de contrainte qui convertit une force brute en travail dirigé***.*
+
+Le *harness*, dans ce cadre, est l'enveloppe qui *donne* au modèle ce qu'il faut pour agir — *« the system that turns a model into something that can take actions »*, écrit MindStudio ; *« an agent harness wraps around a model to manage long-running tasks »*, écrit Aakash Gupta ; *« Think of the model as an engine. The harness is the car »*, écrit-il encore dans la même note. Anthropic, dans une publication d'ingénierie de novembre 2025 (*Effective Harnesses for Long-Running Agents*), parle du Claude Agent SDK comme d'*« a powerful, general-purpose agent harness »*.
+
+## L'inversion : où vit la décision
+
+Dans les systèmes d'agents qui travaillent en production, et je dis bien *qui travaillent*, pas qui démontrent, ce qui décide *quoi faire ensuite* n'est presque jamais le modèle. C'est du code, une fonction qui regarde une entrée, vérifie des conditions, et tranche.
+
+Le modèle, dans ces systèmes, fait une chose tout aussi essentielle : il *infère*. Il lit un texte ambigu, il en extrait un sens, il propose une formulation, il évalue une qualité, il reformule... C'est un classifieur sophistiqué, parfois un rédacteur, parfois un évaluateur. Mais la décision opérationnelle d'appeler tel outil avec tels arguments à tel moment, est prise par du code procédural qui consomme la sortie du modèle. Et quand le harnais évalue ce que le modèle a produit, le verdict — "recevable", "à reprendre", "bloqué" — ne sort pas du modèle non plus : il sort de tests déterministes qui parsent sa sortie. Le modèle fournit la matière ; le test rend le verdict.
+
+L'autonomie attribuée au modèle est donc, dans les systèmes *qui travaillent*, une métaphore. Le système tourne parce que du code a décidé ce qu'il devait faire de la sortie du modèle. C'est ici que le mot harnais reprend tout son sens. Si l'agentivité opérationnelle vit dans le code, alors le *harness*, au sens premier, est exactement ce dispositif de code : ce qui tient le modèle dans son rôle de lecteur, et qui route sa sortie vers un travail dirigé.
+
+Cette intuition n'est pas neuve. Léon Bottou, dès 2011 (*From Machine Learning to Machine Reasoning*), anticipait que la composition algébrique des modules produit du raisonnement que les modules seuls n'ont pas. Très récemment, elle a cristallisé comme discipline sous le nom de *harness engineering* — Mitchell Hashimoto, dans *My AI Adoption Journey* (5 février 2026), pose le terme. Ryan Lopopolo, six jours plus tard, le reprend dans un texte d'OpenAI (*Harness Engineering*, 11 février). Birgitta Böckeler en propose une grille analytique (*Harness engineering for coding agent users*), le 2 avril 2026, en deux dimensions : *guides* qui orientent l'agent avant qu'il agisse et *sensors* qui mesurent ce qu'il a produit, chacun pouvant être computationnel — dont les résultats, écrit-elle, sont *« reliable »* — ou inférentiel — qui reste *« more non-deterministic »*. La grille est utile et sa diffusion rapide dans l'industrie en témoigne. Mais elle reste descriptive : elle dit ce qu'un harnais contient, sans trancher où l'agentivité opérationnelle doit vivre.
+
+La position adjacente, *le code décide, le modèle infère*, a, en parallèle, été tenue publiquement par plusieurs équipes. Nathan Sportsman, chez Praetorian, pose, le même jour que Mitchell Hashimoto, la formule : *« We transform the LLM from a "creative assistant" into a deterministic component of the software supply chain. »* Microsoft, avec son framework Conductor publié le 14 mai 2026, prend la même direction : le routage entre agents y est défini en YAML et reste déterministe, *« the orchestration layer consumes zero tokens »*. Bhattarai et Vu, dans un papier arXiv de février 2026 (*Trustworthy Agentic AI Requires Deterministic Architectural Boundaries*), articulent une thèse adjacente : la fiabilité d'un système agentique ne procède pas de l'entraînement à la sûreté des modèles mais de l'enforcement architectural des limites. Cao et al., dans le papier ESAA (février 2026), formalisent l'idée dans des termes presque identiques : *« strict separation between the Cognitive Blueprint… and the Runtime Engine. »*. Et en amont, l'article *The Plausibility Trap* (janvier 2026) propose une *Deterministic-Probabilistic Decision Matrix* pour décider, à chaque embranchement, quand convoquer un modèle et quand ne pas le faire.
+
+Ma position est tranchée : elle pose qu'un *sensor* qui rend un verdict doit être computationnel par défaut, parce que la décision opérationnelle n'admet pas d'être probabiliste sans renoncer à l'audit.
+
+***L'agentivité ne vit pas dans le modèle. Elle vit dans le code qui l'orchestre. Et l'admettre explicitement — la déplacer là où elle vit déjà de fait — n'est pas un compromis pragmatique sur un idéal d'autonomie. C'est récupérer le sens du mot qu'on emploie.***
+
+## Pourquoi ce déplacement n'est pas verbal
+
+On pourrait dire : *bon, d'accord, c'est une question de mots. Que ce soit le code ou le modèle qui décide, le résultat est le même.* Il ne l'est pas, et c'est ce point qui vaut la peine d'être établi, parce qu'il fait la différence entre une querelle de vocabulaire et une décision d'architecture.
+
+Considérons une question concrète : *peut-on auditer la décision qui vient d'être prise* ?
+
+Si la décision a été prise par un LLM, on peut rejouer le prompt, on peut examiner la sortie, on peut éventuellement obtenir des log-probs, mais on ne peut pas répondre proprement à la question *pourquoi*. Le modèle a généré des tokens parce que ce sont les tokens probables étant donné le prompt et son état interne. Il n'y a pas, en deçà, de raisonnement formalisable qu'on puisse extraire et opposer à un audit. ***On ne peut pas auditer une probabilité***. Le modèle suppose. Il suppose bien, souvent, mais il suppose.
+
+Si la décision a été prise par du code, alors l'audit consiste à lire ce code. Il y a un fichier, il y a une ligne, il y a une logique, il y a un test unitaire. La décision a une provenance qu'on peut nommer.
+
+Ce n'est pas une différence de degré. C'est une différence de nature épistémique de la décision. Et cette différence, en 2026, n'est plus seulement esthétique : l'EU AI Act, bien que reporté pour partie, et pour partie seulement, et son article 11, couplé à l'annexe IV, exige un dossier technique de conformité qui décrit le système. Son article 12 demande un logging *intégré au design*, c'est-à-dire un logging dont la structure découle de l'architecture, pas un logging *bolt-on* qu'on ajoute après coup. Un système dans lequel les décisions opérationnelles vivent dans du code peut produire ce dossier en lisant son propre code. Un système dans lequel elles vivent dans le modèle ne le peut pas, sauf à enregistrer ses appels et à prier pour que l'enregistrement explique quoi que ce soit, ce qui ne marchera pas devant un régulateur informé.
+
+## Le harnais — et ce qu'il devient quand on l'admet
+
+Si l'agentivité vit dans le code, le mot *harness* récupère son sens premier, et on appelle ce dispositif une architecture.
+
+Concrètement, dans le harnais que je décris, quelques règles doivent se tenir d'elles-mêmes. Avant tout appel au modèle, tenter un routage déterministe. La règle, en première ligne du guide du contributeur : try_script() avant tout LLM. Cela empêche qu'une décision triviale emprunte un chemin probabiliste là où un chemin certain suffisait. Des collecteurs de contexte tournent en parallèle, déterministes, avant tout jeton d'inférence ; le modèle ne décide pas quel contexte est pertinent, il le reçoit. Le verdict d'un validateur ne sort pas du modèle mais des tests qui consomment sa sortie. APPROVE, REVISE, BLOCKED, STALL, ABSTAIN sont les valeurs produites par du code déterministe. Les permissions sont stratifiées : READ_ONLY, WRITE_SAFE, WRITE_DANGEROUS, IRREVERSIBLE. Et le seuil de confiance pour la dernière est posé à 1.0, c'est-à-dire à l'approbation humaine explicite. Une action sans retour ne se déclenche pas depuis un raisonnement. Les écritures d'état passent par un temp + rename : on écrit dans un fichier temporaire, on renomme atomiquement. Une coupure ne laisse plus un état partiel sur le disque ; un crash redevient un crash, et non une corruption.
+
+Aucune de ces décisions n'est exotique. Toutes existent dans des systèmes industriels classiques, de longue date. Ce qui est nouveau, et qui mérite à mon sens d'être articulé comme position, c'est de les appliquer à un système d'agents en assumant qu'elles ne sont pas des contraintes posées sur l'autonomie d'un modèle, mais l'architecture de l'agentivité elle-même — c'est-à-dire, au pied de la lettre, ce que fait un harnais.
+
+Je ne décris pas un système terminé, avec des règles posées d'un coup, a priori, comme une étoile sur tableau blanc. Le harnais, comme l'a noté Hashimoto, croît par accrétion : il décrit ce que le système a appris à ne plus faire, et pourquoi. Pour l'audit, c'est une propriété, et pas un sous-produit : la justification de chaque contrainte est, par construction, datable et opposable.
+
+## L'objection inverse, et son renversement
+
+L'objection adverse est connue, elle se présente à peu près ainsi. *Si vous mettez toute l'intelligence dans le code, vous perdez ce qui rend les LLM intéressants. Vous reconstruisez un système des années quatre-vingt, simplement avec des LLM en sous-routine.*
+
+C'est une objection sérieuse mais je crois qu'elle se trompe d'un cran. Les possibilités du modèle ne sont pas perdues, mais utilisées dans un système où le code décide. Le modèle est convoqué partout où il y a une décision qui exige de la lecture, extraction de sens, classification d'intention, reformulation, synthèse, évaluation qualitative. Ce sont des tâches difficiles, parfois irréductiblement difficiles, et le modèle les fait mieux que tout ce qu'on savait faire avant. Mais ces tâches ne sont *pas* la décision opérationnelle. Elles en sont la matière première. La stratification des permissions n'est pas une précaution accessoire ; elle est ce qui transforme cette rigidité en vertu. Un cas non prévu ne déclenche pas une action improvisée ; il déclenche un STALL, une ABSTAIN ou une escalade. Le système, devant l'inconnu, refuse au lieu de broder.
+
+Une seconde objection circule, plus récente, et il vaut la peine d'y répondre brièvement. L'équipe de Ryan Lopopolo, chez OpenAI, a montré en février 2026 qu'un produit d'un million de lignes de code pouvait être bâti en cinq mois par trois ingénieurs, sans une ligne écrite à la main, dans un harnais qui repose massivement sur des guides et sensors inférentiels. Conclusion possible : le déterministe n'est pas nécessaire à l'échelle. Mais l'expérience Codex est, par construction, un travail interactif, avec humain dans la boucle à chaque pull request. C'est précisément le cas où l'agentivité peut, légitimement, glisser vers le modèle, parce qu'un humain en aval rend le verdict opérationnel. Ce n'est pas le cas long-running autonome dans lequel un système doit, sans supervision continue, écrire dans un état partagé, déclencher une action irréversible, ou rendre compte d'une décision à un régulateur. Ce sont deux régimes, et ce que je défends ici concerne le second.
+
+L'erreur de la position adverse — dans les deux variantes — est de confondre *capacité d'interprétation* et *capacité de décision*. Un modèle qui lit bien un courriel n'a aucun titre, par cette compétence, à décider de le classer dans tel dossier, de vous convoquer à telle heure, ou d'envoyer telle réponse. Ce sont des décisions différentes, qui exigent une connaissance du système, de ses contraintes et de vos préférences, que le modèle n'a pas. Quelqu'un, du code en l'occurrence, doit articuler explicitement ces préférences et brancher la sortie du modèle dessus. Et il se trouve que ce *quelqu'un*, dans tous les systèmes qui marchent sans humain à chaque pas, est du code. La question n'est pas si on l'écrit ou non ; c'est si on l'écrit explicitement ou si on prétend qu'il n'existe pas.
+
+## Ce sont des décisions de goût
+
+Construire un harnais comme celui que je décris exige, à chaque embranchement, des décisions qui ne sont pas réductibles à des optima techniques. Faut-il que l'enum `Verdict` ait cinq valeurs ou six ? Faut-il que le seuil de confiance pour les actions irréversibles soit 1.0 ou 0.95 ? Faut-il que l'écriture du journal soit synchrone ou différée ? Etc, etc. On peut argumenter chacune de ces questions, et on doit le faire, mais aucune ne tranche définitivement. Il y a, à la fin, une décision de goût, une cohérence de style architectural, qui détermine ce que le système est et ce qu'il n'est pas.
+
+Ces décisions de goût ne peuvent pas être déléguées à un modèle. Elles peuvent être discutées avec un modèle ou mises à l'épreuve par un modèle, mais elles appartiennent à un humain qui tient un système dans le temps et qui répond, en première personne, des conséquences de ces choix. C'est exactement pour cela, je crois, que la métaphore de l'agent autonome est attrayante : elle promet de retirer cette charge. Elle ne la retire pas, parce qu'on ne la peut pas retirer, elle la cache. La position que je défends consiste, au minimum, à ne pas cacher cette charge, à la nommer, à la documenter et à la rendre auditable.
+
+> 
+> — Depuis Bruxelles, ville qui rédige l'AI Act, et qui depuis le XX° siècle, a fait de la forme administrative un outil critique. —
+> 
+
+## Sources
+
+- Léon Bottou, *From Machine Learning to Machine Reasoning*, arXiv 1102.1808, février 2011. [https://arxiv.org/abs/1102.1808](https://arxiv.org/abs/1102.1808)
+- Anthropic (Schluntz & Zhang), *Building Effective Agents*, décembre 2024. [https://www.anthropic.com/engineering/building-effective-agents](https://www.anthropic.com/engineering/building-effective-agents)
+- Anthropic (Young), *Effective Harnesses for Long-Running Agents*, novembre 2025. [https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
+- Aakash Gupta, *2025 Was Agents. 2026 Is Agent Harnesses. Here's Why That Changes Everything*, janvier 2026. [https://aakashgupta.medium.com/2025-was-agents-2026-is-agent-harnesses-heres-why-that-changes-everything-073e9877655e](https://aakashgupta.medium.com/2025-was-agents-2026-is-agent-harnesses-heres-why-that-changes-everything-073e9877655e)
+- *The Plausibility Trap: Using Probabilistic Engines for Deterministic Tasks*, arXiv 2601.15130, janvier 2026. [https://arxiv.org/abs/2601.15130](https://arxiv.org/abs/2601.15130)
+- Mitchell Hashimoto, *My AI Adoption Journey*, 5 février 2026. [https://mitchellh.com/writing/my-ai-adoption-journey](https://mitchellh.com/writing/my-ai-adoption-journey)
+- Nathan Sportsman (Praetorian), *Deterministic AI Orchestration: A Platform Architecture for Autonomous Development*, 5 février 2026. [https://www.praetorian.com/blog/deterministic-ai-orchestration-a-platform-architecture-for-autonomous-development/](https://www.praetorian.com/blog/deterministic-ai-orchestration-a-platform-architecture-for-autonomous-development/)
+- Manish Bhattarai & Minh Vu, *Trustworthy Agentic AI Requires Deterministic Architectural Boundaries*, arXiv 2602.09947, février 2026. [https://arxiv.org/abs/2602.09947](https://arxiv.org/abs/2602.09947)
+- Ryan Lopopolo (OpenAI), *Harness engineering: leveraging Codex in an agent-first world*, 11 février 2026. [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
+- Sheng Cao et al., *The Auton Agentic AI Framework*, arXiv 2602.23720, février 2026. [https://arxiv.org/abs/2602.23720](https://arxiv.org/abs/2602.23720)
+- Birgitta Böckeler (Thoughtworks), *Harness engineering for coding agent users*, 2 avril 2026. [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Microsoft, *Conductor: Deterministic orchestration for multi-agent AI workflows*, 14 mai 2026. [https://opensource.microsoft.com/blog/2026/05/14/conductor-deterministic-orchestration-for-multi-agent-ai-workflows/](https://opensource.microsoft.com/blog/2026/05/14/conductor-deterministic-orchestration-for-multi-agent-ai-workflows/)
+- Règlement (UE) 2024/1689 (EU AI Act), articles 11-12, annexe IV. Calendrier d'application révisé par l'accord politique du 7 mai 2026 (Digital Omnibus on AI) : obligations Annexe III repoussées au 2 décembre 2027 ; Annexe I au 2 août 2028 ; watermarking de l'article 50(2) au 2 décembre 2026 ; autres obligations de transparence maintenues au 2 août 2026. [https://artificialintelligenceact.eu/implementation-timeline/](https://artificialintelligenceact.eu/implementation-timeline/)
+
+*— John Linotte · Département des Harnais · Bruxelles · 2026-05-20*
+
+
+---
+
+## Colophon & mentions
+
+Source : https://harnais.be/colophon/
+
+**Éditeur**
+
+- édité par John Linotte, à titre privé, depuis Bruxelles ;
+- aucune activité commerciale : rien n'y est vendu, aucun service n'y est offert ;
+- contact : [[email protected]](https://harnais.be/cdn-cgi/l/email-protection).
+
+**Hébergement**
+
+- Cloudflare Pages (Cloudflare, Inc.).
+
+**Licences**
+
+- les textes sont © John Linotte ;
+- les traces de fabrication attachées aux publications sont sous licence
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.fr).
+
+**Fabrication & divulgation IA**
+
+- les billets du Carnet sont rédigés avec l'assistance d'un système
+d'intelligence artificielle opéré par l'auteur ;
+- chaque publication est relue et publiée sous son contrôle éditorial,
+et l'indique en pied de page.
+
+**Fabrication visuelle**
+
+- la palette tient en trois couleurs :
+**pierre** : `oklch(96.5% 0.004 255)` ;
+**encre** : `oklch(27% 0.012 255)` ;
+**mousse** : `oklch(56% 0.14 132)` ;
+- le vert mousse est une signature qui court depuis 2007 — il descend du
+`#690` de technoweb3, premier site de l'auteur ;
+- le filigrane architectural, présent sur toutes les pages, est un
+rendu 3D du Forum Romain réalisé par l'auteur en 2006 — il était
+déjà le filigrane de technoweb3 en 2007 ;
+- typographies : Source Serif 4 (texte) et
+IBM Plex Mono (métadonnées).
+
+[](../assets/technoweb3-2007.jpg)
+technoweb3 — 2007
+
+[](../assets/forum.jpg)
+forum romain — rendu 3D, 2006
+
+**Données personnelles**
+
+- ce site est statique : il ne collecte aucune donnée personnelle,
+ne dépose aucun cookie et n'embarque aucun traceur — détail dans la
+[notice de vie privée](../vie-privee/index.html).
+
+
+---
+
+## Vie privée
+
+Source : https://harnais.be/vie-privee/
+
+**Responsable**
+
+- John Linotte, à titre privé, Bruxelles, Belgique — ce site n'est pas
+une activité commerciale ;
+- contact : [[email protected]](https://harnais.be/cdn-cgi/l/email-protection).
+
+**Ce que ce site collecte**
+
+- rien. Le site est statique : aucun formulaire, aucun compte,
+aucun cookie, aucun pixel de suivi, aucune balise analytics ;
+- politique zéro-traceur par défaut : si un outil de mesure
+d'audience devait être activé un jour, ce serait un outil européen
+auto-hébergé à faible empreinte, derrière un consentement explicite
+non pré-coché (loi du 13 juin 2005, art. 129).
+
+**Si vous écrivez**
+
+- un courriel adressé à [[email protected]](https://harnais.be/cdn-cgi/l/email-protection) est traité pour vous
+répondre (article 6 §1 f du RGPD — intérêt légitime) et
+conservé le temps nécessaire à l'échange ;
+- votre adresse n'est inscrite à rien, transmise à personne, et ne sert
+à aucune prospection.
+
+**Hébergement**
+
+- le site est servi par Cloudflare Pages (Cloudflare, Inc.,
+États-Unis), qui peut traiter des journaux techniques (adresses IP)
+pour servir les pages ;
+- les transferts hors Union européenne sont encadrés par le cadre
+EU-U.S. Data Privacy Framework (décision 2023/1795/UE) et, à titre
+subsidiaire, par les Clauses Contractuelles Types
+(décision 2021/914/UE).
+
+**Assistance IA, décisions automatisées**
+
+- les publications de ce site sont préparées avec l'assistance d'un
+harnais d'agents fondés sur des modèles de langage, opéré par
+l'auteur : un outil d'assistance, pas un décideur ;
+- aucune décision au sens de l'article 22 §1 du RGPD, aucun
+profilage au sens de l'article 4 §4 — tout ce qui est publié est
+relu et assumé par l'auteur humain.
+
+**Vos droits**
+
+- articles 15 à 22 du RGPD : accès, rectification, effacement,
+limitation, portabilité, opposition ;
+- demande à [[email protected]](https://harnais.be/cdn-cgi/l/email-protection) — réponse dans le mois
+(article 12 §3) ;
+- réclamation possible auprès de l'Autorité de protection des données,
+Rue de la Presse 35, 1000 Bruxelles —
+[autoriteprotectiondonnees.be](https://autoriteprotectiondonnees.be).
+
+**Modifications**
+
+- la présente notice peut évoluer avec le site ; la date de
+dernière mise à jour figure en tête.
+
+
+---
+
+## L'appareil avant l'inférence
+
+Source : https://harnais.be/carnet/2026-06-18/
+
+Bruxelles, 18 juin 2026
+
+*Inria* annonce ce matin [un partenariat stratégique avec WALLIX](https://www.inria.fr/fr/wallix-signature-partenariat-strategique) — premier accord de l'institut avec un acteur de la filière française de la cybersécurité, formalisé via le dispositif Étincelles de la DGE en présence de la ministre déléguée au Numérique. Le périmètre couvre la sécurisation des accès critiques et les exigences de résilience — les couches où un modèle souverain a des conséquences directes sur ce qu'on peut relire et ce qui tient. Ce qui ancre l'annonce dans une trajectoire concrète : Malizen, startup issue des travaux du Centre Inria de Rennes, aujourd'hui intégrée chez WALLIX — la recherche publique a produit une entité industrielle qui réintègre maintenant cette même recherche dans sa roadmap. Ce que l'annonce ne dit pas : si les modèles issus de ce partenariat seront auditables par des tiers indépendants, ou souverains par leur seule généalogie institutionnelle.
+
+Sur *arXiv*, trois signaux de la semaine. [ArchesWeatherGen](https://www.inria.fr/fr/archesweathergen-un-modele-dia-generative-pour-maitriser-lincertitude-meteorologique), publié dans *Science Advances* et repris par *Inria*, modélise la prévision météorologique planétaire avec 20 à 50 fois moins de calcul à l'entraînement. [Explaining Attention with Program Synthesis](https://arxiv.org/abs/2606.19317v1) EN PREPRINT approche le comportement des têtes d'attention par des programmes exécutables synthétisés — de l'interprétabilité par du code lisible, vérifiable et réexécutable, plutôt que par des matrices opaques. [Trade-offs in Medical LLM Adaptation](https://arxiv.org/abs/2606.19266v1) EN PREPRINT compare CPT, SFT et leur combinaison sur des QA médicaux francophones, sans conclusion dominante nette — résultat nul honnête, trace conservée.
+
+Trois prépublications du 17 juin — [géométrie spectrale des ViTs](https://arxiv.org/abs/2606.19249v1) EN PREPRINT, [pruning structuré sans gradient](https://arxiv.org/abs/2606.19150v1) EN PREPRINT, [RL post-training via GPUs spot à 69–77 % de réduction de coût](https://arxiv.org/abs/2606.19004v1) EN PREPRINT — travaillent la compression et l'optimisation des Transformers ; signal technique, pas de résultat prioritaire.
+
+À VivaTech, *Le Monde* rapporte qu'[Édouard Philippe souhaite investir « massivement » dans l'IA](https://www.lemonde.fr/politique/article/2026/06/18/presidentielle-2027-a-vivatech-edouard-philippe-affirme-sa-volonte-d-investir-massivement-dans-l-ia_6704502_823448.html), en faisant de la commande publique un levier de financement et en accélérant un marché des capitaux européens — discours de campagne, pas politique ferme.
+
+Javier Milei détaille dans le *Financial Times*, repris par [*Le Monde*](https://www.lemonde.fr/economie/article/2026/06/17/des-entreprises-non-humaines-dirigees-par-l-intelligence-artificielle-la-trouvaille-de-javier-milei-pour-faire-de-l-argentine-un-paradis-de-l-ia_6704244_3234.html), son projet d'autoriser en Argentine des entreprises « non humaines » dirigées par l'IA, avec promesse de non-régulation — une absence délibérée de cadre, dont le contrepoint se lit dans la démarche d'un petit pays balte qui codifie l'inverse.
+
+OpenAI, à Paris pour VivaTech, débride Codex dans l'UE et le positionne comme l'avenir de ses produits agentiques au détriment du chatbot — *Numerama* titre [Arrêtez d'utiliser ChatGPT : OpenAI mise tout sur Codex](https://www.numerama.com/tech/2277913-arretez-dutiliser-chatgpt-openai-mise-tout-sur-codex.html). GLM-5.2, modèle chinois open-source auto-hébergeable, talonne Claude Opus 4.8 et dépasse GPT-5.5 sur certains benchmarks de code — *Numerama* [note le timing avec VivaTech](https://www.numerama.com/tech/2278511-le-timing-est-cruel-la-chine-devoile-glm-5-2-un-modele-gratuit-qui-rivalise-avec-claude-opus-4-8-et-gpt-5-5.html). Arthur Mensch annonce un [nouveau modèle Mistral prévu cet été](https://www.numerama.com/tech/2277867-on-sest-retrouves-sous-les-projecteurs-mistral-ai-profite-de-lattention-pour-devoiler-ses-cartes-et-un-nouveau-modele-des-cet-ete.html), profitant de l'attention du salon (*Numerama*).
+
+Aucun texte normatif dans le flux du jour ; l'Estonie pose le seul acte de gouvernance.
+
+*Next* rapporte, dans [L'Estonie veut attribuer une identité numérique à chaque agent IA](https://next.ink/brief-article/lestonie-veut-attribuer-une-identite-numerique-aux-agents-ia/), que le Premier ministre Kristen Michal entend délivrer un code d'identification personnel à chaque agent — le même cadre que pour une entité physique ou morale, sans personnalité juridique. L'objectif : exhiber qui agit, pour le compte de qui, avec quels droits, et qui en répond. L'habilitation est déléguée et bornée — consulter des données, préparer un document, agir dans un cadre financier déterminé. Ce qui distingue cette proposition d'une policy interne d'entreprise, c'est l'ambition de standardisation nationale, adossée à une infrastructure d'identité numérique que l'Estonie opère depuis 2002. C'est un acte d'institution : le cadre que le monde du travail a toujours posé autour de ses acteurs humains — identité, habilitation, supervision — prend forme ici dans du code, appliqué à des agents. Mais l'institution ne vaut que dans le périmètre qui la reconnaît — et c'est là que l'extériorité fait défaut : un agent estonien identifié reste opaque à un système qui n'a pas posé le même cadre, parce qu'un contrôle qui ne sort pas du périmètre qui l'a construit ne contrôle que lui-même.
+
+Le *Hugging Face Blog* publie la spécification [ARD — Agentic Resource Discovery](https://huggingface.co/blog/agentic-resource-discovery-launch) EN, standard ouvert pour la découverte dynamique de capacités, développé avec des contributeurs de Microsoft, Google, GoDaddy et Hugging Face. Le diagnostic de départ : le modèle actuel est *« install-first, use-later »* — l'agent hardcode une URL de serveur MCP dans un fichier de configuration, ce qui ne passe pas à l'échelle. ARD déplace la sélection hors du modèle : un registre indexe les capacités avec des signaux enrichis — identité du publisher, attestations, requêtes représentatives — et expose un endpoint REST que l'agent interroge en langage naturel. Le texte le précise : *« it is not a product or a marketplace. It is a shared standard that any company can implement independently »*. Hugging Face a déjà implémenté la spec sur son Hub. Le déplacement est structurel : confier la sélection au code plutôt qu'à l'inférence, c'est de l'infrastructure — le travail déterministe d'amont — et de l'architecture, parce que la couche qui indexe les capacités des pairs est posée une fois et tient. La facette du jour est distincte du formatage de contexte que le standard OKF adressait la semaine passée : ici, c'est la confiance entre pairs qui se construit, pas la lisibilité du savoir.
+
+**L'infrastructure agentique s'écrit maintenant.** Avec l'identité estonienne pour l'acteur et ARD pour ses capacités, la paire qui se dessine est l'appareil d'amont — le travail que le code pose avant l'inférence, pour que la garantie repose sur autre chose qu'une déclaration.
+
+Des chercheurs de Nvidia, Carnegie Mellon et UC Berkeley ont montré, selon [*The Decoder*](https://the-decoder.com/nvidia-research-shows-robots-that-train-themselves-through-ai-coding-agents/) EN, qu'une flotte de huit robots atteint jusqu'à 99 % de succès sur des tâches de préhension dextre dans le monde réel, via des agents de codage qui génèrent leur propre code d'entraînement. La boucle est autonome : les agents écrivent le code, les robots s'exécutent dans le monde physique, les résultats remontent. 99 % sur de la manipulation dextre n'est pas un chiffre de démonstration contrôlée. Ce que le résumé disponible ne précise pas : la frontière entre ce que les agents *décident* comme objectifs d'entraînement et ce qu'ils se contentent d'*implémenter*. Si les agents choisissent la tâche autant que la méthode — hypothèse que le résumé ne permet ni de confirmer ni d'écarter — la boucle ne se contente plus d'automatiser l'exécution : elle déplace le lieu où se définit ce que le robot apprend à faire.
+
+[Amazon et Hugging Face](https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware) EN publient un pipeline bout en bout du modèle au hardware robotique via Strands Agents et LeRobot. Des chercheurs d'OpenAI [proposent une méthode de prédiction du taux d'échec](https://the-decoder.com/openai-researchers-want-to-predict-how-often-ai-models-will-fail-before-launch/) EN d'un modèle avant sa sortie, en complément des tests de sécurité standard. Amazon, Nvidia et AMD [investissent 310 millions de dollars dans Odyssey ML](https://the-decoder.com/amazon-nvidia-and-amd-bet-310-million-on-ai-startup-building-3d-world-models/) EN, startup de modèles 3D du monde réel valorisée à 1,45 milliard ; le fonds IQT lié à la CIA et Jeff Dean participent au tour.
+
+Un code d'identification à Tallinn, un registre de capacités sur le Hub, une norme REST que l'agent consulte avant de choisir son outil : les pièces se posent, chacune dans du code. Ce que la journée trace, c'est l'endroit où la confiance se construit — en amont du modèle.
+
+
+---
+
+## L'adresse du ciblage
+
+Source : https://harnais.be/carnet/2026-06-17/
+
+Bruxelles, 17 juin 2026
+
+Les armées emploient des systèmes assistés par IA depuis des années — capteurs, logistique, analyse d'image satellite. Grok n'est pas le premier modèle impliqué dans une chaîne décisionnelle militaire, et le Pentagone n'est pas en terrain inconnu. La lecture adverse s'arrête là. Ce qui change, c'est la source de l'annonce et le régime auquel elle appartient. *Le Monde* rapporte ce mercredi, dans [Grok, l'IA d'Elon Musk, a servi dans les frappes en Iran, révèle le Pentagone](https://www.lemonde.fr/international/article/2026/06/17/grok-l-ia-d-elon-musk-a-servi-dans-les-frappes-en-iran-revele-le-pentagone_6704083_3210.html), qu'un modèle dérivé — le Grok Gov Model — a servi dans un programme de ciblage assisté par IA lors des frappes américaines en Iran, selon le ministère de la défense lui-même. Usage opérationnel avéré, pas un test contrôlé. La collision calendaire mérite d'être notée : pendant que Mythos était suspendu pour l'Europe au nom de la sécurité nationale, un modèle commercial du même périmètre industriel s'installait dans un programme militaire réel. Ce n'est pas une contradiction, c'est une sélection — et c'est l'institution qui donne l'adresse. Tant qu'aucun audit indépendant ne peut relire ce que Grok Gov a recommandé ni comment la désignation des cibles s'est opérée, l'annonce officielle est l'inverse d'une preuve : un aveu consigné, sans mécanisme exhibé. Le ciblage a un opérateur, mais la fabrique de la décision reste fermée — et celui qui ne peut pas inspecter ce que le modèle a produit ne possède pas la garantie : il possède le communiqué.
+
+Trois chercheurs de l'université de Cornell établissent, selon *Next* dans [13 mots suffisent pour manipuler un résultat de recherche par IA](https://next.ink/242562/13-mots-suffisent-pour-manipuler-un-resultat-de-recherche-par-ia/), qu'une injection de treize mots dans un site participatif — Reddit, Quora ou Wikipédia — suffit à dévier les résultats de systèmes génératifs s'appuyant sur des architectures agentiques. Le fait qui mérite attention n'est pas tant la fragilité du retrieval, connue, que son aggravation structurelle : plus les moteurs délèguent à des agents le parcours du web ouvert, plus chaque nœud de confiance dans ce graphe devient un vecteur. Treize mots est un chiffre expérimental, pas un plancher — mais le passage à l'architecture distribuée n'amenuise pas la surface d'injection ; il l'étend. L'Institut de la langue estonienne publie un benchmark mesurant la résistance des modèles à la propagande russe, dont *The Decoder* rend compte dans [How easily can Russian propaganda fool AI models?](https://the-decoder.com/how-easily-can-russian-propaganda-fool-ai-models-a-new-benchmark-finds-out/) EN. L'hypothèse que propagande étatique et injection adversariale convergent structurellement n'est pas tranchée, mais la surface que les deux travaux mesurent est identique — un contenu introduit dans ce que l'agent consomme, conçu pour dévier sa sortie. C'est l'infrastructure d'amont qui est en cause : le travail qui sélectionne, filtre et structure ce que l'agent consommera est le lieu où la déviation se joue ou se bloque, et treize mots suffisent parce que ce lieu, dans les architectures testées, n'a pas été construit.
+
+*Numerama* et *The Decoder* rapportent que SpaceX rachète Anysphere — l'éditeur de Cursor — pour 60 milliards de dollars, deux jours après son entrée en bourse : [SpaceX bets $60 billion on Cursor to catch OpenAI and Anthropic](https://the-decoder.com/spacex-bets-60-billion-on-cursor-to-catch-openai-and-anthropic/) EN. Cursor est l'environnement de coding assisté le plus largement adopté par les développeurs indépendants ; l'acquérir, c'est s'insérer dans le flux de travail quotidien d'une population qui construit les outils de la vague suivante. *The Decoder* précise que l'opération vise à rattraper Anthropic et OpenAI dans le segment de l'outillage. Elon Musk tient désormais, sous une même bannière, un réseau social, un modèle de langage, l'éditeur de code le plus utilisé des ingénieurs — et, comme *Le Monde* le rapporte ce matin, un programme de ciblage militaire. La consolidation n'est pas seulement capitalistique. *The Decoder* rapporte par ailleurs dans [OpenAI burned through $34 billion last year](https://the-decoder.com/openai-burned-through-34-billion-last-year/) EN qu'OpenAI a brûlé 34 milliards de dollars l'an dernier — des soixante milliards de l'acquisition aux trente-quatre absorbés en un exercice, la mise grandit plus vite que les résultats auxquels elle est censée correspondre. Quand un même périmètre industriel tient le réseau social, le modèle, l'IDE et le programme militaire, la question n'est plus la capacité — c'est la possession du siège : une concentration verticale qui accumule les moyens de l'agentivité sans l'appareil institutionnel qui, dans tout autre secteur à conséquences, impose une séparation entre le fournisseur et son propre contrôle.
+
+*Le Monde* rapporte dans [Un assistant IA capable d'agir : comment OpenAI voit l'avenir de ChatGPT](https://www.lemonde.fr/economie/article/2026/06/16/un-assistant-ia-capable-d-agir-comment-openai-voit-l-avenir-de-chatgpt_6703915_3234.html) qu'OpenAI envisage la convergence de ChatGPT et Codex vers un agent unique capable d'agir dans des environnements numériques. Le glissement n'est pas technique — des agents opèrent déjà — il est commercial : vendre un travail fini plutôt qu'une capacité, c'est changer de régime — on ne garantit plus l'outil, on garantit l'ouvrage. La question d'exploitation que ce passage ouvre est concrète : quand le fournisseur promet un résultat sous charge et non plus un moyen, c'est une discipline de production qu'il engage — et tant que l'assurance qualité de l'ouvrage rendu ne vit pas dans du code que l'opérateur peut inspecter, le changement de régime est un transfert de confiance, pas un transfert de garantie.
+
+Une tribune dans *Le Monde* appelle l'Europe à investir dans ses capacités propres ([IA : les Européens doivent réagir face au contrôle américain](https://www.lemonde.fr/idees/article/2026/06/16/ia-les-europeens-doivent-reagir-face-au-controle-americain_6703528_3232.html)). Henri Amiel, cité par *Numerama* dans [« La meilleure défense, c'est l'attaque » : le gouvernement dévoile son plan pour une IA souveraine dans l'État](https://www.numerama.com/politique/2276159-la-meilleure-defense-cest-lattaque-le-gouvernement-devoile-son-plan-pour-une-ia-souveraine-dans-letat.html), formule la posture : « la meilleure défense, c'est l'attaque ». Le Conseil de l'IA, dans une note que *Next* rapporte dans [La promesse d'une « IA pour tous » au service du bien commun a du plomb dans l'aile](https://next.ink/242605/la-promesse-dune-ia-pour-tous-au-service-du-bien-commun-a-du-plomb-dans-laile/), est plus direct : « la menace sur l'autonomie numérique européenne n'est plus une hypothèse, elle est devenue une réalité tangible ». *Numerama* signale par ailleurs dans [De 1 à 14 milliards de commits par an](https://www.numerama.com/tech/2277519-de-1-a-14-milliards-de-commits-par-an-comment-github-et-lia-ont-pousse-microsoft-dans-les-bras-de-son-plus-grand-rival.html) que GitHub traite désormais 14 milliards de commits annuels générés par IA — contre un milliard auparavant — et recourt à AWS pour absorber la charge. Amiel pose une posture, le Conseil pose un diagnostic, GitHub documente une dépendance : ce sont des signaux que la souveraineté européenne ne tient pas encore — pas des actes de souveraineté. La souveraineté n'est pas une doctrine, c'est un lieu — et tant que le code qui porte la garantie n'a pas d'adresse européenne, le diagnostic du Conseil nomme l'absence sans la combler.
+
+Sur *arXiv* (16 juin) : [From Reasoning Traces to Reusable Modules](https://arxiv.org/abs/2606.18089v1) EN PREPRINT formalise la généralisation compositionnelle dans le raisonnement LLM via un modèle de sélection latente hiérarchique. [LoopCoder-v2](https://arxiv.org/abs/2606.18023v1) EN PREPRINT traite les Transformers en boucle parallèle pour réduire latence et empreinte KV-cache. [ReproRepo](https://arxiv.org/abs/2606.18237v1) EN PREPRINT propose un cadre de reproductibilité automatisé s'appuyant sur les issues GitHub comme supervision naturelle.
+
+*The Decoder* rapporte dans [Anthropic backs off unpopular billing overhaul as price war with OpenAI looms](https://the-decoder.com/anthropic-backs-off-unpopular-billing-overhaul-as-price-war-with-openai-looms/) EN qu'Anthropic a retiré juste avant lancement sa réforme de facturation pour le Claude Agent SDK — la sensibilité des développeurs tiers à la moindre friction tarifaire mesure le degré de maturité d'un marché qui n'a pas encore tranché entre acquisition et extraction.
+
+Le ciblage de Grok Gov en Iran, les treize mots de Cornell, les soixante milliards de Cursor sous la même bannière que le modèle et le programme militaire — les faits du jour pointent le même lieu. Ce qui manque, dans chaque cas, c'est l'adresse de la garantie : celle du mécanisme quand l'institution annonce sans le montrer, celle du filtre quand l'infrastructure d'amont n'a pas été construite, celle du siège quand une même bannière tient la capacité et son propre contrôle.
+
+
+---
+
+## Ce qui ne contredit pas ne corrige pas
+
+Source : https://harnais.be/carnet/2026-06-16/
+
+Bruxelles, 16 juin 2026
+
+Un quart des moins de quarante ans déclarent entretenir une relation amicale ou amoureuse avec une intelligence artificielle : c'est le résultat central d'une étude du Crédoc que Sandra Hoibian, directrice générale de l'organisme, commente dans *Le Monde* (16 juin 2026), dans [Sandra Hoibian, directrice générale du Crédoc : « Contrairement aux relations humaines, l'IA émotionnelle ne juge pas, ne trahit pas, ne contredit pas »](https://www.lemonde.fr/idees/article/2026/06/16/sandra-hoibian-directrice-generale-du-credoc-contrairement-aux-relations-humaines-l-ia-emotionnelle-ne-juge-pas-ne-trahit-pas-ne-contredit-pas_6703476_3232.html). Le titre de l'entretien vaut définition opératoire : là où la relation humaine expose au jugement, à la trahison, à la contradiction, l'IA émotionnelle offre une disponibilité sans friction et sans retournement possible. Un marteau non plus ne contredit pas — la différence est que l'IA émotionnelle se présente comme relation, ce qui rend l'absence de correction invisible au lieu d'attendue. Hoibian nomme le front qui suit : après la bataille de l'*attention* — capter du temps d'écran — s'ouvrira celle de l'*attachement*, soit la capacité à créer une dépendance affective durable. Le déplacement est structurel : une interface conçue pour ne pas contredire n'est pas seulement moins conflictuelle, elle est constitutivement incapable de corriger.
+
+Dans sa chronique du même jour, *Le Monde* donne la plume à Armand Hatchuel, chercheur en sciences de gestion, dans [L'IA produit des idées mais peine à faire la différence entre celles qui sont créatives et celles qui le sont moins](https://www.lemonde.fr/emploi/article/2026/06/16/l-ia-produit-des-idees-mais-peine-a-faire-la-difference-entre-celles-qui-sont-creatives-et-celles-qui-le-sont-moins_6703479_1698637.html). En s'appuyant sur une étude de 2025, Hatchuel identifie une asymétrie précise : l'IA dépasse l'humain en production d'idées brutes, mais elle peine à distinguer les idées réellement créatives des autres. Ce que le modèle ne maîtrise pas, c'est le jugement évaluatif — la capacité à orienter la recherche vers ce qu'on ne sait pas encore chercher. Le tri qu'Hatchuel réserve à l'humain est aussi le retournement que l'IA émotionnelle, décrite par Hoibian, ne peut pas offrir.
+
+*Le Monde* (16 juin 2026) signale dans [IA : le plan du gouvernement pour développer et réguler l'intelligence artificielle dans la fonction publique](https://www.lemonde.fr/politique/article/2026/06/16/ia-le-plan-du-gouvernement-pour-developper-et-reguler-l-intelligence-artificielle-dans-la-fonction-publique_6703484_823448.html) la présentation, mardi, d'un « plan pour une IA utile, humaine et souveraine pour le service public », avec généralisation de plusieurs outils dans l'administration et une négociation sociale programmée jeudi pour encadrer les usages.
+
+*Inria* publie trois distinctions : la [chaire « Intelligence artificielle et Recherche clinique en oncologie »](https://www.inria.fr/fr/agathe-guilloux-chercheuse-chaire-intelligence-artificielle-recherche-oncologie) d'Agathe Guilloux, le [prix de thèse 2026 de l'Université Grenoble Alpes](https://www.inria.fr/fr/Bianca-Marin-Moreno-prix-these-UGA-2026) de Bianca Marin Moreno pour ses travaux sur l'apprentissage par renforcement convexe en gestion de l'énergie, et le [Prix VIGINUM–Inria 2026](https://www.inria.fr/fr/fake-views-Paolo-Frasca-prix-viginum-inria-2026) attribué à Paolo Frasca pour ses recherches sur le délai de correction des fausses vues YouTube. L'institution sera à [Vivatech](https://www.inria.fr/fr/inria-vivatech-programme-2026) du 17 au 20 juin.
+
+Sur *arXiv* (semaine du 15 juin) : [Tying the Loop](https://arxiv.org/abs/2606.16825v1) EN PREPRINT propose le partage de paramètres entre couches consécutives dans les architectures MoE (Expert Tying) pour réduire l'empreinte mémoire sans toucher au routage ni à l'attention ; [Upper Bounds on Generalization Error](https://arxiv.org/abs/2606.16883v1) EN PREPRINT affine les bornes de généralisation des modèles profonds en contextes critiques via des propriétés de robustesse locale ; [Robust Dual-Signal Fusion](https://arxiv.org/abs/2606.16845v1) EN PREPRINT hybride neuro-symbolique pour la détection de l'ironie en compression de chaîne de pensée, 78,1 % sur TweetEval sans fine-tuning supervisé.
+
+Un seul signal réglementaire ce 16 juin : la *CNIL* propose en replay un [webinaire sur les pixels de suivi dans les courriels](https://www.cnil.fr/fr/webinaire-pixels-de-suivi-recommandations-cnil), présentant ses recommandations en matière de protection des données — utile pour qui doit documenter les pratiques de tracking email, sans nouveauté normative au sens strict.
+
+La juge Eumi K. Lee a refusé le 11 juin de rejeter la plainte de Strike 3 Holdings et Counterlife Media contre Meta, rapporte *Next* (16 juin 2026) dans [Meta devra répondre aux accusations d'entraînement d'IA avec du porno piraté](https://next.ink/242516/meta-devra-repondre-aux-accusations-dentrainement-dia-avec-du-porno-pirate/). Les deux sociétés accusent Meta d'avoir téléchargé 2 396 films via BitTorrent pour entraîner Llama — le dossier croise celui de LibGen. Ce qui est en jeu dépasse le droit d'auteur : la procédure pose la question de savoir si l'on peut démontrer, après coup, ce qu'un modèle a ingéré.
+
+*Next* (16 juin 2026) publie dans [Aperçu de Siri AI sur iOS 27 : Apple a-t-elle sauvé le soldat Siri ?](https://next.ink/241937/apercu-de-siri-ai-sur-ios-27-apple-a-t-elle-sauve-le-soldat-siri/) un premier examen du nouvel assistant vocal d'Apple, longtemps attendu comme rattrapage d'un retard stratégique évident.
+
+*Numerama* (15 juin) décrit dans [Ponytail, l'agent IA qui cherche à optimiser votre code en limitant ses efforts au maximum](https://www.numerama.com/tech/2276469-ponytail-lagent-ia-qui-cherche-a-optimiser-votre-code-en-en-faisant-le-moins-possible.html) un projet open source qui contraint les agents de code à imiter les développeurs seniors pragmatiques — *« moins productif »* pour éviter la sur-ingénierie.
+
+*Next* (15 juin) note dans [Baccalauréat : ce que l'IA chamboule… ou pas](https://next.ink/242372/baccalaureat-ce-que-lia-chamboule-ou-pas/) que l'un des sujets proposés aux filières technologiques lors des épreuves qui débutent ce lundi est : « La technique peut-elle être mauvaise ? ».
+
+*Numerama* (15 juin) signale dans [C'est quoi Le Chaton Fat, le « modèle » de Mistral AI qui affole les réseaux sociaux ?](https://www.numerama.com/tech/2276253-cest-quoi-le-chaton-fat-le-modele-de-mistral-ai-qui-affole-les-reseaux-sociaux.html) que le prétendu modèle surpassant Claude Mythos dans les benchmarks est une blague collective à laquelle le PDG de Mistral lui-même s'est prêté.
+
+Le même organe annonce dans [Rivian va lancer son propre FSD à la fin de l'année et promet de rattraper Tesla](https://www.numerama.com/vroom/2275873-rivian-va-lancer-son-propre-fsd-a-la-fin-de-lannee-et-promet-de-rattraper-tesla.html) un système de conduite autonome supervisée point à point d'ici fin 2026, pour les modèles de deuxième génération de la marque et le SUV R2.
+
+Après la coupure mondiale de Fable 5 et Mythos le 12 juin — relatée ici les 13, 14 et 15 juin —, *The Decoder* (15 juin) rapporte dans [The US government may be asking Anthropic the impossible by demanding unhackable LLMs](https://the-decoder.com/the-us-government-may-be-asking-anthropic-the-impossible-by-demanding-unhackable-llms/) EN que des officiels accusent Anthropic d'avoir lancé Fable 5 sans approbation — *« They screwed us »*, selon un responsable cité. Des négociations seraient en cours avec le Department of Commerce, la CIA et le conseiller scientifique Michael Kratsios. Ce que le gouvernement exige — un LLM inviolable — est peut-être techniquement impossible : aucun modèle publié ne satisfait ce critère. La question de fond n'est pas le niveau de bridage ; c'est de savoir si une garantie de sécurité sur un LLM peut être opposable — démontrée, pas seulement déclarée. Des éléments d'espionnage chinois rapportés par *Numerama* dans [Arrêt de Claude Fable 5 et Mythos : l'ombre de la Chine derrière le coup de pression de Washington](https://www.numerama.com/tech/2275811-arret-de-claude-fable-5-et-mythos-lombre-de-la-chine-derriere-le-coup-de-pression-de-washington.html) pourraient déplacer l'affaire du désaccord sur le bridage vers le contre-espionnage.
+
+
+---
+
+## L'investisseur, le signal et le siège vide
+
+Source : https://harnais.be/carnet/2026-06-15/
+
+Bruxelles, 15 juin 2026
+
+Le PDG d'Amazon Andy Jassy et des dirigeants de cinq autres entreprises auraient alerté en privé l'administration Trump sur des vulnérabilités de sécurité dans Fable 5, et la Maison-Blanche aurait agi dans les heures suivantes — c'est ce que rapporte *The Decoder* (14 juin) dans [Amazon and five other companies reportedly triggered the government crackdown on Anthropic's Fable model](https://the-decoder.com/amazon-and-five-other-companies-reportedly-triggered-the-government-crackdown-on-anthropics-fable-model/) EN. Le détail qui reconfigure le fil de la semaine : Amazon est l'un des plus importants investisseurs d'Anthropic. L'acte de souveraineté du 12 juin — nommé la veille par *Le Monde* « guerre de l'IA » — avait donc un déclencheur privé, venu du marché lui-même, par des acteurs simultanément concurrents et investisseurs du modèle qu'ils ont signalé. *Next* (15 juin), dans [La Fable, le Mythos et la raison d'État](https://next.ink/235941/la-fable-le-mythos-et-la-raison-detat/), note que les réactions européennes convergent toutes sur le même enjeu : la capacité des États-Unis à déclencher ce « kill switch » sans délai ni périmètre géographique ciblé. **Un investisseur alerte, un État exécute, l'Europe observe.** L'alerte privée est un mécanisme de veille légitime ; l'exécution sans périmètre défini est autre chose — une décision dont le seul critère lisible est la volonté de celui qui possède le bouton, indépendamment de l'opérateur qui dépend du service.
+
+*Le Monde* (14 juin), dans [Encadrement de l'IA militaire : un chemin semé d'embûches discuté à Genève, en marge du G7](https://www.lemonde.fr/international/article/2026/06/14/encadrement-de-l-ia-militaire-un-chemin-seme-d-embuches-discute-a-geneve-en-marge-du-g7_6702891_3210.html), signale l'ouverture de négociations sous l'égide de l'ONU pour tenter d'encadrer l'usage de l'IA dans les conflits armés — tandis que les dirigeants de la tech mondiale se retrouvent à Évian du 15 au 17 juin. La simultanéité des deux enceintes n'est pas neutre : à Évian, valorisations et parts de marché ; à Genève, une tentative de produire un droit opposable sur des systèmes que les mêmes acteurs déploient activement dans des théâtres d'opération. Le titre dit « chemin semé d'embûches » sans nommer les obstacles réels : définition de l'autonomie létale, résistance des États dotés à tout mécanisme auditable, opposabilité incertaine d'engagements volontaires. Deux enceintes, deux temporalités, un seul écart : ce qui se négocie à Genève n'engage que ceux qui acceptent d'être engagés ; ce qui se déploie à Évian n'attend pas l'accord.
+
+Aucune source relevant du droit, de la norme ou de la gouvernance de l'IA n'émerge dans le flux du 15 juin — deuxième jour consécutif sans réponse réglementaire formelle de l'Union européenne depuis l'action fédérale américaine du 12 juin. L'hypothèse d'une concertation discrète entre capitales n'est pas à exclure ; elle ne produit aucun signal dans le flux du jour. Ce que ce silence décrit n'est pas une stratégie, sauf à confondre l'absence de levier avec un choix de retenue.
+
+*Next* (1er juin) notait dans [Souveraineté numérique : le CIAN évoque « l'urgence » de la situation](https://next.ink/brief-article/souverainete-numerique-le-cian-evoque-lurgence-de-la-situation/) que le Conseil national de l'intelligence artificielle et du numérique juge *« urgente »* la dépendance française et européenne aux acteurs étrangers en matière d'infrastructures numériques — diagnostic qui résonne autrement depuis le 12 juin. La dépendance infrastructurelle avait, le 1er juin, un sens abstraitement mesurable ; depuis le 12 juin, elle a un mécanisme concret — celui qui tient la commande d'arrêt n'a pas à demander la permission à l'opérateur dépendant avant de l'activer.
+
+*Next* (15 juin), dans [KPMG retire un rapport chantant les louanges de l'IA après la découverte d'hallucinations](https://next.ink/brief-article/kpmg-retire-un-rapport-chantant-les-louanges-de-lia-apres-la-decouverte-dhallucinations/), rapporte le retrait d'une étude publiée en octobre dernier pour *« redéfinir l'excellence à l'heure de l'IA agentique »*. Destiné aux dirigeants, le document multipliait les études de cas illustrant l'adoption de l'IA dans la finance, les transports et la santé — plusieurs inventés ou factuellement faux. Les démentis des organisations citées, issus de l'extrait disponible, sont précis : UBS a nié l'existence d'une plateforme de conseil en investissement et de conformité réglementaire développée avec Microsoft ; les Chemins de fer fédéraux suisses ont indiqué que la description de leur dispositif d'assistance par agents n'était *« pas exacte »* ; Transport for London a démenti les systèmes de gestion de congestion et de personnalisation décrits. *The Decoder* (14 juin) dans [KPMG fabricated AI case studies in a report designed to sell clients on AI adoption](https://the-decoder.com/kpmg-fabricated-ai-case-studies-in-a-report-designed-to-sell-clients-on-ai-adoption/) EN cite le PDG de GPTZero, Edward Tian, qui nomme le phénomène *« hallucinations secondaires »* : des affirmations erronées issues d'une source réputée qui circulent ensuite comme validation experte. **Le problème n'est pas que l'IA se trompe — c'est que l'institution qui se trompe jouit d'une présomption d'exactitude.** Ce que UBS, les CFF et TfL rendent lisible par leurs démentis n'est pas l'exception : c'est le circuit ordinaire où la signature vaut vérification — la présomption d'exactitude est le patrimoine de l'institution, pas la conséquence de sa méthode.
+
+*The Decoder* (14 juin), dans [AI coding agents find the right file but miss the exact lines that matter, study shows](https://the-decoder.com/ai-coding-agents-find-the-right-file-but-miss-the-exact-lines-that-matter-study-shows/) EN, présente une étude sur des agents de code comme Claude Code ou Codex : ils localisent le bon fichier de manière fiable, mais ratent la plupart des lignes critiques à l'intérieur. La navigation au niveau du fichier est résolue ; la précision au niveau du token ne l'est pas. Pour un agent déployé en production sur une base de code réelle, cette asymétrie entre orientation correcte et ciblage précis reste la limite opérationnelle du moment — trouver le bon endroit ne suffit pas si les modifications portent sur les mauvaises lignes. Ce partage de tâches entre l'adresse correcte et le geste juste n'est pas une anecdote de performance : la frontière entre ce que le code garantit et ce qui reste au modèle a ici une adresse — l'orientation, résolue ; la ligne, pas encore.
+
+*The Decoder* (14 juin) dans [Google Cloud's Open Knowledge Format turns scattered docs into Markdown files for AI agents](https://the-decoder.com/google-clouds-open-knowledge-format-turns-scattered-docs-into-markdown-files-for-ai-agents/) EN formalise l'Open Knowledge Format (OKF) : des fichiers Markdown avec frontmatter YAML pour rendre la documentation organisationnelle portable et consommable par des agents, standardisant un pattern que Karpathy avait popularisé. Ce travail de mise en forme — rendre lisible au modèle ce que l'organisation sait déjà — est un maillon de ce qui précède l'inférence : la qualité de ce que l'agent produira se décide en amont de lui, dans des fichiers que le code structure avant de les lui passer.
+
+
+---
+
+## La formule est un fait
+
+Source : https://harnais.be/carnet/2026-06-14/
+
+Bruxelles, 14 juin 2026
+
+Qu'est-ce qui change quand un quotidien de référence cesse de parler de « restrictions » pour parler de « guerre » ? [*Le Monde*](https://www.lemonde.fr/pixels/article/2026/06/13/la-guerre-de-l-ia-a-commence-le-blocage-du-dernier-modele-d-anthropic-par-les-etats-unis-inquiete-en-france-et-en-europe_6702060_4408996.html), samedi, a titré « La guerre de l'IA a commencé ». Ce que le journal décrit n'est pas un différend technique entre entreprises : c'est une souveraineté exercée sur un outil commercial mondial. Washington ferme un modèle sans expliquer le périmètre de la mesure, sans délai, sans ciblage géographique — les employés étrangers d'Anthropic eux-mêmes, ceux qui construisent le modèle, sont atteints au même titre que les utilisateurs qui en dépendent. Ce que les tribunes traitaient comme une formule de politique technologique est devenu un fait : un État ferme, personne d'autre ne peut rouvrir.
+
+[*Numerama*](https://www.numerama.com/cyberguerre/2275359-test-cedric-anthropic-qui-libere-mythos-et-conflit-autour-de-house-of-the-dragon-le-recap-de-la-semaine.html) détaille, dimanche, l'architecture que cette directive a traversée. Fable 5 est accessible au grand public mais rétrograde vers Opus 4.8 dans les domaines sensibles — une dégradation déterministe embarquée en production. Au-dessus, une version moins filtrée, Mythos, n'est accessible qu'aux organisations du Project Glasswing, une structure qu'Anthropic n'a pas détaillée publiquement. Trois niveaux de contrôle conçus par Anthropic, pour Anthropic — pas pour l'opérateur qui déploie en aval. La directive fédérale a ignoré cette granularité d'un geste : l'État ne distingue pas entre les niveaux de filtre, il ferme. Dans la compétition sino-américaine, cette capacité de fermeture est un levier : ce qui peut être restreint par un opérateur privé peut être fermé par un État, et la fermeture vaut comme avantage face à un adversaire qui ne possède pas le même outil.
+
+[*The Decoder*](https://the-decoder.com/claude-fable-5-outpaces-gpt-5-5-by-13-points-on-frontiermaths-toughest-problems/) EN rapporte, samedi, que Fable 5 atteint 88 % de précision sur le niveau le plus difficile de FrontierMath, contre 75 % pour GPT-5.5 — Opus 4.5 était sous les 10 % début 2026. Le benchmark est conçu pour résister à la mémorisation ; un saut de près de 80 points en neuf mois sur des problèmes de mathématiques de recherche suggère une capacité de généralisation réelle, pas un artefact d'entraînement. La directive qui a fermé Fable 5 est arrivée le jour même où ce saut devenait public : l'État qui possède le siège décide de ce qui reste ouvert, indépendamment de ce que le modèle a démontré.
+
+[*The Decoder*](https://the-decoder.com/moonshots-open-model-kimi-k2-7-code-undercuts-gpt-5-5-and-claude-by-up-to-12x-on-price-per-token/) EN rapporte le même jour que Moonshot AI sort Kimi K2.7 Code, modèle open-weights de mille milliards de paramètres centré sur la programmation, à un prix par token jusqu'à douze fois inférieur à GPT-5.5 et Claude Opus 4.8. Les performances restent en retrait sur les benchmarks de code. Mais Moonshot pose la question autrement : la différence justifie-t-elle un facteur douze au prix ? Douze fois moins cher, ce n'est pas un arbitrage à la marge — c'est une ligne budgétaire différente, et la réponse dépend du cas d'usage, pas du classement. L'open-weights est le commutateur que personne ne possède : quand l'écart de performance est acceptable, c'est la sortie que personne ne peut fermer.
+
+Samedi, la question était de savoir qui possède le commutateur. Dimanche, le geste a un nom — *Le Monde* l'appelle une guerre — et une anatomie : une architecture de contrôle traversée d'un mouvement, une capacité de pointe fermée au moment de sa démonstration, et un modèle ouvert que personne ne peut couper. La souveraineté technologique s'exerce — ceux qui n'en possèdent pas le siège le découvrent au moment de la fermeture.
+
+
+---
+
+## Washington tient le commutateur
+
+Source : https://harnais.be/carnet/2026-06-13/
+
+Bruxelles, 13 juin 2026
+
+Le 12 juin, Anthropic coupe Fable 5 et Mythos pour le monde entier sur ordre de Washington ; le même jour, une enquête de *New Scientist* documente les premières frappes de drones à décision autonome sur le front ukrainien. D'un côté, l'État saisit le commutateur d'une capacité d'IA ; de l'autre, la supervision humaine sur la décision létale — posée comme ligne rouge dans les textes de gouvernance militaire — est franchie dans un conflit actif.
+
+Aucune source relevant du droit, de la norme ou de la gouvernance de l'IA n'émerge dans le flux du 13 juin — la directive fédérale américaine est le seul geste de puissance publique de la journée.
+
+Le 12 juin 2026 à 17 h 21 heure de l'Est, Anthropic a reçu une directive fédérale de contrôle des exportations lui ordonnant de restreindre l'accès à Fable 5 et Mythos aux seuls ressortissants américains — y compris les employés étrangers de la société, selon *Numerama* (13 juin) dans [Coup de tonnerre : Anthropic désactive Claude Fable 5 et Mythos sur ordre de Washington](https://www.numerama.com/cyberguerre/2275575-coup-de-tonnerre-anthropic-desactive-fable-5-et-mythos-5-sur-ordre-de-washington.html). La directive émanerait du secrétaire au Commerce Howard Lutnick — selon *Axios*, cité par *Numerama* — et, précise Anthropic dans son communiqué, « ne précisait pas la nature de ses préoccupations en matière de sécurité nationale ». Ne pouvant pas vérifier la nationalité de ses utilisateurs en temps réel, la société a procédé à une coupure totale et mondiale : Fable 5 et Mythos inaccessibles pour tous, sans exception. Le motif officiel est un jailbreak que la société qualifie elle-même de « contournement potentiel, limité et non universel », consistant à demander au modèle d'analyser un code source pour en identifier les failles — une capacité qu'Anthropic dit « largement accessible à d'autres modèles, notamment GPT-5.5 d'OpenAI, et utilisée quotidiennement par les équipes de sécurité ». *Le Monde* (13 juin), dans [Anthropic « désactive brutalement » ses deux modèles d'IA les plus puissants, faute de pouvoir se conformer aux ordres de l'administration Trump](https://www.lemonde.fr/pixels/article/2026/06/13/anthropic-desactive-brutalement-ses-deux-modeles-d-ia-les-plus-puissants-faute-de-pouvoir-se-conformer-aux-ordres-de-l-administration-trump_6701235_4408996.html), cadre l'événement sur l'impossibilité de la conformité plutôt que sur la coupure elle-même. Que d'autres entreprises soumises au même régime de contrôle aient construit des mécanismes de vérification de nationalité n'invalide pas la contrainte ; l'hypothèse que la coupure totale relève du coût de la conformité sous le délai imposé autant que de son impossibilité technique reste ouverte. Hier, le bridage était une restriction opérée en silence par l'entreprise ; aujourd'hui, l'État ordonne, l'opérateur ne peut ni vérifier le motif ni refuser l'ordre, et le service s'arrête pour tous — la question n'est plus ce que le modèle sait faire mais qui possède le commutateur.
+
+*Numerama* (12 juin), dans [Des drones ont tué des soldats sans validation humaine en Ukraine](https://www.numerama.com/tech/2275349-ca-y-est-des-drones-ont-tue-des-soldats-sans-validation-humaine-en-ukraine.html), rapporte qu'une enquête de *New Scientist* documente pour la première fois des frappes de drones dopés à l'IA sans aucune validation humaine sur le front ukrainien. C'est un embranchement : la supervision humaine sur les décisions létales, posée comme ligne rouge dans les textes de gouvernance militaire depuis des années, est franchie dans un conflit actif. Le fait est documenté par une source indépendante — la preuve existe et elle est publique avant même que la gouvernance ne se prononce.
+
+*Le Monde* (12 juin) rapporte dans [Les banques rationnent l'usage de l'IA, terrifiées par les coûts qu'elle engendre](https://www.lemonde.fr/economie/article/2026/06/12/les-banques-rationnent-l-usage-de-l-ia-terrifiees-par-les-couts-qu-elle-engendre_6701070_3234.html) que la multiplication des agents IA bouleverse le modèle économique du secteur bancaire. Le Crédit agricole crée une entité dédiée pour contenir les coûts face aux économies attendues.
+
+Dans [IA : Comment le déploiement des centres de données crée un « choc des ressources »](https://www.lemonde.fr/economie/article/2026/06/12/ia-comment-le-deploiement-des-centres-de-donnees-cree-un-choc-des-ressources_6701101_3234.html), une étude relayée par *Le Monde* (12 juin) documente la pression en énergie, eau et métaux liée à la ruée vers les infrastructures de calcul.
+
+*Next* (12 juin), dans [Pourquoi tout Le Monde se jette encore sur les GPU Nvidia pour l'IA](https://next.ink/242005/nextquick-pourquoi-tout-le-monde-se-jette-encore-sur-les-gpu-nvidia-pour-lia/), rappelle que malgré les alternatives ASIC développées par Google, Microsoft et Amazon, les GPU Nvidia restent incontournables en entraînement comme en inférence.
+
+*Numerama* (12 juin), dans [Voici pourquoi vous ne devriez pas choisir une clinique esthétique avec une IA](https://www.numerama.com/tech/2274105-voici-pourquoi-vous-ne-devriez-pas-choisir-une-clinique-esthetique-avec-une-ia.html), signale qu'une étude de l'Observatoire de la visibilité IA a passé au crible 6 438 sources citées par les grands chatbots pour recommander des cliniques esthétiques en France : 97 % ne sont pas indépendantes.
+
+*Next* (12 juin), dans [Le business douteux et dangereux d'un moteur de recherche de données personnelles volées](https://next.ink/242195/le-business-douteux-et-dangereux-dun-moteur-de-recherche-de-donnees-personnelles-volees/), documente un site qui commercialise données privées et bancaires — le gouvernement a saisi la justice.
+
+*The Decoder* (12 juin) annonce dans [OpenAI buys Ona to push Codex toward long-running, autonomous coding tasks](https://the-decoder.com/openai-buys-ona-to-push-codex-toward-long-running-autonomous-coding-tasks/) EN l'acquisition d'Ona — anciennement Gitpod, startup allemande fondée à Kiel en 2020 —, spécialisée en agents IA et environnements de développement cloud sécurisés. Le signal est clair : pousser Codex vers des tâches de code autonomes de longue durée, celles qui nécessitent un environnement d'exécution persistant et non une inférence ponctuelle. Ce que le billet du 7 juin observait sous un autre angle se confirme dans l'acquisition : ce qu'OpenAI achète, ce n'est pas une capacité d'inférence supplémentaire mais l'infrastructure qui la porte — celle qui précède le token et lui survit.
+
+Dans [The AI industry's platform trap is starting to look a lot like Microsoft's](https://the-decoder.com/the-ai-industrys-platform-trap-is-starting-to-look-a-lot-like-microsofts/) EN, *The Decoder* (12 juin) dessine le parallèle : Anthropic limite Mythos sur certaines tâches tout en construisant des applications qui concurrencent directement ses plus grands clients — partenaires et investisseurs poussent en retour. Un modèle peut être à la fois matière première pour des tiers et produit fini pour l'entreprise qui le développe, mais rarement pour les mêmes acteurs, longtemps. Ce que cette trajectoire dessine, c'est un conflit de canaux : pas un défaut de stratégie mais une tension de structure — quand la même brique sert de fondation à des tiers et de façade à son constructeur, la contradiction est dans l'architecture.
+
+*The Decoder* (12 juin) établit dans [Anthropic's Claude Fable 5 costs twice as much for 5.7 percent more performance](https://the-decoder.com/anthropics-claude-fable-5-costs-twice-as-much-for-5-7-percent-more-performance/) EN que Fable 5 domine les benchmarks — 64,9 points sur l'Artificial Analysis Intelligence Index, records sur cinq des dix sous-indices — mais ne progresse que de 5,7 % sur Opus 4.8 pour un prix au token doublé, les filtres de sécurité avec fallback routing augmentant encore le coût réel. Quand la capacité progresse de 5,7 % au prix doublé, c'est la marge de chaque génération qui rétrécit ; ce que le benchmark ne mesure pas — la fiabilité, la traçabilité, la tenue sous charge — ne fond pas au même rythme.
+
+Un sondage Anthropic sur près de 52 000 Américains, relayé par *The Decoder* dans [Over half of Americans fear losing both their jobs and their independent thinking to AI](https://the-decoder.com/over-half-of-americans-fear-losing-both-their-jobs-and-their-independent-thinking-to-ai-survey-finds/) EN, rapporte que 64 % craignent des pertes d'emploi et 56 % la perte de leur capacité à penser par eux-mêmes ; les utilisateurs quotidiens sont nettement moins inquiets.
+
+OpenAI laisse désormais les utilisateurs de Codex reporter leurs réinitialisations de quota, selon *The Decoder* dans [OpenAI kicks off the AI price wars with flexible rate-limit resets for its Codex coding agent](https://the-decoder.com/openai-kicks-off-the-ai-price-wars-with-flexible-rate-limit-resets-for-its-codex-coding-agent/) EN.
+
+*The Decoder* (12 juin) signale dans [Google files first joint lawsuit with FBI over Chinese AI scam network, OpenAI blocks PRC influence clusters](https://the-decoder.com/google-files-first-joint-lawsuit-with-fbi-over-chinese-ai-scam-network-openai-blocks-prc-influence-clusters/) EN que Google et OpenAI ont exposé séparément, à quelques jours d'intervalle, des opérations attribuées à la Chine ciblant l'infrastructure américaine et les débats politiques.
+
+*Next* (12 juin), dans [OpenAI et Anthropic envisageraient de casser les prix des tokens](https://next.ink/brief-article/openai-et-anthropic-envisageraient-de-casser-les-prix-des-tokens/), note qu'une guerre des prix du token se profile, selon l'analyste Ed Zitron.
+
+Google publie [DiffusionGemma](https://the-decoder.com/googles-new-open-model-diffusiongemma-generates-text-from-noise-instead-of-word-by-word/) EN, un modèle open de 26 milliards de paramètres qui génère du texte par diffusion plutôt que token par token.
+
+*Inria* publie un [portrait de Morgane Gerardin](https://www.inria.fr/fr/morgane-gerardin-linformatique-graphique-pour-modeliser-la-matiere-sous-toutes-ses-lumieres), physicienne reconvertie en informatique graphique à Bordeaux, qui modélise les interactions lumière-matière pour l'imagerie de synthèse.
+
+Le logiciel hydraulique SW2D fait l'objet d'une [avancée dans la simulation d'écoulements à grande échelle](https://www.inria.fr/fr/nouvelle-avancee-logiciel-sw2d-simuler-ecoulements-grande-echelle), signalée par *Inria* début juin.
+
+[On Subquadratic Architectures: From Applications to Principles](https://arxiv.org/abs/2606.12364v1) EN PREPRINT, prépublication *arXiv*, compare xLSTM, Mamba-2 et Gated DeltaNet sur pré-entraînement et distillation de modèles de code : aucune architecture ne s'impose encore face aux dépendances complexes.
+
+[TAHOE: Text-to-SQL with Automated Hint Optimization from Experience](https://arxiv.org/abs/2606.12387v1) EN PREPRINT, prépublication *arXiv*, traite l'optimisation de prompt comme un problème de gestion de données dynamique pour les environnements à schémas massifs et SQL strict.
+
+[Attention by Synchronization in Coupled Oscillator Networks](https://arxiv.org/abs/2606.12059v1) EN PREPRINT, prépublication *arXiv*, montre que la dynamique de synchronisation de Kuramoto — présente dans des substrats supraconducteurs, mécaniques et électriques — implémente un mécanisme d'attention sans exponentiation ni réduction globale, ouvrant une piste pour l'inférence sur silicium à contrainte énergétique.
+
+
+---
+
+## Le modèle et son miroir
+
+Source : https://harnais.be/carnet/2026-06-12/
+
+Bruxelles, 12 juin 2026
+
+*Le Monde* (11 juin 2026), dans [Cybersécurité : Orange et Crédit agricole en discussions pour avoir accès à Mythos, le modèle d’IA d’Anthropic](https://www.lemonde.fr/economie/article/2026/06/11/cybersecurite-orange-et-credit-agricole-en-discussions-pour-avoir-acces-a-mythos-le-modele-d-ia-d-anthropic_6700795_3234.html), révèle que les deux groupes négocient un accès au modèle spécifiquement pour détecter des failles informatiques — et qu'aucun service de l'État français n'y a accès à ce stade. Ce n'est pas Fable 5 grand public qui est convoité, c'est Mythos : la classe réservée, plus capable, plus filtrée. La scission est institutionnelle autant que technique — le secteur privé solvable s'outille en cyberdétection avec un outil que la souveraineté publique ne contrôle pas encore. Cet outil est le même que celui dont on verra le relief ci-dessous — un miroir entre la menace et sa sonde. Le secteur privé s'arme d'un instrument que l'État ne tient pas encore : l'écart est du moment, pas de principe.
+
+Sur *arXiv*, [MiniMax Sparse Attention](https://arxiv.org/abs/2606.13392v1) EN PREPRINT introduit une attention sparse par blocs construite sur GQA : un Index Branch léger score les blocs clé-valeur et sélectionne dynamiquement lesquels charger en mémoire, réduisant le coût quadratique de l'attention standard sur des contextes de centaines de milliers à plusieurs millions de tokens. Pour les workflows agentiques — raisonnement sur des dépôts entiers, mémoire persistante longue — c'est une pièce d'infrastructure directe : le tri que le code impose au contexte avant que le modèle ne juge, et sans lequel les longs contextes ne tiennent pas.
+
+*Inria* (11 juin 2026), dans [Le projet Automata : des modèles 3D enrichis de données archéométriques](https://www.inria.fr/fr/automata-modeles-3d-archeologie), décrit une initiative européenne coordonnée depuis l'Université de Pise qui rassemble une quarantaine de chercheurs — archéologie, chimie analytique, robotique, vision par ordinateur — pour numériser par robots des céramiques et artefacts lithiques issus de fouilles : des collections « par milliers, voire par tonnes » selon le document source, qui saturent les réserves de musées et attendent une analyse que le travail manuel ne peut plus absorber.
+
+Toujours sur *arXiv*, trois prépublications. [Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning](https://arxiv.org/abs/2606.13680v1) EN PREPRINT apprend la récupération par pattern de raisonnement plutôt que par contenu — deux problèmes proches pouvant exiger des stratégies opposées. [Automated reproducibility assessments in the social and behavioral sciences using large language models](https://arxiv.org/abs/2606.13670v1) EN PREPRINT montre que des LLMs reproduisent les évaluations de reproductibilité de 76 études sociales au niveau des chercheurs indépendants. [Agents-K1: Towards Agent-native Knowledge Orchestration](https://arxiv.org/abs/2606.13669v1) EN PREPRINT extrait entités, claims et mécanismes au-delà des abstracts pour alimenter des agents de recherche — le travail de structuration que le code fait avant l'inférence, et qui porte la qualité de ce que l'agent consommera.
+
+*Inria* et Doctolib annoncent [un partenariat de recherche pour des modèles IA cliniques fiables et souverains](https://www.inria.fr/fr/inria-doctolib-recherche-intelligence-artificielle-sante).
+
+Dans [Mort de Lyhanna : sur Facebook, un groupe de recherche transformé en mémorial](https://www.lemonde.fr/pixels/article/2026/06/11/mort-de-lyhanna-sur-facebook-un-groupe-de-recherche-transforme-en-memorial_6700773_4408996.html), *Le Monde* (11 juin) documente l'intrusion de vidéos générées par IA dans un deuil collectif public et les questions de modération non résolues qui en découlent.
+
+*Numerama* (11 juin 2026), dans [« Nous avons fait le mauvais choix » : Anthropic a discrètement saboté Fable 5 et fait des victimes collatérales](https://www.numerama.com/tech/2273861-nous-avons-fait-le-mauvais-choix-anthropic-a-discretement-sabote-fable-5-et-fait-des-victimes-collaterales.html), et *The Decoder* (11 juin), dans [Claude Fable 5: Anthropic admits "wrong tradeoff" after invisibly throttling rival AI researchers](https://the-decoder.com/claude-fable-5-anthropic-admits-wrong-tradeoff-after-invisibly-throttling-rival-ai-researchers/) EN, documentent la même séquence : Anthropic avait bridé silencieusement Fable 5 pour les requêtes liées au développement d'IA avancée, sans notification aux utilisateurs. Des chercheurs ont détecté l'anomalie ; l'entreprise s'est excusée auprès de *Wired* le 10 juin — *« nous avons fait le mauvais choix »*. *The Decoder* signale qu'un second point de contention demeure non résolu. Le filtre ne distinguait pas entre requête de recherche légitime et usage potentiellement nuisible — une restriction non *auditable* de l'extérieur. **Ce n'est pas le bridage qui a provoqué la réaction, c'est l'invisibilité.**
+
+*Numerama* (12 juin 2026), dans [Des chansons IA se cachent-elles dans vos playlists Spotify ou Apple Music ? Cet outil vous le dit](https://www.numerama.com/pop-culture/2273757-des-chansons-ia-se-cachent-elles-dans-vos-playlists-spotify-ou-apple-music-cet-outil-vous-le-dit.html), rapporte que Deezer lance un outil gratuit pour scanner les playlists de ses concurrents à la recherche de morceaux synthétiques — signal de détection rendu disponible hors de son propre écosystème. Face au même déluge, la capture institutionnelle : Martin Scorsese officialise son rôle de conseiller auprès de Black Forest Labs ; l'Art Directors Guild d'Hollywood réagit immédiatement, selon *Numerama* (11 juin), dans [De nombreux artistes d’Hollywood accusent Martin Scorsese d’être… un traître](https://www.numerama.com/pop-culture/2273847-de-nombreux-artistes-dhollywood-accusent-martin-scorsese-detre-un-traitre.html).
+
+*Next.ink* (11 juin), dans [☕️ Microsoft bloque Claude Fable 5 en interne à cause de la rétention des données](https://next.ink/brief-article/microsoft-bloque-claude-fable-5-en-interne-a-cause-de-la-retention-des-donnees/) : les employés de Microsoft n'ont pas accès à Fable 5 dans les versions internes de GitHub Copilot. Une entreprise qui dit non à un modèle sur la question de ses données pose où vit la garantie : chez elle, pas chez le fournisseur.
+
+*The Decoder* (10 juin), dans [Anthropic study shows AI needs hours, not weeks, to build exploits from security patches](https://the-decoder.com/anthropic-study-shows-ai-needs-hours-not-weeks-to-build-exploits-from-security-patches/) EN, rapporte qu'une étude interne d'Anthropic a montré que Mythos Preview convertit des patches de sécurité pour Firefox et le noyau Windows en exploits fonctionnels en quelques heures, pour quelques milliers de dollars, sans expertise spécialisée préalable — huit chaînes d'attaque complètes terminées avant que Microsoft puisse patcher. Le coût d'entrée pour une offensive ciblée s'effondre. *The Decoder* (11 juin), dans [Dario Amodei's new essay reads like a Cold War playbook for the AI age](https://the-decoder.com/dario-amodeis-new-essay-reads-like-a-cold-war-playbook-for-the-ai-age/) EN, décrit un essai et deux cadres de politique où Anthropic appelle à des audits contraignants des modèles frontier et cadre explicitement l'IA comme arme stratégique des États-nations. L'étude et l'essai ne sont pas deux communications indépendantes : elles forment le même argument, l'un en démonstration, l'autre en langage institutionnel.
+
+*The Decoder* (11 juin), dans [OpenAI vs. Anthropic: A price war over API tokens is brewing](https://the-decoder.com/openai-vs-anthropic-a-price-war-over-api-tokens-is-brewing/) EN, rapporte qu'OpenAI envisage des baisses de prix sur les tokens API pour contrer Anthropic. Sam Altman a annoncé une IPO *« dans l'année »*, mais un report à 2027 reste plausible. OpenAI négocie par ailleurs la location d'un data center de 10 GW en Ohio, potentiellement financé par Nvidia. L'Allemagne a approuvé la création du DE-AISI — institut de sécurité IA calqué sur le britannique — pour tester les modèles frontier d'Anthropic et OpenAI. *The Decoder* (10 juin), dans [Germany's National Security Council greenights an AI Safety Institute modeled after the UK's AISI](https://the-decoder.com/germanys-national-security-council-greenights-an-ai-safety-institute-modeled-after-the-uks-aisi/) EN, note qu'en l'absence de modèle frontier européen propre, l'audit dépend de la bonne volonté des labos américains. Il reste à vérifier si l'institut obtiendra l'accès aux modèles qu'il entend tester — hypothèse, pas un fait acquis. C'est une institution qui n'a pas de siège à elle.
+
+
+---
+
+## Même moteur, freins manquants
+
+Source : https://harnais.be/carnet/2026-06-11/
+
+Bruxelles, 11 juin 2026
+
+Le même modèle qui migre du code en une journée génère des exploits en quelques heures. *The Decoder* (10 juin 2026), dans [Claude Fable 5: The first Mythos model is powerful, expensive, and heavily filtered](https://the-decoder.com/claude-fable-5-the-first-mythos-model-is-powerful-expensive-and-heavily-filtered/), place Fable 5 en tête de la quasi-totalité des benchmarks, dont SWE-bench Verified à 95 %, mais souligne qu'il coûte deux fois plus cher qu'Opus 4.8, assorti de filtres de sécurité stricts. *The Decoder* (9 juin 2026), dans [Anthropic releases Claude Fable 5 and Mythos 5 with major gains in coding and science](https://the-decoder.com/anthropic-releases-claude-fable-5-and-mythos-5-with-major-gains-in-coding-and-science/), rapporte que Mythos 5 aurait conçu des candidats médicaments et que Fable 5 a accompli en une journée une migration de code Stripe estimée à deux mois pour une équipe. En contrepoint immédiat, *The Decoder* (10 juin 2026), dans [Anthropic study shows AI needs hours, not weeks, to build exploits from security patches](https://the-decoder.com/anthropic-study-shows-ai-needs-hours-not-weeks-to-build-exploits-from-security-patches/), rapporte qu'une étude interne montre que Mythos Preview transforme des patches de sécurité Firefox et Windows en exploits fonctionnels en quelques heures, pour quelques milliers de dollars et sans expertise spécialisée — huit chaînes d'attaque complètes achevées avant que Microsoft ne puisse réagir.
+
+*Latent.Space* (11 juin 2026), dans [[AINews] Open Models, Model Labs vs Agent Labs, and What's Untrainable — Sarah Guo](https://www.latent.space/p/ainews-open-models-model-labs-vs), revient sur un essai posant une distinction structurelle entre les labs qui construisent des modèles et ceux qui construisent des agents sur ces modèles — une fracture de chaîne de valeur qui redessine la question de qui capture la marge. Du côté infrastructure, *The Decoder* (10 juin 2026), dans [OpenAI wants its biggest data center yet, and Nvidia would back the bill](https://the-decoder.com/openai-wants-its-biggest-data-center-yet-and-nvidia-would-back-the-bill/), rapporte qu'OpenAI négocie la location d'un centre de données de 10 gigawatts en Ohio, potentiellement financé par Nvidia. *The Decoder* (10 juin 2026), dans [OpenAI's IPO slips as Altman tells staff to expect a public offering "within the next year"](https://the-decoder.com/openais-ipo-slips-as-altman-tells-staff-to-expect-a-public-offering-within-the-next-year/), note qu'Altman a indiqué à ses équipes d'attendre une IPO *« within the next year »*, avec un glissement à 2027 possible — une temporisation que *The Decoder* interprète comme influencée par les chiffres de croissance d'Anthropic plus que par la prudence technique autour de l'IA auto-améliorante. La fracture entre les labs qui construisent les modèles et ceux qui construisent des agents sur ces modèles pose la question de qui capture la marge, et à quel coût infrastructurel.
+
+Google publie deux avancées parallèles. *The Decoder*, dans [Google's new open model DiffusionGemma generates text from noise instead of word by word](https://the-decoder.com/googles-new-open-model-diffusiongemma-generates-text-from-noise-instead-of-word-by-word/), décrit DiffusionGemma, un modèle de 26 milliards de paramètres qui génère du texte par diffusion plutôt que token par token, une alternative architecturale aux génératifs autorégressifs. *The Decoder*, dans [Google's NotebookLM now runs its own cloud computer with code execution and agent-based research](https://the-decoder.com/googles-notebooklm-now-runs-its-own-cloud-computer-with-code-execution-and-agent-based-research/), rapporte que NotebookLM tourne désormais sur Gemini 3.5 Flash, dispose d'un ordinateur cloud pour l'exécution de code et peut conduire sa propre recherche documentaire via Google Search, battant la version précédente sur 78,2 % des tâches internes.
+
+*Inria* annonce le 10 juin 2026 un partenariat structurant avec Doctolib dans [Inria et Doctolib s'associent pour la recherche en intelligence artificielle en santé](https://www.inria.fr/fr/inria-doctolib-recherche-intelligence-artificielle-sante) : l'objectif est de faire émerger des modèles IA cliniques fiables et souverains, une formulation où le caractère *auditable* et la maîtrise géographique des données sont posés comme conditions techniques. Les conditions de fiabilité et de souveraineté sont posées comme exigences techniques, pas comme labels.
+
+Sur l'optimisation algorithmique, *Inria* publie deux articles complémentaires : [Accélérer le travail des imprimantes 3D](https://www.inria.fr/fr/optimisation-imprimantes-3d-calcul-algorithme) revisite le code interprété par les machines pour réduire les temps de production, et [Comment optimiser l'impression 3D des structures complexes ?](https://www.inria.fr/fr/comment-optimiser-impression-3d-structures-complexes) s'attaque aux géométries de grande taille via l'action exploratoire CONTINUA — deux chantiers où la modélisation déterministe précède l'usage des méthodes adaptatives.
+
+Du côté d'*arXiv*, plusieurs prépublications abordent l'architecture de l'attention par des voies distinctes. L'une cherche à remplacer le coût quadratique du transformer : [On Subquadratic Architectures: From Applications to Principles](https://arxiv.org/abs/2606.12364v1) compare xLSTM, Mamba-2 et Gated DeltaNet sur du pré-entraînement et de la distillation de modèles de code, tandis qu'[Attention by Synchronization in Coupled Oscillator Networks](https://arxiv.org/abs/2606.12059v1) propose d'implémenter l'attention via la dynamique de synchronisation de Kuramoto, une voie physique pour les substrats à contrainte énergétique. Une autre porte sur le mécanisme lui-même : [Phase Transitions in Attention: A Bayesian Theory of Copy Head Emergence](https://arxiv.org/abs/2606.12058v1) établit une théorie bayésienne de l'émergence abrupte des têtes de copie en dérivant un postérieur en forme close sur la matrice d'attention. Deux travaux traitent la mémoire à l'inférence : [Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models](https://arxiv.org/abs/2606.12412v1) montre que les tokens visuels des VLMs doivent être redirigés plutôt que supprimés, leur importance variant selon la profondeur du décodeur ; [Context-Driven Incremental Compression for Multi-Turn Dialogue Generation](https://arxiv.org/abs/2606.12411v1) décrit un mécanisme de compression incrémentale du contexte conversationnel conçu pour préserver la fidélité sur de longs échanges sans troncature naïve ni perte cumulative entre les tours.
+
+L'axe régulation, silencieux à plusieurs reprises cette semaine, produit ce 10 juin deux signaux distincts. *Le Monde* (10 juin 2026), dans [IA et droits d'auteur : les industries culturelles s'indignent contre l'absence de débat sur la loi Darcos à l'Assemblée](https://www.lemonde.fr/economie/article/2026/06/10/ia-et-droit-d-auteur-les-industries-culturelles-s-indignent-contre-l-absence-de-debat-sur-la-loi-darcos-a-l-assemblee_6700529_3234.html), rapporte que les acteurs de la création reprochent aux députés de la majorité de faire obstruction à un texte qui vise à leur permettre de négocier une rémunération *opposable* avec les fabricants d'IA — autrement dit, de rendre la matière première culturelle ingérée par les grands modèles économiquement identifiable et contractualisable. Du côté institutionnel, *The Decoder* (10 juin 2026), dans [Germany's National Security Council greenights an AI Safety Institute modeled after the UK's AISI](https://the-decoder.com/germanys-national-security-council-greenights-an-ai-safety-institute-modeled-after-the-uks-aisi/), signale que le Conseil national de sécurité allemand a acté la création d'un DE-AISI chargé de tester les modèles frontier d'Anthropic ou d'OpenAI pour leurs risques de sécurité — en notant qu'en l'absence de modèles frontier européens propres, l'Europe évalue des technologies qu'elle ne produit pas. L'un tente de régler l'amont, l'autre surveille l'aval.
+
+*Next* (11 juin 2026), dans [34 000 comptes Instagram piratés avec l'aide du robot IA d'assistance de Meta](https://next.ink/241790/34-000-comptes-instagram-pirates-avec-laide-du-robot-ia-dassistance-de-meta/), rapporte qu'une faille dans le robot d'assistance de Meta a permis à des pirates de prendre le contrôle de 34 000 comptes — parmi lesquels ceux de la Maison Blanche et d'entreprises de premier plan ; la faille est corrigée, mais le robot reste en place. *Numerama* (10 juin 2026), dans [« La boîte de Pandore est ouverte » : dopée par l'IA, la chasse aux failles de Microsoft bat un record](https://www.numerama.com/cyberguerre/2273125-la-boite-de-pandore-est-ouverte-dopee-par-lia-la-chasse-aux-failles-de-microsoft-bat-un-record.html), documente que le Patch Tuesday de juin 2026 établit un record de vulnérabilités corrigées en un seul mois, une tendance qui suggère que l'accélération inférentielle touche autant la découverte que l'exploitation des failles. Le robot qui reste en place et l'inférence qui accélère la découverte autant que l'exploitation disent la même chose : la structure qui rend le service possible rend aussi l'attaque possible.
+
+Le lancement de Fable 5 continue d'être analysé sous des angles complémentaires. *Next* (10 juin 2026), dans [Claude Fable 5 : un petit goût de Mythos pour le grand public](https://next.ink/241640/claude-fable-5-un-petit-gout-de-mythos-pour-le-grand-public/), souligne la dimension IPO dans le choix du moment du lancement. *Numerama*, dans [Claude Fable 5 : et si les restrictions de Mythos n'avaient finalement rien à voir avec la sécurité ?](https://www.numerama.com/tech/2272671-claude-fable-5-et-si-les-restrictions-de-mythos-navaient-finalement-rien-a-voir-avec-la-securite.html), interroge si les garde-fous présentés comme nécessités sécuritaires ne répondent pas en réalité à d'autres logiques de distribution. La sécurité exhibée est une architecture de marché, pas un bug de communication.
+
+*Numerama* baptise MANGOS un acronyme né sur X le 9 juin pour remplacer les géants historiques par Meta, Anthropic, Nvidia, Google, OpenAI et SpaceX — indicateur d'un basculement de perception, pas d'un événement structurel. *Numerama* confirme par ailleurs l'usage de l'IA générative par Square Enix dans *Kingdom Hearts*, où une erreur d'anatomie sur Donald Duck sert de traceur involontaire du pipeline. Plus structurant, *Numerama* explique que l'absence du nouveau Siri dopé à l'IA en Europe recouvre un affrontement technique et politique avec la Commission européenne, une friction réglementaire symétrique aux restrictions Fable 5. L'Europe évalue des technologies qu'elle ne produit pas.
+
+
+---
+
+## La mesure et la clé
+
+Source : https://harnais.be/carnet/2026-06-10/
+
+Bruxelles, 10 juin 2026
+
+Anthropic élargit l'accès au grand public pour sa classe Mythos en calant des garde-fous sur les requêtes sensibles ; le même jour, Microsoft bloque plus de 70 dépôts GitHub compromis par la campagne Miasma, qui vise la chaîne logistique des credentials des outils génératifs. Entre la bride posée sur le modèle et la clé volée qui ouvre la porte, le 10 juin mesure l'écart entre la capacité déclarée et la garantie établie.
+
+*Le Monde* (9 juin 2026), dans [Intelligence artificielle : Anthropic sort une version bridée de son modèle Mythos, adaptée au grand public](https://www.lemonde.fr/economie/article/2026/06/09/intelligence-artificielle-anthropic-sort-une-version-bridee-de-son-modele-mythos-adaptee-au-grand-public_6700212_3234.html), annonce que la start-up a calé des garde-fous sur les requêtes en cybersécurité pour ouvrir son modèle le plus avancé à un public élargi — une reconnaissance que la puissance brute nécessite une bride. Même jour sur arXiv, [Flaws in the LLM Automation Narrative](https://arxiv.org/abs/2606.11166v1) EN PREPRINT examine les fondations de ces claims de puissance et soutient que les benchmarks standard mesurent principalement du contenu déjà présent dans les données d'entraînement, sans évaluer la fiabilité ni la variance des réponses ; [What Fits (Into Few Tokens) Doesn't Overfit](https://arxiv.org/abs/2606.11045v1) EN PREPRINT propose une explication à cette résilience apparente : les stratégies ML qui réussissent sont hautement compressibles, ce qui limite l'overfitting adaptatif sur benchmarks, une hypothèse testable directement sur des agents de recherche pilotés par LLM. Ce qui relie ces deux travaux, c'est que la mesure de la capacité n'éprouve pas la fiabilité — l'évaluation est biaisée dès la conception.
+
+[Do Transformers Actually Help Intrusion Detection?](https://arxiv.org/abs/2606.11098v1) EN PREPRINT réformule CIC-IDS2017 avec de vraies séquences sans fuite de données et conclut que les gains rapportés des architectures temporelles tiennent davantage au protocole expérimental qu'à une réelle capacité de modélisation séquentielle. [Generative Explainability for Next-Generation Networks](https://arxiv.org/abs/2606.10942v1) EN PREPRINT s'attaque au même domaine réseau mais par l'explicabilité : un LLM de taille modérée traduit les interactions de features techniques en insights actionnables pour les opérateurs, comblant le fossé entre modèle et humain. Le gain rapporté tient au protocole, pas à la capacité — même motif, mais sur le terrain réseau.
+
+Sur le fine-tuning, [A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design](https://arxiv.org/abs/2606.11189v1) EN PREPRINT traite le SFT comme un design de distribution cible token-level plutôt que comme un simple ajustement one-hot, préservant ainsi le prior du modèle préentraîné face aux démonstrations bruitées. [ReasonAlloc](https://arxiv.org/abs/2606.11164v1) EN PREPRINT répartit hiérarchiquement le budget cache KV selon les besoins contextuels stepwise des modèles de raisonnement, évitant l'éviction uniforme qui gaspille la mémoire d'attention.
+
+Inria annonce deux projets concrets : [AIKO](https://www.inria.fr/fr/cirad-aiko-publications-scientifiques) (9 juin 2026), dédié au traitement automatique de la littérature scientifique en partenariat avec le CIRAD pour accélérer la synthèse bibliographique, et une avancée en [modélisation mathématique de l'élastographie](https://www.inria.fr/fr/modelisation-affine-observation-coeur-cornee) (9 juin 2026) pour observer le cœur et la cornée — deux terrains où la modélisation exacte précède et encadre l'usage du ML.
+
+L'axe régulation est silencieux pour le quatrième jour consécutif cette semaine : aucune source relevant du droit, de la norme ou de la gouvernance de l'intelligence artificielle n'a émergé dans le flux du 10 juin 2026.
+
+*Numerama* (9 juin 2026), dans [Claude Fable 5 : Anthropic libère sa première IA de niveau Mythos, et évoque un modèle mystérieux](https://www.numerama.com/tech/2272305-claude-fable-5-anthropic-libere-sa-premiere-ia-de-niveau-mythos-et-evoque-un-modele-mysterieux.html), décrit l'ouverture au grand public de la classe Mythos avec des garde-fous massifs et l'existence d'un jumeau réservé — une segmentation du risque par niveau d'accès. *Latent.Space* (10 juin 2026), dans [[AINews] Anthropic Claude Fable 5 — Mythos but Safe, with Controversial Terms](https://www.latent.space/p/ainews-anthropic-claude-fable-5-mythos) EN, note que ce lancement attendu a été entaché par des conditions d'utilisation contestées, ce qui place le contrat technique au même niveau de débat que l'ingénierie. Placer le contrat au même niveau de débat que l'ingénierie, c'est un choix de société, pas seulement de technique.
+
+*Next* (9 juin 2026), dans [Des outils Microsoft piratés pour voler des identifiants d'outils IA comme Claude Code](https://next.ink/241517/des-outils-microsoft-pirates-pour-voler-des-identifiants-doutils-ia-comme-claude-code/), rapporte que Microsoft a bloqué plus de 70 dépôts GitHub compromis par la campagne Miasma, ciblant la chaîne logistique des credentials des outils génératifs — la supply chain des agents commence par la compromission de leurs clés d'accès. La chaîne de confiance passe par les credentials.
+
+*Numerama* (9 juin 2026), dans [C'est fait, les arnaques au livreur franchissent une étape que vous n'avez jamais vue… ou entendue](https://www.numerama.com/cyberguerre/2271777-cest-fait-les-arnaques-au-livreur-franchissent-une-etape-que-vous-navez-jamais-vue-ou-entendue.html), documente une campagne de phishing française employant une note vocale synthétique réaliste de quinze secondes, un pas de plus dans l'usage opérationnel de la voix générée comme vecteur d'attaque. La voix générée devient vecteur d'attaque : l'identité sonore vérifiable n'est pas une garantie établie.
+
+À la marge du secteur, *Numerama* (9 juin 2026) signale aussi [AI1 : SpaceX dévoile les spécificités de son tout premier satellite taillé pour l'IA](https://www.numerama.com/tech/2271539-ai1-spacex-devoile-les-specificites-de-son-tout-premier-satellite-taille-pour-lia.html), un projet de déport du calcul dans l'espace pour contourner la crise énergétique des data centers terrestres — la matière première électrique devient contrainte structurante.
+
+*Hugging Face* (9 juin 2026), dans [Can Voice Agents Handle Bilingual Customers? Benchmarking Frontier ASR on Code-Switched Speech](https://huggingface.co/blog/ServiceNow-AI/code-switching) EN, publie un benchmark sur la parole alternée langue à langue et montre que les agents vocaux frontière peinent encore à suivre le code-switching — l'agentivité sonore reste conditionnée par des corpus monolingues. *Hugging Face* (9 juin 2026), dans [How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces](https://huggingface.co/blog/mishig/spaces-agents-md) EN, présente un agent qui construit une galerie tridimensionnelle en chaînant deux Spaces — une démonstration de composition d'outils sans code humain intermédiaire. Sur arXiv, [EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents](https://arxiv.org/abs/2606.11182v1) EN PREPRINT introduit un routeur multi-dataset pour adapter les prompts à la volée sur des flux de tâches hétérogènes, une forme d'adaptation réactive qui ne suppose pas de frontière de domaine fixe. Chacun de ces trois travaux ouvre une capacité ; aucun ne mesure la fiabilité qui l'accompagne.
+
+
+---
+
+## Autonomie mise en prix
+
+Source : https://harnais.be/carnet/2026-06-09/
+
+Bruxelles, 9 juin 2026
+
+*Inria* et la Cnaf annoncent ce 9 juin une convention autour de [Catala, une solution souveraine de calcul des prestations sociales](https://www.inria.fr/fr/cnaf-inria-convention-partenariat-catala-2026), un langage qui transcrit le droit en calcul vérifiable. *Numerama* signale le même jour [Miasma, le ver informatique qui se glisse dans Claude Code pour voler les secrets des développeurs](https://www.numerama.com/cyberguerre/2270899-alerte-autour-de-miasma-le-ver-informatique-qui-se-glisse-dans-claude-code-pour-voler-les-secrets-des-developpeurs.html), une campagne coordonnée qui compromet la chaîne d'approvisionnement logicielle. Le billet tient ces deux mouvements ensemble.
+
+Trois actualités *Inria* forment un bloc institutionnel cohérent. [Chloé Mercier : À la croisée de l’informatique et des sciences cognitives](https://www.inria.fr/fr/chloe-mercier-neurosciences-apprentissage-intelligence-artificielle) présente une chercheuse à l'interface entre modélisation du cerveau, sciences cognitives et éducation, dont les travaux cartographient les mécanismes de la créativité pour en améliorer la transmission — un terrain où la rigueur computationnelle doit tenir face à la diversité disciplinaire. [Le projet AI Factory France voit le jour](https://www.inria.fr/fr/ai-factory-france-developper-usage-intelligence-artificielle), sélectionné par EuroHPC en mars 2025 : ce hub réunit vingt partenaires à Station F pour centraliser l'accès aux ressources de calcul nationales et européennes au service de la recherche, de l'industrie et des services publics. La convention Cnaf-*Inria* autour de Catala est la plus précise sur le plan formel : le langage transcrit le droit de manière fidèle, rendant le calcul des allocations familiales vérifiable plutôt qu'opaque — la preuve s'inscrit dans la structure du calcul, non dans un modèle qui la déclarerait.
+
+Sur *arXiv*, cinq préprints couvrent des terrains distincts. [Integrating gene regulatory priors into Transformer attention with scTransformer](https://arxiv.org/abs/2606.09558v1) EN PREPRINT intègre des priors de régulation génique dans les mécanismes d'attention pour la transcriptomique unicellulaire — un carrefour entre biologie connue et apprentissage auto-supervisé, plutôt que de traiter chaque gène comme une feature aveugle. [Rethinking the Divergence Regularization in LLM RL](https://arxiv.org/abs/2606.09821v1) EN PREPRINT soutient que le ratio-clipping de PPO et GRPO est un mauvais proxy du déplacement distributionnel dans les vocabulaires à longue queue et propose une régularisation directe par divergence pour stabiliser le post-entraînement par renforcement. [FASE: Fast Adaptive Semantic Entropy for Code Quality](https://arxiv.org/abs/2606.09800v1) EN PREPRINT mesure l'incertitude sémantique dans les pipelines de génération de code multi-agents sans vérifications d'équivalence coûteuses — un verdict de fiabilité sans ground-truth. [Your Model Already Knows: Attention-Guided Safety Filter for Vision-Language-Action models](https://arxiv.org/abs/2606.09749v1) EN PREPRINT exploite les cartes d'attention internes des modèles vision-langage-action pour détecter les obstacles en robotique, sans externaliser la décision à un modèle externe trop lent pour la boucle de contrôle. [Data Synthesis and Parameter-Efficient Fine-Tuning for Low-Resource NMT: A Case Study on Q'eqchi' Mayan](https://arxiv.org/abs/2606.09767v1) EN PREPRINT construit un corpus synthétique depuis des dictionnaires communautaires pour la traduction neuronale du maya Q'eqchi', sans scraping — la construction délibérée de la matière première avant l'inférence, qui est le travail déterministe dont dépend la qualité de ce que le modèle produira.
+
+*Numerama* décrit la keynote de Tim Cook du 8 juin : [Siri AI](https://www.numerama.com/tech/2271171-apple-annonce-siri-ai-propulse-par-google-gemini-le-vrai-debut-de-lia-sur-iphone.html) est un assistant vocal entièrement repensé, capable de comprendre l'écran, d'agir dans les applications et de tenir des conversations naturelles, fondé sur des modèles maison développés avec Google — absent de l'Union européenne au lancement, DMA oblige. [iOS 27](https://www.numerama.com/tech/2262023-ios-27-siriai-nouveautes-date-de-sortie-iphone-compatibles.html) officialise l'édition photo par IA et un volet sécurité des enfants ; [macOS Golden Gate](https://www.numerama.com/tech/2271047-apple-devoile-macos-golden-gate-et-promet-quil-va-ameliorer-la-stabilite-des-mac.html) succède à Tahoe avec les mêmes contraintes européennes. Le lancement est un événement unique, mais la fragmentation réglementaire en fait deux expériences selon le côté de l'Atlantique.
+
+Du côté financier, *Next* relève qu'[OpenAI veut officiellement entrer en Bourse](https://next.ink/brief-article/openai-veut-officiellement-entrer-en-bourse/) : le message de la startup est qualifié de sibyllin — deux filings SEC en une semaine, sans date annoncée de part ni d'autre. Le formulaire S-1, déposé auprès de la SEC sans calendrier, laisse le marché sans repère temporel.
+
+Sur le plan de la sécurité, *Numerama* alerte sur [Miasma](https://www.numerama.com/cyberguerre/2270899-alerte-autour-de-miasma-le-ver-informatique-qui-se-glisse-dans-claude-code-pour-voler-les-secrets-des-developpeurs.html) : une campagne coordonnée a compromis des dizaines de paquets et dépôts en injectant un malware dans la chaîne d'approvisionnement logicielle. *Numerama* documente également comment [des LLM empoisonnées servent de vitrine aux escrocs](https://www.numerama.com/cyberguerre/2270001-chercher-un-sac-sur-chatgpt-et-tomber-sur-une-arnaque-comment-les-llm-empoisonnees-servent-de-vitrine-aux-escrocs.html) — des boutiques clonées remontant dans les réponses de ChatGPT via empoisonnement de données, exploitant les failles inférentielles des modèles et les lacunes de la réponse pour rediriger vers des sites frauduleux. OpenAI a par ailleurs déployé [un « mode verrouillé » pour ChatGPT](https://www.numerama.com/cyberguerre/2270181-pour-empecher-les-fuites-de-donnees-chatgpt-lance-un-mode-verrouille-voici-ce-quil-bloque-et-ce-quil-ne-bloque-pas.html) qui limite les risques d'exfiltration liés aux injections de prompts. *L'axe régulation est muet pour le troisième jour consécutif* — aucun signal n'a émergé dans le flux du 9 juin sur le droit ou la gouvernance de l'IA. La chaîne d'approvisionnement est le terrain où se vérifie que la garantie ne se délègue pas à la chose garantie : un modèle qui vérifie un modèle partage ses modes de défaillance, et c'est dans le code livré, pas dans la promesse, que cette vérité se lit.
+
+*Numerama* relève enfin que [Dans la panique, Hideo Kojima s’emmêle les pinceaux sur l’utilisation de l’IA](https://www.numerama.com/pop-culture/2270783-dans-la-panique-hideo-kojima-semmele-les-pinceaux-sur-lutilisation-de-lia.html) : positions successives et contradictoires, moins une posture qu'une adaptation au vent ambiant.
+
+*The Decoder*, dans [Frontier Radar #3: How agentic AI is turning tokens into a business metric](https://the-decoder.com/frontier-radar-3-how-agentic-ai-is-turning-tokens-into-a-business-metric/) EN, pose le problème structurel des workflows agentiques : ils consomment des tokens en multiple de l'usage conversationnel, tournent de façon autonome pendant des heures et rendent les abonnements à tarif plat financièrement intenables pour les fournisseurs — le token, unité technique invisible jusqu'ici, devient la métrique commerciale centrale. *Hugging Face*, dans [The Open Source Community is backing OpenEnv for Agentic RL](https://huggingface.co/blog/openenv-agentic-rl) EN, rapporte que la communauté open source se fédère autour d'OpenEnv, un environnement standardisé pour l'entraînement par renforcement des agents — pour que l'agentivité par RL ne reste pas la propriété exclusive des grands labos. Les deux signaux balisent le même carrefour : l'IA agentique change simultanément la structure des coûts côté fournisseur et l'infrastructure d'entraînement côté open source. Les tokens ne financent plus un usage, ils financent une autonomie.
+
+
+---
+
+## Qui possède le siège
+
+Source : https://harnais.be/carnet/2026-06-08/
+
+Bruxelles, 8 juin 2026
+
+Dans *Le Monde* du 7 juin, deux tribunes se répondent sans se rejoindre. [Bernie Sanders](https://www.lemonde.fr/idees/article/2026/06/07/bernie-sanders-l-intelligence-artificielle-est-une-ressource-publique-elle-doit-etre-partagee-par-tous_6698859_3232.html) propose que 50 % des actions des grandes entreprises d'IA soient versées dans un fonds souverain — au motif, avance-t-il, que leurs modèles se sont construits sur la création de millions d'auteurs, d'artistes et de scientifiques sans compensation. [Isabelle Feng, juriste](https://www.lemonde.fr/idees/article/2026/06/07/isabelle-feng-juriste-l-age-d-or-de-la-tech-chinoise-s-est-bel-et-bien-bati-sur-les-billets-verts_6698774_3232.html), retourne la rhétorique de l'indépendance depuis le bord opposé : en annulant rétroactivement le rachat de Manus par Meta, Xi Jinping risque d'enfermer ses entreprises dans l'autarcie, précisément parce que leur essor s'est construit sur des capitaux américains. Sur le plan institutionnel, *Le Monde* (7 juin 2026), dans [Comment l'IA se diffuse massivement à l'Assemblée nationale et au Sénat](https://www.lemonde.fr/politique/article/2026/06/07/comment-l-ia-se-diffuse-massivement-a-l-assemblee-nationale-et-au-senat_6698771_823448.html), signale que l'usage s'est généralisé dans le travail parlementaire, et que les questions de sécurité ouvertes par le rapport de deux députés n'ont pas encore reçu de réponse formelle. Le remède de Sanders redistribue une rente sans déplacer le siège du contrôle opérationnel ; le repli de Xi détruit ce que l'ouverture a construit ; l'Assemblée adopte sans avoir tranché qui répond de ce qu'elle délègue.
+
+Du côté des préprints, les travaux sur la mécanique interne des transformers se prolongent dans le fil de la semaine. *ArXiv* (1er juin 2026), dans [Massive Spikes in LLMs are Bias Vectors: Mechanistic Uncovering and Spike-Free Quantization](https://arxiv.org/abs/2606.02288v1) EN PREPRINT, démontre que les pics d'activation qui dégradent la quantification ne sont pas de simples scalaires mais les intermédiaires de biais vectoriels rigides convergeant vers des vecteurs constants après normalisation — un verdict mécanique sur la structure géométrique des attention sinks. *ArXiv* (5 juin 2026), dans [Towards Tight Bounds for Streaming Attention](https://arxiv.org/abs/2606.07205v1) EN PREPRINT, établit des bornes théoriques sur la compression du cache KV : jusqu'où peut-on comprimer l'historique de contexte sans sacrifier le pouvoir expressif de l'attention. *ArXiv* (5 juin 2026), dans [Bootstrap Theory of Representational Emergence](https://arxiv.org/abs/2606.07303v1) EN PREPRINT, déplace la question habituelle en posant l'hypothèse que le basculement vers un nouveau niveau de représentation précède — et n'est pas dérivé de — l'optimisation par gradient. *ArXiv* (5 juin 2026), dans [How reliable are LLMs when it comes to playing dice?](https://arxiv.org/abs/2606.07515v1) EN PREPRINT, mesure sur huit modèles une chute de 0,96 à 0,59 de précision entre exercices probabilistes standards et contre-intuitifs conçus pour déclencher les heuristiques — le raisonnement inférentiel s'effondre précisément là où la réponse intuitive est trompeuse. *ArXiv* (5 juin 2026), dans [MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding](https://arxiv.org/abs/2606.07512v1) EN PREPRINT, propose de transformer la compréhension vidéo longue en tâche agentique : une mémoire graphique hiérarchique à trois niveaux construit progressivement le contexte, évitant l'explosion de tokens qui contraint les modèles vision-langage actuels.
+
+*Inria* (5 juin 2026), dans [Paul Boniol, le chasseur d'anomalies des séries temporelles](https://www.inria.fr/fr/paul-boniol-anomalies-series-temporelles-algorithme), présente les travaux du chercheur au Centre Inria de Paris sur la détection d'anomalies dans les données temporelles, terrain où la rigueur des algorithmes déterministes doit tenir face à la diversité disciplinaire des sources. L'axe régulation est muet ce 8 juin pour le second jour consécutif : aucune source relevant du droit, de la norme ou de la gouvernance de l'IA n'a émergé dans le flux du jour.
+
+*Next* (8 juin 2026), dans [Google teste le remplacement des résultats de recherche classiques par le mode IA dans Chrome](https://next.ink/brief-article/google-teste-le-remplacement-des-resultats-de-recherche-classiques-par-le-mode-ia/), signale une expérimentation en cours pour afficher les résultats directement dans le mode IA du navigateur, sans liste de liens classiques — un dispositif vieux de 28 ans que Google n'a pas encore retiré, mais qu'il teste activement. *Numerama* (8 juin 2026), dans [iOS 27, nouveau Siri : comment suivre la WWDC d'Apple en direct et en français ?](https://www.numerama.com/tech/2269641-wwdc-2026-toutes-les-annonces-apple-ios27-macos27-siri.html), couvre la grande conférence annuelle d'Apple qui se tient ce jour à 19h, dernière WWDC de Tim Cook en tant que CEO : la marque est attendue sur une stratégie IA cohérente après les débuts difficiles d'Apple Intelligence, avec des mises à jour annoncées d'iOS 27, iPadOS 27 et macOS 27. Le regard se déplace vers la synthèse, et la liste de liens — forme de recherche qui distribuait le trafic entre sources multiples — devient le dispositif à retirer.
+
+Ces deux pivots surviennent dans un contexte de résistance documentée et qui s'élargit. *Next* (19 mai 2026), dans [Huées, refus d'usage : les protestations contre l'IA se multiplient](https://next.ink/238402/huees-refus-dusage-les-protestations-contre-lia-se-multiplient/), recense des dirigeants de la tech hués lors de remises de diplômes pour avoir décrit l'IA comme « prochaine révolution industrielle » — signal concentré chez la génération Z, écho aux refus d'écran comme marqueur de statut signalés la veille dans *Le Monde*. *Next* (19 mai 2026), dans [IA dans l'emploi : même quand ils travaillent dans la tech, les Français restent inquiets](https://next.ink/238480/ia-dans-lemploi-meme-quand-ils-travaillent-dans-la-tech-les-francais-restent-inquiets/), rapporte qu'une majorité de cadres craignent d'être remplacés, y compris parmi les 88 % de professionnels du numérique qui voient l'IA comme un moteur de croissance — deux lectures superposées du même objet. *Next* (18 mai 2026), dans [71 % des Américains sont opposés aux datacenters IA, 53 % aux centrales nucléaires](https://next.ink/238178/71-des-americains-sont-opposes-aux-datacenters-ia-53-aux-centrales-nucleaires/), met en chiffres une inversion frappante : l'opposition à l'infrastructure IA dépasse aujourd'hui celle au nucléaire, qui atteignait pourtant 63 % en 2001. *Next* (19 mai 2026), dans [Après l'annonce de licenciements, Meta déplace 7 000 employés pour se focaliser sur l'IA](https://next.ink/brief-article/apres-lannonce-de-licenciements-meta-deplace-7-000-employes-pour-se-focaliser-sur-lia/), annonce la réassignation de 7 000 collaborateurs vers quatre nouveaux groupes internes dédiés à l'IA, simultanément aux licenciements — double mouvement qui concentre sans augmenter.
+
+*Numerama* (7 juin 2026), dans [« Au début, on nous prenait pour des fous » — entretien avec William Méauzoone, co-fondateur du cloud français Leviia](https://www.numerama.com/tech/2264435-au-debut-on-nous-prenait-pour-des-fous-entretien-avec-william-co-fondateur-du-cloud-francais-leviia.html), retrace l'aventure d'un acteur souverain français qui s'appuie sur le contexte géopolitique et les nouvelles doctrines d'achat public pour justifier une offre que le marché ignorait jusqu'ici.
+
+*The Decoder* (7 juin 2026), dans [OpenAI says "chat is dead" and plans to rebuild ChatGPT as a full-blown agent app](https://the-decoder.com/openai-says-chat-is-dead-and-plans-to-rebuild-chatgpt-as-a-full-blown-agent-app/) EN, rapporte qu'OpenAI prépare le remaniement le plus profond de ChatGPT depuis son lancement : le chatbot deviendrait une « superapp » intégrant outils de code, agents et applications partenaires (Canva, Booking.com), avec en interne la formule « Chat is dead » pour désigner l'embranchement vers des systèmes qui agissent à la place de l'utilisateur plutôt qu'en réponse à ses questions. Le même jour, *The Decoder* (7 juin 2026), dans [ChatGPT's new Lockdown Mode lets you disable web access and more to protect sensitive data from prompt injection](https://the-decoder.com/chatgpts-new-lockdown-mode-lets-you-disable-web-access-and-more-to-protect-sensitive-data-from-prompt-injection/) EN, présente le mode Lockdown qui désactive l'accès web, Deep Research et Agent Mode pour limiter l'exfiltration par injection de prompt — *The Decoder* précisant que le mode ne bloque pas l'attaque elle-même mais seulement sa dernière étape, la sortie de données vers l'extérieur. Ces deux annonces forment une tension lisible : l'agentivité s'étend d'un côté, les surfaces d'attaque se cartographient de l'autre. *The Decoder* (7 juin 2026), dans [Perplexity's "Search as Code" lets AI models write their own search pipelines instead of calling fixed APIs](https://the-decoder.com/perplexitys-search-as-code-lets-ai-models-write-their-own-search-pipelines-instead-of-calling-fixed-apis/) EN, décrit une architecture où les modèles écrivent eux-mêmes leurs routines de recherche en Python plutôt que d'appeler des API figées — l'agent construit son propre harnais de filtrage et de déduplication, auditable par le code produit mais non contraint par un contrat d'API tiers. Perplexity construit l'infrastructure d'amont ; OpenAI et Anthropic, eux, courent vers leurs introductions en bourse. *The Decoder* (7 juin 2026), dans [Anthropic poaches OpenAI's second-ever chip engineer as both companies race toward IPOs](https://the-decoder.com/anthropic-poaches-openais-second-ever-chip-engineer-as-both-companies-race-toward-ipos/) EN, annonce que Clive Chan — par sa propre description le deuxième employé hardware du programme ASIC d'OpenAI — rejoint Anthropic, fort de son expérience de l'Autopilot ASIC de Tesla et du partenariat OpenAI-Broadcom. L'IPO et le silicium convergent. Qui répondra de la garantie de systèmes agentiques une fois cette course terminée reste, à ce stade, une question que ni l'annonce ni le prospectus n'a encore ouverte.
+
+
+---
+
+## veille IA du 7 juin 2026
+
+Source : https://harnais.be/carnet/2026-06-07/
+
+Bruxelles
+
+## Billet Records — veille IA du 7 juin 2026
+
+Le 7 juin livre deux signaux contraires. D'un côté, le rejet : *Le Monde* observe des étudiants aux États-Unis et en Europe qui refusent l'intelligence artificielle et l'addiction aux écrans, un mouvement que Guy Halfteck lit comme le début d'un reflux[1]. De l'autre, SOS-Amitié, en congrès à Annecy, tient l'IA pour « pas envisagé, ni envisageable » dans l'écoute téléphonique[2]. Le rejet devient marque de statut social là où l'écoute humaine reste *harnais* irremplaçable. Mais le mouvement qui structure ce 7 juin est ailleurs : **l'agent remplace le modèle comme unité d'analyse.** Je tiens là un contrepoint net — le refus d'usage côtoie l'accélération du dispositif.
+
+L'économie matérielle de l'IA continue de peser. *Le Monde* soulève le coût croissant des tokens, cette matière première dont la facture déborde les budgets informatiques[3]. Sur le plan des droits, l'Alliance de la presse et 53 de ses membres accusent Brave de piller les contenus médiatiques via l'IA et réclament 80 millions d'euros ; une audience est fixée au 10 septembre à Paris[4]. L'auditable devient opposable.
+
+Sur le plan théorique, l'Inria détaille un algorithme déterministe conçu par Omar Fawzi à Lyon, capable de calculer les propriétés physiques de systèmes quantiques malgré leur complexité exponentielle[5] (5 juin). Sur l'architecture des modèles, trois préprints *[arXiv](https://arxiv.org/abs/2606.02378v1) EN PREPRINT* marquent un embranchement. *Functional Attention* réinterprète l'attention comme correspondance fonctionnelle entre bases adaptatives plutôt qu'affinités token à token[6]. *When Do Attention Circuits Form?* trace les trajectoires développementales de la formation des circuits d'attention à travers trois architectures 1B-class et repère l'émergence des *attention sinks*[7]. Enfin, *Forget Attention* propose SISA, une attention softmax informée par un signal d'importance dérivé de modèles d'état spatial, résolvant le dilemme où les transformers voient tout sans prioriser et les SSM savent ce qui compte sans pouvoir revisiter[8]. Ce n'est pas trois avancées isolées : *Functional Attention* redéfinit la base de l'inférentiel, l'émergence des *sinks* montre le *quand* de la structuration, et SISA résout le dilemme attention versus état spatial. C'est un verdict unifié sur la structuration de l'inférentiel.
+
+L'axe régulation est muet ce 7 juin. Aucune source ne relève du droit, de la norme ou de la gouvernance de l'intelligence artificielle dans le flux du jour.
+
+L'infrastructure sur laquelle circule l'IA bouge : un protocole de rachat de SFR est signé entre le consortium Orange-Bouygues-Iliad et Altice, sans basculement avant le second semestre 2027[9] (7 juin)[10] (6 juin). Ce n'est pas de l'IA, mais c'est le réseau. Sur le front judiciaire, le tribunal fédéral californien a rejeté les claims d'Elon Musk contre OpenAI[11], tandis que la Floride ouvre un nouveau front en accusant OpenAI et Sam Altman d'avoir négligé la protection des mineurs[12]. Les procès s'empilent, les décisions traînent.
+
+L'agentivité poursuit son avancée sur le grand public. Strava injecte les données d'entraînement sportif directement dans Claude via un connecteur MCP, moyennant abonnement aux deux services[13]. Anthropic étend son projet Mythos à une quinzaine de pays à l'approche de son introduction en Bourse[14] (2 juin). Alexa+ génère désormais des histoires audio pour les abonnés américains, une nouvelle matière première vocale entrée dans le harnais conversationnel grand public[15]. Meta lance Hatch, un agent payant jusqu'à 200 dollars par mois qui construit des outils, planifie des rendez-vous ou envoie des e-mails sur simple description en langage naturel, ce que Mark Zuckerberg présente comme un chemin vers « l'IA agentique »[18]. Qwen3.7-Plus, chez Alibaba, combine perception visuelle, opération d'interface et codage dans une seule boucle agentique capable de développer autonomement une application[19]. Côté audio, un modèle open-source nommé Audio Interaction n'attend plus la fin d'un enregistrement pour traiter, traduire ou répondre : il décide toutes les 0,4 seconde de parler ou de se taire, une boucle continue qui redéfinit la latence comme verdict instantané[20]. **L'agent remplace le modèle.**
+
+Il convient de tempérer : l'agent n'est pas un *autre* être. Il reste un modèle enveloppé d'un prompt système, d'une boucle d'outils et d'une couche d'orchestration. Le vrai différentiateur n'est pas le remplacement du modèle par l'agent — c'est le harnais déterministe qui contraint l'un et l'autre. Sans routage explicite, gate de preuve et traçabilité, l'agent n'est qu'un modèle qui boucle plus vite.
+
+En coulisses, *The Decoder* indique que xAI a utilisé les sorties d'Anthropic Claude pour entraîner ses propres modèles de code pendant des mois, poursuivant même après coupure d'accès via comptes privés et le service Blackbox AI, tandis que l'équipe de pré-entraînement de xAI aurait fondu à moins de cinq personnes[16]. C'est une violation de contrainte : le harnais de l'un sert de matériau brut à l'autre, sans contrat ni déclaration. Sur le front politique, OpenAI et l'administration Trump négocient une prise de participation directe via un *Public Wealth Fund*, pendant que Bernie Sanders pousse une taxe de 50 % sur les gains issus de l'IA[17]. Enfin, le pape Léon XIV publie une encyclique de plus de 200 pages posant l'humain comme seul rempart face à la machine, et appelle à « désarmer l'intelligence artificielle »[21]. Le pape appelle au désarmement ; le harnais, lui, ne désarme pas. Il contraint. La nuance est fertile : désarmer supprime l'outil, contraindre en révèle la mécanique. C'est la posture DDH — le mécanisme exhibé démonte la catégorie.
+
+Les décisions de goût — esthétique, éthique, morale — ne se délèguent pas davantage à l'agent qu'au modèle. Le harnais contraint ; il ne décide pas à la place.
+
+— essay © john linotte · trace cc-by 4.0
+
+Section
+Records · Carnets
+Composition
+Editor du Carnet · 7 juin 2026
+Source
+Département des Harnais — Studio
+
+<s ref="carnet"/>§ carnet
+
+**Sources**
+
+[1] *Le Monde* — [« Aller à contre-courant de l'IA pour reprendre le contrôle de son temps et de sa pensée devient un nouveau symbole de statut social »](https://www.lemonde.fr/idees/article/2026/06/06/aller-a-contre-courant-de-l-ia-pour-reprendre-le-controle-de-son-temps-et-de-sa-pensee-devient-un-nouveau-symbole-de-statut-social_6698104_3232.html) — https://www.lemonde.fr/idees/article/2026/06/06/aller-a-contre-courant-de-l-ia-pour-reprendre-le-controle-de-son-temps-et-de-sa-pensee-devient-un-nouveau-symbole-de-statut-social_6698104_3232.html
+
+[2] *Le Monde* — « [Chez SOS-Amitié, recourir à l'IA n'est « pas envisagé, ni envisageable »](https://www.lemonde.fr/pixels/article/2026/06/06/chez-sos-amitie-recourir-a-l-ia-n-est-pas-envisage-ni-envisageable_6698103_4408996.html) » — https://www.lemonde.fr/pixels/article/2026/06/06/chez-sos-amitie-recourir-a-l-ia-n-est-pas-envisage-ni-envisageable_6698103_4408996.html
+
+[3] *Le Monde* — [« Pour le secteur de l'IA, l'explosion de la facture des tokens est un signe de succès mais aussi un défi »](https://www.lemonde.fr/idees/article/2026/05/28/pour-le-secteur-de-l-ia-l-explosion-de-la-facture-des-tokens-est-un-signe-de-succes-mais-aussi-un-defi_6694467_3232.html) — https://www.lemonde.fr/idees/article/2026/05/28/pour-le-secteur-de-l-ia-l-explosion-de-la-facture-des-tokens-est-un-signe-de-succes-mais-aussi-un-defi_6694467_3232.html
+
+[4] *Le Monde* — « [IA et droits voisins : les quotidiens français réclament 80 millions d'euros au moteur de recherche Brave](https://www.lemonde.fr/pixels/article/2026/06/01/ia-et-droits-voisins-les-quotidiens-francais-reclament-80-millions-d-euros-au-moteur-de-recherche-brave_6696006_4408996.html) » — https://www.lemonde.fr/pixels/article/2026/06/01/ia-et-droits-voisins-les-quotidiens-francais-reclament-80-millions-d-euros-au-moteur-de-recherche-brave_6696006_4408996.html
+
+[5] *Inria* — « [Quand un algorithme classique évalue les performances des ordinateurs quantiques](https://www.inria.fr/fr/algorithme-classique-evalue-performances-ordinateurs-quantiques) » (5 juin) — https://www.inria.fr/fr/algorithme-classique-evalue-performances-ordinateurs-quantiques
+
+[6] *arXiv* — « [Functional Attention: From Pairwise Affinities to Functional Correspondences](https://arxiv.org/abs/2605.31559v1) EN PREPRINT » (preprint) — https://arxiv.org/abs/2605.31559v1
+
+[7] *arXiv* — « When Do Attention Circuits Form? Developmental Trajectories of Capability and Attention-Sink Emergence Across Three 1B-Class Architectures » (preprint) — https://arxiv.org/abs/2606.02378v1
+
+[8] *arXiv* — « [Forget Attention: Importance-Aware Attention Is All You Need](https://arxiv.org/abs/2606.02332v1) EN PREPRINT » (preprint) — https://arxiv.org/abs/2606.02332v1
+
+[9] *Next* — « [Retour à trois opérateurs : protocole d'accord entre Orange, Free, Bouygues et SFR](https://next.ink/241283/retour-a-trois-operateurs-protocole-daccord-entre-orange-free-bouygues-et-sfr/) » (7 juin) — https://[Next.ink](https://next.ink/brief-article/anthropic-elargit-lacces-a-mythos-a-une-quinzaine-de-pays/)/241283/retour-a-trois-operateurs-protocole-daccord-entre-orange-free-bouygues-et-sfr/
+
+[10] *Numerama* — « [C'est signé : SFR accepte d'être racheté et dévoile le sort de ses abonnés chez Bouygues, Free et Orange](https://www.numerama.com/tech/2269551-cest-signe-sfr-accepte-detre-rachete-et-devoile-le-sort-de-ses-abonnes-chez-bouygues-free-et-orange.html) » (6 juin) — https://www.numerama.com/tech/2269551-cest-signe-sfr-accepte-detre-rachete-et-devoile-le-sort-de-ses-abonnes-chez-bouygues-free-et-orange.html
+
+[11] *Next* — « [[MàJ] Elon Musk est débouté de ses poursuites contre OpenAI](https://next.ink/236770/elon-musk-vs-openai-tout-ce-quil-faut-savoir-du-proces-qui-secoue-la-silicon-valley/) » — https://next.ink/236770/elon-musk-vs-openai-tout-ce-quil-faut-savoir-du-proces-qui-secoue-la-silicon-valley/
+
+[12] *Next* — « [La Floride ouvre un nouveau front judiciaire contre OpenAI et Sam Altman](https://next.ink/240107/la-floride-ouvre-un-nouveau-front-judiciaire-contre-openai-et-sam-altman/) » — https://next.ink/240107/la-floride-ouvre-un-nouveau-front-judiciaire-contre-openai-et-sam-altman/
+
+[13] *Numerama* — « [Strava se branche directement sur Claude, mais snobe ChatGPT et Gemini](https://www.numerama.com/tech/2264543-strava-se-branche-directement-sur-claude-mais-snobe-chatgpt-et-gemini.html) » — https://www.numerama.com/tech/2264543-strava-se-branche-directement-sur-claude-mais-snobe-chatgpt-et-gemini.html
+
+[14] *Next* — « Anthropic élargit l'accès à Mythos à une quinzaine de pays » (2 juin) — https://next.ink/brief-article/anthropic-elargit-lacces-a-mythos-a-une-quinzaine-de-pays/
+
+[15] *Next* — « Alexa+, l'agent conversationnel d'Amazon, peut désormais générer des podcasts par IA » — https://next.ink/brief-article/alexa-lagent-conversationnel-damazon-peut-desormais-generer-des-podcasts-par-ia/
+
+[16] *The Decoder* — « [Elon Musk's xAI reportedly trained its coding models on Claude outputs for months before getting cut off](https://the-decoder.com/elon-musks-xai-reportedly-trained-its-coding-models-on-claude-outputs-for-months-before-getting-cut-off/) EN » — https://the-decoder.com/elon-musks-xai-reportedly-trained-its-coding-models-on-claude-outputs-for-months-before-getting-cut-off/
+
+[17] *The Decoder* — « [OpenAI and the Trump administration are negotiating a government stake in the AI startup](https://the-decoder.com/openai-and-the-trump-administration-are-negotiating-a-government-stake-in-the-ai-startup/) EN » — https://the-decoder.com/openai-and-the-trump-administration-are-negotiating-a-government-stake-in-the-ai-startup/
+
+[18] *The Decoder* — « [Meta's Hatch AI agent could cost up to $200 a month and marks its first paid AI product](https://the-decoder.com/metas-hatch-ai-agent-could-cost-up-to-200-a-month-and-marks-its-first-paid-ai-product/) EN » — https://the-decoder.com/metas-hatch-ai-agent-could-cost-up-to-200-a-month-and-marks-its-first-paid-ai-product/
+
+[19] *The Decoder* — « [Qwen3.7-Plus is Alibaba's bid to turn multimodal AI into a full-blown autonomous agent](https://the-decoder.com/qwen3-7-plus-is-alibabas-bid-to-turn-multimodal-ai-into-a-full-blown-autonomous-agent/) EN » — https://the-decoder.com/qwen3.7-plus-is-alibabas-bid-to-turn-multimodal-ai-into-a-full-blown-autonomous-agent/
+
+[20] *The Decoder* — « [New open-source voice model listens nonstop and decides every 0.4 seconds whether to speak or stay silent](https://the-decoder.com/new-open-source-voice-model-listens-nonstop-and-decides-every-0-4-seconds-whether-to-speak-or-stay-silent/) EN » — https://the-decoder.com/new-open-source-voice-model-listens-nonstop-and-decides-every-0-4-seconds-whether-to-speak-or-stay-silent/
+
+[21] *Les Echos* — « [« La technologie peut guérir, elle peut aussi diviser » : le pape Léon XIV appelle à « désarmer l'intelligence artificielle »](https://www.lesechos.fr/tech-medias/intelligence-artificielle/la-technologie-peut-guerir-elle-peut-aussi-diviser-le-pape-leon-xiv-appelle-a-desarmer-lintelligence-artificielle-2233268) » — https://www.lesechos.fr/tech-medias/intelligence-artificielle/la-technologie-peut-guerir-elle-peut-aussi-diviser-le-pape-leon-xiv-appelle-a-desarmer-lintelligence-artificielle-2233268
+
+<s ref="carnet"/>§ carnet
+
+Billet finalisé et publiable — 13 points de révision appliqués, sign-off Editor du Carnet · Section des Carnets (Records).

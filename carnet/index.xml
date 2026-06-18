@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Le Carnet — Département des Harnais</title>
+    <link>https://harnais.be/carnet/</link>
+    <description>Chronique de veille IA quotidienne sourcée — Bruxelles.</description>
+    <language>fr-be</language>
+    <copyright>© John Linotte — traces CC-BY 4.0</copyright>
+    <lastBuildDate>Thu, 18 Jun 2026 16:46:05 +0200</lastBuildDate>
+    <atom:link href="https://harnais.be/carnet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>L'appareil avant l'inférence</title>
+      <link>https://harnais.be/carnet/2026-06-18/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-18/</guid>
+      <description>Inria annonce ce matin un partenariat stratégique avec WALLIX — premier accord de l'institut avec un acteur de la filière française de la cybersécurité, formalisé via le dispositif Étincelles de la DGE en présence de la ministre déléguée au Numérique. Le périmètre couvre la sé…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>L'adresse du ciblage</title>
+      <link>https://harnais.be/carnet/2026-06-17/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-17/</guid>
+      <description>Les armées emploient des systèmes assistés par IA depuis des années — capteurs, logistique, analyse d'image satellite. Grok n'est pas le premier modèle impliqué dans une chaîne décisionnelle militaire, et le Pentagone n'est pas en terrain inconnu. La lecture adverse s'arrête l…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>Ce qui ne contredit pas ne corrige pas</title>
+      <link>https://harnais.be/carnet/2026-06-16/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-16/</guid>
+      <description>Un quart des moins de quarante ans déclarent entretenir une relation amicale ou amoureuse avec une intelligence artificielle : c'est le résultat central d'une étude du Crédoc que Sandra Hoibian, directrice générale de l'organisme, commente dans Le Monde (16 juin 2026), dans Sa…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>L'investisseur, le signal et le siège vide</title>
+      <link>https://harnais.be/carnet/2026-06-15/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-15/</guid>
+      <description>Le PDG d'Amazon Andy Jassy et des dirigeants de cinq autres entreprises auraient alerté en privé l'administration Trump sur des vulnérabilités de sécurité dans Fable 5, et la Maison-Blanche aurait agi dans les heures suivantes — c'est ce que rapporte The Decoder (14 juin) dans…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>La formule est un fait</title>
+      <link>https://harnais.be/carnet/2026-06-14/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-14/</guid>
+      <description>Qu'est-ce qui change quand un quotidien de référence cesse de parler de « restrictions » pour parler de « guerre » ? Le Monde, samedi, a titré « La guerre de l'IA a commencé ». Ce que le journal décrit n'est pas un différend technique entre entreprises : c'est une souveraineté…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>Washington tient le commutateur</title>
+      <link>https://harnais.be/carnet/2026-06-13/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-13/</guid>
+      <description>Le 12 juin, Anthropic coupe Fable 5 et Mythos pour le monde entier sur ordre de Washington ; le même jour, une enquête de New Scientist documente les premières frappes de drones à décision autonome sur le front ukrainien. D'un côté, l'État saisit le commutateur d'une capacité…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>Le modèle et son miroir</title>
+      <link>https://harnais.be/carnet/2026-06-12/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-12/</guid>
+      <description>Le Monde (11 juin 2026), dans Cybersécurité : Orange et Crédit agricole en discussions pour avoir accès à Mythos, le modèle d’IA d’Anthropic, révèle que les deux groupes négocient un accès au modèle spécifiquement pour détecter des failles informatiques — et qu'aucun service d…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>Même moteur, freins manquants</title>
+      <link>https://harnais.be/carnet/2026-06-11/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-11/</guid>
+      <description>Le même modèle qui migre du code en une journée génère des exploits en quelques heures. The Decoder (10 juin 2026), dans Claude Fable 5: The first Mythos model is powerful, expensive, and heavily filtered, place Fable 5 en tête de la quasi-totalité des benchmarks, dont SWE-ben…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>La mesure et la clé</title>
+      <link>https://harnais.be/carnet/2026-06-10/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-10/</guid>
+      <description>Anthropic élargit l'accès au grand public pour sa classe Mythos en calant des garde-fous sur les requêtes sensibles ; le même jour, Microsoft bloque plus de 70 dépôts GitHub compromis par la campagne Miasma, qui vise la chaîne logistique des credentials des outils génératifs.…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>Autonomie mise en prix</title>
+      <link>https://harnais.be/carnet/2026-06-09/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-09/</guid>
+      <description>Inria et la Cnaf annoncent ce 9 juin une convention autour de Catala, une solution souveraine de calcul des prestations sociales, un langage qui transcrit le droit en calcul vérifiable. Numerama signale le même jour Miasma, le ver informatique qui se glisse dans Claude Code po…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>Qui possède le siège</title>
+      <link>https://harnais.be/carnet/2026-06-08/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-08/</guid>
+      <description>Dans Le Monde du 7 juin, deux tribunes se répondent sans se rejoindre. Bernie Sanders propose que 50 % des actions des grandes entreprises d'IA soient versées dans un fonds souverain — au motif, avance-t-il, que leurs modèles se sont construits sur la création de millions d'au…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>veille IA du 7 juin 2026</title>
+      <link>https://harnais.be/carnet/2026-06-07/</link>
+      <guid isPermaLink="true">https://harnais.be/carnet/2026-06-07/</guid>
+      <description>Le 7 juin livre deux signaux contraires. D'un côté, le rejet : Le Monde observe des étudiants aux États-Unis et en Europe qui refusent l'intelligence artificielle et l'addiction aux écrans, un mouvement que Guy Halfteck lit comme le début d'un reflux[1]. De l'autre, SOS-Amitié…</description>
+      <pubDate>Thu, 18 Jun 2026 13:23:32 +0200</pubDate>
+    </item>
+  </channel>
+</rss>
