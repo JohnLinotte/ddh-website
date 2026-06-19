@@ -6,14 +6,14 @@
     <description>Essais long-form numérotés (T0…Tn) — une position défendue sur ce qu'un harness doit faire.</description>
     <language>fr-be</language>
     <copyright>© John Linotte — traces CC-BY 4.0</copyright>
-    <lastBuildDate>Fri, 19 Jun 2026 16:00:54 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 17:41:09 +0200</lastBuildDate>
     <atom:link href="https://harnais.be/essais/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Un harness, ses sections</title>
       <link>https://harnais.be/essais/t0/</link>
       <guid isPermaLink="true">https://harnais.be/essais/t0/</guid>
       <description>Essai T0. Où vit l'agentivité opérationnelle d'un système d'agents : dans le code qui orchestre, pas dans le modèle. Contraindre le modèle, ou ne pas être un harness. John Linotte, Bruxelles, mmxxvi.</description>
-      <pubDate>Fri, 19 Jun 2026 08:03:39 +0200</pubDate>
+      <pubDate>Fri, 19 Jun 2026 16:00:59 +0200</pubDate>
     </item>
   </channel>
 </rss>

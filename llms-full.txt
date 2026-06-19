@@ -101,6 +101,18 @@ billets datés · 2026 — en cours
 ## Le Carnet
 
 [
+<artefact role="record">2026-06-19
+
+### Calibré, pas compris
+
+Le 18 juin, deux publications se répondent sans se connaître. Sur arXiv, un preprint construit un benchmark qui sépare calibration et compréhension — un modèle peut scorer parfaitement sur des…
+
+Lire
+</artefact>
+
+](/carnet/2026-06-19/)
+
+[
 <artefact role="record">2026-06-18
 
 ### L'appareil avant l'inférence
@@ -495,6 +507,47 @@ Rue de la Presse 35, 1000 Bruxelles —
 
 - la présente notice peut évoluer avec le site ; la date de
 dernière mise à jour figure en tête.
+
+
+---
+
+## Calibré, pas compris
+
+Source : https://harnais.be/carnet/2026-06-19/
+
+> Un benchmark de détection de vulnérabilités qui ne distingue pas calibration et compréhension ne mesure que ce que le modèle a déjà vu — pas ce qu'il comprend. C'est la lecture que Le Département des Harnais retient du preprint CWE-Trace (*arXiv*, 18 juin 2026, 834 échantillons annotés du noyau Linux) et de la « AI Control Roadmap » de DeepMind publiée le même jour. La garantie de détection repose sur l'extériorité du test — un appareil d'amont, ou pre-inference architecture, qui ne partage pas les angles morts du modèle qu'il évalue.
+
+Bruxelles, 2026-06-19
+
+Le 18 juin, deux publications se répondent sans se connaître. Sur *arXiv*, un preprint construit un benchmark qui sépare calibration et compréhension — un modèle peut scorer parfaitement sur des vulnérabilités connues et dériver sur des variantes inédites. Chez DeepMind, une « AI Control Roadmap » conditionne les contrôles de sécurité aux capacités mesurées des agents : plus l'agent est capable, plus le cliquet se resserre. Les deux font le même constat par des chemins opposés : l'étalonnage interne ne suffit pas à établir la fiabilité.
+
+[Calibration Without Comprehension](https://arxiv.org/abs/2606.20502v1) EN PREPRINT (*arXiv*, 18 juin) pose sa question avec précision : les LLMs qui obtiennent de bons scores sur les benchmarks de détection de vulnérabilités raisonnent-ils réellement sur la sécurité, ou reconnaissent-ils des patterns déjà vus dans leurs données d'entraînement ? Les auteurs construisent CWE-Trace à partir de 834 échantillons manuellement annotés du noyau Linux, couvrant 74 types de vulnérabilités, avec un split temporel strict — ensemble historique pré-2025 d'un côté, ensemble post-cutoff exempt de contamination de l'autre. Deux métriques diagnostiques permettent de distinguer les deux régimes : un modèle peut être parfaitement *calibré* sur des exemples connus et aveugle sur des variantes inédites. Pour les usages qui engagent une présomption de fiabilité — audit de code, validation de patch — c'est cette distinction qui compte, et les benchmarks existants ne la tranchent pas. Le test qui ne sépare pas calibration et compréhension mesure ce que le modèle a déjà vu, pas ce qu'il comprend : l'étalon interne n'est pas un tiers.
+
+*The Decoder* (18 juin) décrit dans [Google Deepmind treats its own AI agents like rogue employees with office keys](https://the-decoder.com/google-deepmind-treats-its-own-ai-agents-like-rogue-employees-with-office-keys/) EN l'existence d'une « AI Control Roadmap » chez DeepMind, qui conditionne les mesures de sécurité aux capacités mesurées des agents. L'analyse porte sur un million de tâches de coding ; la majorité des problèmes provient d'agents trop zélés, pas d'agents malveillants. La métaphore de l'employé-voyou avec des clés de bureau dit quelque chose de précis : ce n'est pas la mauvaise intention qui est le risque primaire, c'est l'*agentivité* non bornée d'un agent bien intentionné. L'objection tient : un contrôle paramétrique conçu par DeepMind sur les agents de DeepMind est un régime d'auto-bridage — la granularité des métriques améliore le cliquet, elle ne le sort pas de l'atelier du constructeur. Ce qui se joue pourtant est architectural : un contrôle conditionné aux capacités mesurées plutôt qu'à un règlement est une discipline d'exploitation — et elle ne tient que sous charge.
+
+*Inria* (18 juin), dans [Inria et le Groupe VYV nouent un partenariat autour de l'IA en santé](https://www.inria.fr/fr/inria-groupe-vyv-partenariat-ia-sante-2026), annonce un accord avec le Groupe VYV, premier acteur mutualiste de santé et de protection sociale en France — troisième accord institutionnel de l'institut en une semaine, après WALLIX (cybersécurité) le 17 juin.
+
+[How Transparent is DiffusionGemma?](https://arxiv.org/abs/2606.20560v1) EN PREPRINT (*arXiv*, 18 juin) décompose la transparence en deux composantes — états intermédiaires et algorithme — pour un modèle qui effectue une part de son calcul dans un espace latent continu. Signal d'interprétabilité, résultats à confirmer.
+
+[Execution-State Capsules](https://arxiv.org/abs/2606.20537v1) EN PREPRINT (*arXiv*, 18 juin) propose un mécanisme de checkpoint/restore d'état d'exécution pour agents LLM embarqués — robotique, TTS, agents interactifs — dans le régime faible-latence où le KV cache classique est insuffisant.
+
+[Probe-and-Refine Tuning of Repository Guidance for Coding Agents](https://arxiv.org/abs/2606.20512v1) EN PREPRINT (*arXiv*, 18 juin) s'attaque aux fichiers AGENTS.md, dont l'utilité est contestée par des études récentes contradictoires, et propose un protocole itératif pour les produire — résultat à vérifier sur des évaluations extérieures aux auteurs.
+
+Pas de texte normatif ce jour ; l'acte est administratif. *Next* (19 juin), dans [Bercy crée une direction dédiée à l'intelligence artificielle](https://next.ink/brief-article/bercy-cree-une-direction-dediee-a-lintelligence-artificielle/), annonce la création de la Direction de l'intelligence artificielle et du numérique (DIAN) — premier ministère à intégrer l'IA dans le périmètre d'une direction, pas seulement dans son intitulé. La DIAN succède au Service du numérique du Secrétariat général des MEF et doit livrer d'ici fin juin une feuille de route IA 2026-2027 pour les ministères économiques et financiers. Ce que l'annonce ne précise pas : quelle autorité d'arbitrage aura concrètement la DIAN sur les choix d'infrastructure. Le contraste avec une information parallèle le dit sans le dire : *Next* (18 juin), dans [L'impact de l'IA sur les effectifs de la fonction publique ? Matignon ne veut pas le donner](https://next.ink/brief-article/limpact-de-lia-sur-les-effectifs-de-la-fonction-publique-matignon-ne-veut-pas-le-donner/), rapporte que Matignon a refusé de communiquer les projections d'impact sur les effectifs lors du groupe de travail avec les syndicats.
+
+Trois promesses, trois absences de preuve extérieure. *Numerama* (19 juin) dans [Midjourney promet de réduire la mortalité mondiale de 30 % grâce à un immense scanner corporel à ultrasons](https://www.numerama.com/sciences/2278697-midjourney-promet-de-reduire-la-mortalite-mondiale-de-30-grace-a-un-immense-scanner-corporel-a-ultrasons.html) : pivot du studio d'image vers le médical, scanner installé dans un spa de luxe, promesse de 30 % de réduction de mortalité mondiale sans protocole clinique visible. *Next* (18 juin) dans [OVHcloud veut ses Mistral gagnants et se lance dans les LLM](https://next.ink/242992/ovhcloud-veut-ses-mistral-gagnants-et-se-lance-dans-les-llm/) : Octave Klaba, revenu aux commandes fin 2025, prépare une famille de modèles open source — *« c'est effectivement l'idée »*, sans calendrier arrêté. *Next* (18 juin) dans [Avec sa puce Napier, Tensordyne veut faire 13x à 17x mieux que les GPU Nvidia](https://next.ink/243065/avec-sa-puce-napier-tensordyne-veut-faire-13x-a-17x-mieux-que-les-gpu-nvidia/) : architecture qui remplace les multiplications par des additions, 13 à 17× plus de tokens par seconde que Nvidia — benchmarks indépendants à venir. La forme est chaque fois la même : une performance annoncée par celui qui l'a produite, mesurée par celui qui l'a produite.
+
+*The Decoder* (18 juin) dans [Adobe adds AI agents to Photoshop, Premiere, and more Creative Cloud apps](https://the-decoder.com/adobe-adds-ai-agents-to-photoshop-premiere-and-more-creative-cloud-apps/) EN rapporte le déploiement d'un « creative agent » sur l'ensemble des applications principales de Creative Cloud, ainsi que sur des plateformes tierces — ChatGPT et Claude. L'utilisateur décrit son intention, l'agent prend en charge le travail en plusieurs étapes. Ce déploiement est notable moins par sa nouveauté technique que par son périmètre : Photoshop et Premiere sont installés dans des flux de production industriels, pas dans des environnements d'expérimentation. L'intégration simultanée sur des plateformes concurrentes signale qu'Adobe joue la couche orchestration, indépendamment du modèle sous-jacent.
+
+Anthropic, selon *The Decoder* (18 juin) dans [Anthropic brings Artifacts to Claude Code, letting teams share live pages from coding sessions](https://the-decoder.com/anthropic-brings-artifacts-to-claude-code-letting-teams-share-live-pages-from-coding-sessions/) EN, donne à Claude Code la capacité de convertir les résultats de session en pages web interactives partageables avec historique de versions — persistance de la session sous forme de livrable.
+
+OpenAI, dans [ChatGPT's new health upgrade beats doctor-written answers, OpenAI says](https://the-decoder.com/chatgpts-new-health-upgrade-beats-doctor-written-answers-openai-says/) EN (*The Decoder*, 18 juin), affirme que GPT-5.5 Instant surpasse les réponses médicales écrites par des médecins en précision, clarté et complétude — dans ses propres tests comparatifs. C'est le cas non-extérieur par excellence : le modèle qui se jauge lui-même, dans un domaine où la question n'est pas « a-t-il bien répondu ? » mais « qui a vérifié, et depuis quel lieu ? ». Un benchmark interne prouve que le concepteur est satisfait ; il ne prouve pas que le patient est protégé.
+
+Yann LeCun, rapporté par *The Decoder* (18 juin) dans [Yann LeCun warns AI labs like OpenAI and Anthropic face a "big bubble explosion"](https://the-decoder.com/yann-lecun-warns-ai-labs-like-openai-and-anthropic-face-a-big-bubble-explosion/) EN, estime les coûts opérationnels des grands labs non-soutenables sans subvention investisseur et les prix de l'inférence trop lents à baisser — position contraire à la lecture dominante de la semaine sur l'infrastructure agentique en construction.
+
+*The Decoder* (18 juin) dans [Alleged China ties at SK Telecom alarmed US officials and triggered Anthropic crisis](https://the-decoder.com/alleged-china-ties-at-sk-telecom-alarmed-us-officials-and-triggered-anthropic-crisis/) EN précise que SK Telecom avait accès à Claude Mythos via le programme Glasswing jusqu'à l'intervention de la Maison-Blanche. *IT Social* (18 juin) dans [Du jeton au résultat, la facturation de l'IA agentique change de logique](https://itsocial.fr/cloud-infrastructure-it/cloud-infrastructure-it-articles/du-jeton-au-resultat-la-facturation-de-lia-agentique-change-de-logique-et-installe-une-nouvelle-dependance/) signale le pivot de Pega, Databricks et UiPath vers la facturation au dossier traité — modèle de dépendance différent, pas moins contraignant. *Latent.Space* (19 juin) dans [GLM > GPT ? GLM-5.2 passes vibe check ; Z.ai forecasts Open Fable by December](https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe) EN note que Z.ai prévoit un équivalent open source de Fable d'ici décembre.
+
+CWE-Trace, la roadmap DeepMind, l'auto-évaluation santé d'OpenAI : trois mesures prises depuis l'intérieur. Calibré ne signifie pas vérifié — et c'est la distance entre les deux que les benchmarks existants ne mesurent pas encore.
 
 
 ---

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calibré, pas compris — Le Carnet · Département des Harnais</title>
+<meta name="description" content="Un benchmark de détection de vulnérabilités qui ne distingue pas calibration et compréhension ne mesure que ce que le modèle a déjà vu — pas ce qu'il…">
+<meta name="author" content="John Linotte">
+<link rel="canonical" href="https://harnais.be/carnet/2026-06-19/">
+<link rel="stylesheet" href="/assets/ddh.css">
+<link rel="me" href="https://mastodon.social/@johnlinotte">
+<meta name="fediverse:creator" content="@johnlinotte@mastodon.social">
+  <link rel="alternate" type="application/rss+xml" title="Le Carnet — Département des Harnais" href="/carnet/index.xml">
+  <link rel="alternate" type="application/json" title="Le Carnet — JSON Feed" href="/carnet/feed.json">
+  <link rel="alternate" type="application/rss+xml" title="Les Essais — Département des Harnais" href="/essais/index.xml">
+  <link rel="alternate" type="application/json" title="Les Essais — JSON Feed" href="/essais/feed.json">
+  <!-- ddh:favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+<!-- ddh:jsonld-start -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Département des Harnais",
+  "alternateName": "DDH",
+  "url": "https://harnais.be/",
+  "description": "Atelier d'auteur sur l'IA : harness d'agents et agentivité, deterministic-first. Bruxelles, mmxxvi.",
+  "foundingDate": "2026",
+  "founder": {
+    "@type": "Person",
+    "name": "John Linotte",
+    "url": "https://harnais.be/a-propos/"
+  },
+  "email": "mailto:contact@harnais.be",
+  "logo": "https://harnais.be/assets/forum.jpg",
+  "sameAs": [
+    "https://github.com/JohnLinotte",
+    "https://pypi.org/user/JohnLinotte/",
+    "https://github.com/JohnLinotte/ddh-website",
+    "https://github.com/JohnLinotte/atomic-json-io",
+    "https://github.com/JohnLinotte/hybrid-retrieval-scoring",
+    "https://github.com/JohnLinotte/prompt-injection-sanitizer",
+    "https://github.com/JohnLinotte/web-article-extractor"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Index",
+      "item": "https://harnais.be/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Le Carnet",
+      "item": "https://harnais.be/carnet/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Calibré, pas compris",
+      "item": "https://harnais.be/carnet/2026-06-19/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Calibré, pas compris",
+  "description": "Un benchmark de détection de vulnérabilités qui ne distingue pas calibration et compréhension ne mesure que ce que le modèle a déjà vu — pas ce qu'il comprend. C'est la lecture que Le Département des Harnais retient du preprint CWE-Trace (*arXiv*…",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "inLanguage": "fr-BE",
+  "keywords": "harnais d'agents IA, appareil d'amont, garantie opposable, possession du siège, extériorité, deux fonctions du harnais, agentivité, déterministe d'abord, exhibition du mécanisme, AI agent governance, agentic AI oversight, pre-inference architecture, kill switch ownership, model sovereignty, production AI safety, agent identity management, AI auditing framework, agentic workflow",
+  "author": {
+    "@type": "Person",
+    "name": "John Linotte",
+    "url": "https://harnais.be/a-propos/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Département des Harnais",
+    "url": "https://harnais.be/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://harnais.be/carnet/2026-06-19/"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+  </script>
+<!-- ddh:jsonld-end -->
+  <meta property="og:description" content="A vulnerability-detection benchmark that does not separate calibration from comprehension measures only what the model has already seen — not what it understands. Le Département des Harnais (Brussels) reads the CWE-Trace preprint (*arXiv*, 18 June 2026, 834 Linux kernel samples) alongside DeepMind's same-day AI Control Roadmap as two sides of the same gap. Detection assurance rests on test exteriority — an upstream apparatus (l'appareil d'amont), or pre-inference architecture, whose failure modes do not overlap with the model it evaluates.">
+  <!-- ddh:hreflang-en -->
+  <link rel="alternate" hreflang="fr-BE" href="https://harnais.be/carnet/2026-06-19/">
+  <link rel="alternate" hreflang="en" href="https://harnais.be/carnet/2026-06-19/">
+  <link rel="alternate" hreflang="x-default" href="https://harnais.be/carnet/2026-06-19/">
+</head>
+<body>
+<div class="page">
+
+<!-- ddh:nav -->
+<img class="wm-bg" src="/assets/forum.jpg" alt="" aria-hidden="true">
+<div class="topbar">
+  <div class="lf"><span class="dot"></span>atelier d&#x27;auteur · bruxelles · mmxxvi</div>
+  <nav>
+    <a href="/">Index</a><span class="sep">·</span><a class="on" href="/carnet/">Le Carnet</a><span class="sep">·</span><a href="/essais/">Les Essais</a><span class="sep">·</span><a href="/a-propos/">À propos</a>
+  </nav>
+</div>
+<!-- /ddh:nav -->
+
+<!-- [SLOT NAMEPLATE] direction C · plaque / cartel de musée -->
+<div class="cartel cartel-records">
+
+  <div class="cartel-apparatus">
+    <span class="lhs">
+      <span class="gx">DtH</span>
+      <span class="fig">fig.&nbsp;<span class="onum">II</span></span>
+      <span class="ord">records</span>
+      <span> - intitulé de section</span>
+    </span>
+    <span class="rule"></span>
+    <span class="place onum">bruxelles · mmxxvi</span>
+  </div>
+
+  <h1 class="cartel-name">
+    <a href="/" class="cartel-name-link" aria-label="Retour à l'index du site">
+      <span class="l1">Département</span>
+      <span class="joint">des</span>
+      <span class="word2">Harnais</span>
+    </a>
+  </h1>
+
+  <div class="cartel-section tagline">chronique de veille IA · sourcée · publiée du lundi au samedi</div>
+  <div class="cartel-section">
+    <span><a class="cartel-link" href="/carnet/"><span class="g">section</span>&nbsp;du carnet</a> · <em>le modèle tenu en laisse, la preuve exigée</em></span>
+  </div>
+
+</div>
+<!-- [/SLOT NAMEPLATE] -->
+
+<div class="xml-rule xml-rule-billet">
+  <span><span class="br">&lt;</span><span class="tg">section</span> <span class="at">ref</span>=<span class="vl">"records"</span><span class="br">&gt;</span></span>
+  <span class="caption"><a class="caption-link" href="/carnet/">section du carnet</a></span>
+  <span class="spacer"></span>
+  <span class="caption">billets datés · 2026 — en cours</span>
+</div>
+
+<div class="billet-layout">
+
+<aside class="dispatch-card" aria-label="fabrication du billet">
+  <div class="head">fabrication</div>
+  <dl class="meta-top">
+  <dt>ticket</dt><dd>DPA-208</dd>
+  <dt>dispatch</dt><dd>06e65c2a6c8d</dd>
+  </dl>
+  <table class="waves">
+    <tr><td class="w">W1</td><td class="tm"><span class="t">compliance-officer</span><span class="m">sonnet-4-6</span></td><td class="v ok">✓</td></tr>
+    <tr class="verdict-row"><td class="w">&nbsp;</td><td class="vt" colspan="2">GO Le fond est propre sur les cinq domaines de contrôle</td></tr>
+    <tr><td class="w">&nbsp;</td><td class="tm"><span class="t">editor-in-chief</span><span class="m">glm-5.2</span></td><td class="v ok">✓</td></tr>
+    <tr><td class="w">W2</td><td class="tm"><span class="t">producer</span><span class="m">glm-5.2</span></td><td class="v ok">✓</td></tr>
+    <tr class="verdict-row"><td class="w">&nbsp;</td><td class="vt" colspan="2">20 tâches de révision</td></tr>
+    <tr><td class="w">W3</td><td class="tm"><span class="t">editor-du-carnet</span><span class="m">opus-4-6</span></td><td class="v ok">✓</td></tr>
+    <tr class="verdict-row"><td class="w">&nbsp;</td><td class="vt" colspan="2">billet livré — 1182 mots</td></tr>
+  </table>
+</aside>
+
+<div class="billet-main">
+
+<header class="section-head">
+  <div class="kicker"><span class="g">§</span> Le Carnet <span class="rule"></span> <a class="nav-day nav-prev" href="/carnet/2026-06-18/" title="Billet précédent : 2026-06-18">&larr;</a> <span class="date">vendredi 19 juin 2026</span></div>
+  <h1>Calibré, pas compris</h1>
+</header>
+
+<article class="carnet">
+<p>Bruxelles, 2026-06-19</p>
+<p>Le 18 juin, deux publications se répondent sans se connaître. Sur <em>arXiv</em>, un preprint construit un benchmark qui sépare calibration et compréhension — un modèle peut scorer parfaitement sur des vulnérabilités connues et dériver sur des variantes inédites. Chez DeepMind, une « AI Control Roadmap » conditionne les contrôles de sécurité aux capacités mesurées des agents : plus l'agent est capable, plus le cliquet se resserre. Les deux font le même constat par des chemins opposés : l'étalonnage interne ne suffit pas à établir la fiabilité.</p>
+<p><a href="https://arxiv.org/abs/2606.20502v1">Calibration Without Comprehension</a> <span class="lang-en" title="Source en anglais">EN</span> <span class="kind-preprint" title="Preprint non peer-reviewed">PREPRINT</span> (<em>arXiv</em>, 18 juin) pose sa question avec précision : les LLMs qui obtiennent de bons scores sur les benchmarks de détection de vulnérabilités raisonnent-ils réellement sur la sécurité, ou reconnaissent-ils des patterns déjà vus dans leurs données d'entraînement ? Les auteurs construisent CWE-Trace à partir de 834 échantillons manuellement annotés du noyau Linux, couvrant 74 types de vulnérabilités, avec un split temporel strict — ensemble historique pré-2025 d'un côté, ensemble post-cutoff exempt de contamination de l'autre. Deux métriques diagnostiques permettent de distinguer les deux régimes : un modèle peut être parfaitement <em>calibré</em> sur des exemples connus et aveugle sur des variantes inédites. Pour les usages qui engagent une présomption de fiabilité — audit de code, validation de patch — c'est cette distinction qui compte, et les benchmarks existants ne la tranchent pas. Le test qui ne sépare pas calibration et compréhension mesure ce que le modèle a déjà vu, pas ce qu'il comprend : l'étalon interne n'est pas un tiers.</p>
+<p><em>The Decoder</em> (18 juin) décrit dans <a href="https://the-decoder.com/google-deepmind-treats-its-own-ai-agents-like-rogue-employees-with-office-keys/">Google Deepmind treats its own AI agents like rogue employees with office keys</a> <span class="lang-en" title="Source en anglais">EN</span> l'existence d'une « AI Control Roadmap » chez DeepMind, qui conditionne les mesures de sécurité aux capacités mesurées des agents. L'analyse porte sur un million de tâches de coding ; la majorité des problèmes provient d'agents trop zélés, pas d'agents malveillants. La métaphore de l'employé-voyou avec des clés de bureau dit quelque chose de précis : ce n'est pas la mauvaise intention qui est le risque primaire, c'est l'<em>agentivité</em> non bornée d'un agent bien intentionné. L'objection tient : un contrôle paramétrique conçu par DeepMind sur les agents de DeepMind est un régime d'auto-bridage — la granularité des métriques améliore le cliquet, elle ne le sort pas de l'atelier du constructeur. Ce qui se joue pourtant est architectural : un contrôle conditionné aux capacités mesurées plutôt qu'à un règlement est une discipline d'exploitation — et elle ne tient que sous charge.</p>
+<p><em>Inria</em> (18 juin), dans <a href="https://www.inria.fr/fr/inria-groupe-vyv-partenariat-ia-sante-2026">Inria et le Groupe VYV nouent un partenariat autour de l'IA en santé</a>, annonce un accord avec le Groupe VYV, premier acteur mutualiste de santé et de protection sociale en France — troisième accord institutionnel de l'institut en une semaine, après WALLIX (cybersécurité) le 17 juin.</p>
+<p><a href="https://arxiv.org/abs/2606.20560v1">How Transparent is DiffusionGemma?</a> <span class="lang-en" title="Source en anglais">EN</span> <span class="kind-preprint" title="Preprint non peer-reviewed">PREPRINT</span> (<em>arXiv</em>, 18 juin) décompose la transparence en deux composantes — états intermédiaires et algorithme — pour un modèle qui effectue une part de son calcul dans un espace latent continu. Signal d'interprétabilité, résultats à confirmer.</p>
+<p><a href="https://arxiv.org/abs/2606.20537v1">Execution-State Capsules</a> <span class="lang-en" title="Source en anglais">EN</span> <span class="kind-preprint" title="Preprint non peer-reviewed">PREPRINT</span> (<em>arXiv</em>, 18 juin) propose un mécanisme de checkpoint/restore d'état d'exécution pour agents LLM embarqués — robotique, TTS, agents interactifs — dans le régime faible-latence où le KV cache classique est insuffisant.</p>
+<p><a href="https://arxiv.org/abs/2606.20512v1">Probe-and-Refine Tuning of Repository Guidance for Coding Agents</a> <span class="lang-en" title="Source en anglais">EN</span> <span class="kind-preprint" title="Preprint non peer-reviewed">PREPRINT</span> (<em>arXiv</em>, 18 juin) s'attaque aux fichiers AGENTS.md, dont l'utilité est contestée par des études récentes contradictoires, et propose un protocole itératif pour les produire — résultat à vérifier sur des évaluations extérieures aux auteurs.</p>
+<p>Pas de texte normatif ce jour ; l'acte est administratif. <em>Next</em> (19 juin), dans <a href="https://next.ink/brief-article/bercy-cree-une-direction-dediee-a-lintelligence-artificielle/">Bercy crée une direction dédiée à l'intelligence artificielle</a>, annonce la création de la Direction de l'intelligence artificielle et du numérique (DIAN) — premier ministère à intégrer l'IA dans le périmètre d'une direction, pas seulement dans son intitulé. La DIAN succède au Service du numérique du Secrétariat général des MEF et doit livrer d'ici fin juin une feuille de route IA 2026-2027 pour les ministères économiques et financiers. Ce que l'annonce ne précise pas : quelle autorité d'arbitrage aura concrètement la DIAN sur les choix d'infrastructure. Le contraste avec une information parallèle le dit sans le dire : <em>Next</em> (18 juin), dans <a href="https://next.ink/brief-article/limpact-de-lia-sur-les-effectifs-de-la-fonction-publique-matignon-ne-veut-pas-le-donner/">L'impact de l'IA sur les effectifs de la fonction publique ? Matignon ne veut pas le donner</a>, rapporte que Matignon a refusé de communiquer les projections d'impact sur les effectifs lors du groupe de travail avec les syndicats.</p>
+<p>Trois promesses, trois absences de preuve extérieure. <em>Numerama</em> (19 juin) dans <a href="https://www.numerama.com/sciences/2278697-midjourney-promet-de-reduire-la-mortalite-mondiale-de-30-grace-a-un-immense-scanner-corporel-a-ultrasons.html">Midjourney promet de réduire la mortalité mondiale de 30 % grâce à un immense scanner corporel à ultrasons</a> : pivot du studio d'image vers le médical, scanner installé dans un spa de luxe, promesse de 30 % de réduction de mortalité mondiale sans protocole clinique visible. <em>Next</em> (18 juin) dans <a href="https://next.ink/242992/ovhcloud-veut-ses-mistral-gagnants-et-se-lance-dans-les-llm/">OVHcloud veut ses Mistral gagnants et se lance dans les LLM</a> : Octave Klaba, revenu aux commandes fin 2025, prépare une famille de modèles open source — <em>« c'est effectivement l'idée »</em>, sans calendrier arrêté. <em>Next</em> (18 juin) dans <a href="https://next.ink/243065/avec-sa-puce-napier-tensordyne-veut-faire-13x-a-17x-mieux-que-les-gpu-nvidia/">Avec sa puce Napier, Tensordyne veut faire 13x à 17x mieux que les GPU Nvidia</a> : architecture qui remplace les multiplications par des additions, 13 à 17× plus de tokens par seconde que Nvidia — benchmarks indépendants à venir. La forme est chaque fois la même : une performance annoncée par celui qui l'a produite, mesurée par celui qui l'a produite.</p>
+<p><em>The Decoder</em> (18 juin) dans <a href="https://the-decoder.com/adobe-adds-ai-agents-to-photoshop-premiere-and-more-creative-cloud-apps/">Adobe adds AI agents to Photoshop, Premiere, and more Creative Cloud apps</a> <span class="lang-en" title="Source en anglais">EN</span> rapporte le déploiement d'un « creative agent » sur l'ensemble des applications principales de Creative Cloud, ainsi que sur des plateformes tierces — ChatGPT et Claude. L'utilisateur décrit son intention, l'agent prend en charge le travail en plusieurs étapes. Ce déploiement est notable moins par sa nouveauté technique que par son périmètre : Photoshop et Premiere sont installés dans des flux de production industriels, pas dans des environnements d'expérimentation. L'intégration simultanée sur des plateformes concurrentes signale qu'Adobe joue la couche orchestration, indépendamment du modèle sous-jacent.</p>
+<p>Anthropic, selon <em>The Decoder</em> (18 juin) dans <a href="https://the-decoder.com/anthropic-brings-artifacts-to-claude-code-letting-teams-share-live-pages-from-coding-sessions/">Anthropic brings Artifacts to Claude Code, letting teams share live pages from coding sessions</a> <span class="lang-en" title="Source en anglais">EN</span>, donne à Claude Code la capacité de convertir les résultats de session en pages web interactives partageables avec historique de versions — persistance de la session sous forme de livrable.</p>
+<p>OpenAI, dans <a href="https://the-decoder.com/chatgpts-new-health-upgrade-beats-doctor-written-answers-openai-says/">ChatGPT's new health upgrade beats doctor-written answers, OpenAI says</a> <span class="lang-en" title="Source en anglais">EN</span> (<em>The Decoder</em>, 18 juin), affirme que GPT-5.5 Instant surpasse les réponses médicales écrites par des médecins en précision, clarté et complétude — dans ses propres tests comparatifs. C'est le cas non-extérieur par excellence : le modèle qui se jauge lui-même, dans un domaine où la question n'est pas « a-t-il bien répondu ? » mais « qui a vérifié, et depuis quel lieu ? ». Un benchmark interne prouve que le concepteur est satisfait ; il ne prouve pas que le patient est protégé.</p>
+<p>Yann LeCun, rapporté par <em>The Decoder</em> (18 juin) dans <a href="https://the-decoder.com/yann-lecun-warns-ai-labs-like-openai-and-anthropic-face-a-big-bubble-explosion/">Yann LeCun warns AI labs like OpenAI and Anthropic face a "big bubble explosion"</a> <span class="lang-en" title="Source en anglais">EN</span>, estime les coûts opérationnels des grands labs non-soutenables sans subvention investisseur et les prix de l'inférence trop lents à baisser — position contraire à la lecture dominante de la semaine sur l'infrastructure agentique en construction.</p>
+<p><em>The Decoder</em> (18 juin) dans <a href="https://the-decoder.com/alleged-china-ties-at-sk-telecom-alarmed-us-officials-and-triggered-anthropic-crisis/">Alleged China ties at SK Telecom alarmed US officials and triggered Anthropic crisis</a> <span class="lang-en" title="Source en anglais">EN</span> précise que SK Telecom avait accès à Claude Mythos via le programme Glasswing jusqu'à l'intervention de la Maison-Blanche. <em>IT Social</em> (18 juin) dans <a href="https://itsocial.fr/cloud-infrastructure-it/cloud-infrastructure-it-articles/du-jeton-au-resultat-la-facturation-de-lia-agentique-change-de-logique-et-installe-une-nouvelle-dependance/">Du jeton au résultat, la facturation de l'IA agentique change de logique</a> signale le pivot de Pega, Databricks et UiPath vers la facturation au dossier traité — modèle de dépendance différent, pas moins contraignant. <em>Latent.Space</em> (19 juin) dans <a href="https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe">GLM &gt; GPT ? GLM-5.2 passes vibe check ; Z.ai forecasts Open Fable by December</a> <span class="lang-en" title="Source en anglais">EN</span> note que Z.ai prévoit un équivalent open source de Fable d'ici décembre.</p>
+<p>CWE-Trace, la roadmap DeepMind, l'auto-évaluation santé d'OpenAI : trois mesures prises depuis l'intérieur. Calibré ne signifie pas vérifié — et c'est la distance entre les deux que les benchmarks existants ne mesurent pas encore.</p>
+</article>
+
+<section class="sources-section">
+
+<details class="sources">
+<summary>Items cités dans la note (18 items · 7 sources)</summary>
+<ul>
+      <li><a href="https://arxiv.org/abs/2606.20502v1" class="source-title">Calibration Without Comprehension: Diagnosing the Limits of Fine-Tuning LLMs for Vulnerability Detection in Systems Software</a> <span class="lang-en" title="Source en anglais">EN</span> <span class="kind-preprint" title="Preprint non peer-reviewed">PREPRINT</span><span class="source-meta">arXiv · 2026-06-18T17:19:26Z</span></li>
+      <li><a href="https://www.inria.fr/fr/inria-groupe-vyv-partenariat-ia-sante-2026" class="source-title">Inria et le Groupe VYV nouent un partenariat  autour de l’IA en santé</a><span class="source-meta">Inria · Thu, 18 Jun 2026 15:03:19 +0200</span></li>
+      <li><a href="https://arxiv.org/abs/2606.20560v1" class="source-title">How Transparent is DiffusionGemma?</a> <span class="lang-en" title="Source en anglais">EN</span> <span class="kind-preprint" title="Preprint non peer-reviewed">PREPRINT</span><span class="source-meta">arXiv · 2026-06-18T17:59:46Z</span></li>
+      <li><a href="https://arxiv.org/abs/2606.20537v1" class="source-title">Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving</a> <span class="lang-en" title="Source en anglais">EN</span> <span class="kind-preprint" title="Preprint non peer-reviewed">PREPRINT</span><span class="source-meta">arXiv · 2026-06-18T17:49:36Z</span></li>
+      <li><a href="https://arxiv.org/abs/2606.20512v1" class="source-title">Probe-and-Refine Tuning of Repository Guidance for Coding Agents</a> <span class="lang-en" title="Source en anglais">EN</span> <span class="kind-preprint" title="Preprint non peer-reviewed">PREPRINT</span><span class="source-meta">arXiv · 2026-06-18T17:30:15Z</span></li>
+      <li><a href="https://next.ink/brief-article/bercy-cree-une-direction-dediee-a-lintelligence-artificielle/" class="source-title">☕️ Bercy crée une direction dédiée à l’intelligence artificielle</a><span class="source-meta">Next.ink · Fri, 19 Jun 2026 05:49:44 +0000</span></li>
+      <li><a href="https://next.ink/brief-article/limpact-de-lia-sur-les-effectifs-de-la-fonction-publique-matignon-ne-veut-pas-le-donner/" class="source-title">☕️ L’impact de l’IA sur les effectifs de la fonction publique ? Matignon ne veut pas le donner</a><span class="source-meta">Next.ink · Thu, 18 Jun 2026 13:16:56 +0000</span></li>
+      <li><a href="https://www.numerama.com/sciences/2278697-midjourney-promet-de-reduire-la-mortalite-mondiale-de-30-grace-a-un-immense-scanner-corporel-a-ultrasons.html" class="source-title">Midjourney promet de réduire la mortalité mondiale de 30 % grâce à un immense scanner corporel à ultrasons</a><span class="source-meta">Numerama · Fri, 19 Jun 2026 05:45:32 +0000</span></li>
+      <li><a href="https://next.ink/242992/ovhcloud-veut-ses-mistral-gagnants-et-se-lance-dans-les-llm/" class="source-title">OVHcloud veut ses Mistral gagnants et se lance dans les LLM</a><span class="source-meta">Next.ink · Thu, 18 Jun 2026 09:15:00 +0000</span></li>
+      <li><a href="https://next.ink/243065/avec-sa-puce-napier-tensordyne-veut-faire-13x-a-17x-mieux-que-les-gpu-nvidia/" class="source-title">Avec sa puce Napier, Tensordyne veut faire 13x à 17x mieux que les GPU NVIDIA</a><span class="source-meta">Next.ink · Thu, 18 Jun 2026 15:27:45 +0000</span></li>
+      <li><a href="https://the-decoder.com/google-deepmind-treats-its-own-ai-agents-like-rogue-employees-with-office-keys/" class="source-title">Google Deepmind treats its own AI agents like rogue employees with office keys</a> <span class="lang-en" title="Source en anglais">EN</span><span class="source-meta">The Decoder · Thu, 18 Jun 2026 18:07:01 +0000</span></li>
+      <li><a href="https://the-decoder.com/adobe-adds-ai-agents-to-photoshop-premiere-and-more-creative-cloud-apps/" class="source-title">Adobe adds AI agents to Photoshop, Premiere, and more Creative Cloud apps</a> <span class="lang-en" title="Source en anglais">EN</span><span class="source-meta">The Decoder · Thu, 18 Jun 2026 12:59:00 +0000</span></li>
+      <li><a href="https://the-decoder.com/anthropic-brings-artifacts-to-claude-code-letting-teams-share-live-pages-from-coding-sessions/" class="source-title">Anthropic brings Artifacts to Claude Code, letting teams share live pages from coding sessions</a> <span class="lang-en" title="Source en anglais">EN</span><span class="source-meta">The Decoder · Thu, 18 Jun 2026 19:02:14 +0000</span></li>
+      <li><a href="https://the-decoder.com/chatgpts-new-health-upgrade-beats-doctor-written-answers-openai-says/" class="source-title">ChatGPT&#x27;s new health upgrade beats doctor-written answers, OpenAI says</a> <span class="lang-en" title="Source en anglais">EN</span><span class="source-meta">The Decoder · Thu, 18 Jun 2026 19:17:00 +0000</span></li>
+      <li><a href="https://the-decoder.com/yann-lecun-warns-ai-labs-like-openai-and-anthropic-face-a-big-bubble-explosion/" class="source-title">Yann LeCun warns AI labs like OpenAI and Anthropic face a &quot;big bubble explosion&quot;</a> <span class="lang-en" title="Source en anglais">EN</span><span class="source-meta">The Decoder · Thu, 18 Jun 2026 13:35:47 +0000</span></li>
+      <li><a href="https://the-decoder.com/alleged-china-ties-at-sk-telecom-alarmed-us-officials-and-triggered-anthropic-crisis/" class="source-title">Alleged China ties at SK Telecom alarmed US officials and triggered Anthropic crisis</a> <span class="lang-en" title="Source en anglais">EN</span><span class="source-meta">The Decoder · Thu, 18 Jun 2026 18:54:09 +0000</span></li>
+      <li><a href="https://itsocial.fr/cloud-infrastructure-it/cloud-infrastructure-it-articles/du-jeton-au-resultat-la-facturation-de-lia-agentique-change-de-logique-et-installe-une-nouvelle-dependance/" class="source-title">Du jeton au résultat, la facturation de l’IA agentique change de logique et installe une nouvelle dépendance</a><span class="source-meta">IT SOCIAL · Thu, 18 Jun 2026 12:57:32 +0000</span></li>
+      <li><a href="https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe" class="source-title">[AINews] GLM &gt; GPT? GLM-5.2 passes vibe check; Z.ai forecasts Open Fable by December</a> <span class="lang-en" title="Source en anglais">EN</span><span class="source-meta">Latent.Space · Fri, 19 Jun 2026 05:53:54 GMT</span></li>
+</ul>
+</details>
+</section>
+
+<p class="colophon-note"><em>Ce billet a été rédigé avec l&#x27;assistance d&#x27;un système d&#x27;intelligence artificielle. Les sources citées sont vérifiables ; la voix éditoriale relève du Département des Harnais.</em></p>
+
+</div><!-- /.billet-main -->
+</div><!-- /.billet-layout -->
+
+<!-- ddh:cartel -->
+<aside class="cartel-label" aria-label="cartel de l'œuvre">
+  <div class="head">cartel</div>
+  <dl>
+  <dt>Étiquette</dt><dd>Département des Harnais · Section du Carnet · Records · 2026-06-19</dd>
+  <dt>Auteur</dt><dd>John Linotte</dd>
+  <dt>Commission</dt><dd>Atelier d'auteur — Section du Carnet</dd>
+  <dt>Date</dt><dd>2026-06-19</dd>
+  <dt>Tagline</dt><dd>un harness, ses sections · bruxelles · mmxxvi</dd>
+  <dt>Wedge</dt><dd class="wedge">Contraindre le modèle, ou ne pas être un harness.</dd>
+  <dt>License</dt><dd>Billet © John Linotte · Trace CC-BY 4.0</dd>
+  </dl>
+</aside>
+<!-- /ddh:cartel -->
+
+<!-- ddh:footer -->
+<footer class="legal-footer">
+  <p>édité par John Linotte, à titre privé<span class="sep">·</span>contact : contact@harnais.be<span class="sep">·</span><a href="/colophon/">◆ moss &amp; stone</a><span class="sep">·</span><a href="/vie-privee/">vie privée</a></p>
+</footer>
+<!-- /ddh:footer -->
+
+</div>
+</body>
+</html>

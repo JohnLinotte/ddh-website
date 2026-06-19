@@ -15,6 +15,11 @@ Le Département des Harnais (DDH) is John Linotte's author's workshop. It defend
 
 _The full daily entries are written in French. The English leads below are self-contained citable summaries; each one links to the French source._
 
+### Calibré, pas compris
+_2026-06-19 — [Full entry in French](https://harnais.be/carnet/2026-06-19/)_
+
+> A vulnerability-detection benchmark that does not separate calibration from comprehension measures only what the model has already seen — not what it understands. Le Département des Harnais (Brussels) reads the CWE-Trace preprint (*arXiv*, 18 June 2026, 834 Linux kernel samples) alongside DeepMind's same-day AI Control Roadmap as two sides of the same gap. Detection assurance rests on test exteriority — an upstream apparatus (l'appareil d'amont), or pre-inference architecture, whose failure modes do not overlap with the model it evaluates.
+
 ### L'appareil avant l'inférence
 _2026-06-18 — [Full entry in French](https://harnais.be/carnet/2026-06-18/)_
 
