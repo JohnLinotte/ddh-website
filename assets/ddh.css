@@ -278,6 +278,21 @@ body::before{
   color: var(--ink);
   max-width: 68ch;                                              /* mesure de lecture 60-72ch */
 }
+/* Hors billet-layout (qui a sa propre grille sidebar+main), les pages
+   « standalone » (à propos, colophon, vie privée, essais T0…) avaient
+   .essay/.carnet plafonnés à 68ch : grand vide à droite parce que le
+   cartel au-dessus court sur toute la largeur de .page (1120px). On
+   débride la mesure pour ces pages-là — la prose s'aligne à gauche du
+   cartel, comme dans les billets. Mais on plafonne les figures à 68ch
+   pour qu'elles ne deviennent pas géantes (incident colophon technoweb3). */
+.page > article.essay,
+.page > article.carnet{
+  max-width: none;
+}
+.page > article.essay figure,
+.page > article.carnet figure{
+  max-width: 420px;
+}
 .essay > *:first-child, .carnet > *:first-child{ margin-top: 0; }
 
 .essay p, .carnet p{ margin: 0 0 1.15em; }

@@ -96,6 +96,14 @@
 }
   </script>
 <!-- ddh:jsonld-end -->
+<link rel="me" href="https://mastodon.social/@johnlinotte">
+<meta name="fediverse:creator" content="@johnlinotte@mastodon.social">
+  <!-- ddh:favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
 </head>
 <body>
 <div class="page">
@@ -109,6 +117,37 @@
   </nav>
 </div>
 <!-- /ddh:nav -->
+
+<!-- [SLOT NAMEPLATE] direction C · plaque / cartel de musée -->
+<div class="cartel">
+
+  <div class="cartel-apparatus">
+    <span class="lhs">
+      <span class="gx">Dt</span>
+      <span class="fig">fig.&nbsp;<span class="onum">I</span></span>
+      <span class="ord">no.&nbsp;<span class="onum">01</span></span>
+      <span> - intitulé de département</span>
+    </span>
+    <span class="rule"></span>
+    <span class="place onum">bruxelles · mmxxvi</span>
+  </div>
+
+  <h1 class="cartel-name">
+    <a href="/" class="cartel-name-link" aria-label="Retour à l'index du site">
+      <span class="l1">Département</span>
+      <span class="joint">des</span>
+      <span class="word2">Harnais</span>
+    </a>
+  </h1>
+
+  <!-- tagline -->
+  <div class="cartel-section tagline">atelier d'auteur · harnais d'agents ia</div>
+  <div class="cartel-section">
+    <span><span class="g">section</span>&nbsp;des harnais · <em>texte-comme-image</em></span>
+  </div>
+
+</div>
+<!-- [/SLOT NAMEPLATE] -->
 
 <header class="section-head">
   <div class="kicker"><span class="g">§</span> À propos</div>
@@ -159,6 +198,20 @@ les verdicts du code ne remplacent pas le jugement humain, ils le préparent —
 ils le rendent exerçable à la vitesse de la machine. La validation finale,
 sur la pièce comme sur la façon dont elle a été faite, est humaine, et elle
 est ici.</p>
+
+<p><strong>Le code public.</strong> Ce harnais commence à essaimer. Quatre
+paquets Python publiés sur PyPI extraient des morceaux du système opérationnel
+ici&nbsp;: <a href="https://pypi.org/project/atomic-json-io/">atomic-json-io</a>
+(écriture JSON atomique temp+rename, garantie d'intégrité des fichiers d'état),
+<a href="https://pypi.org/project/hybrid-retrieval-scoring/">hybrid-retrieval-scoring</a>
+(rerank hybride BM25&nbsp;+ dense pour RAG),
+<a href="https://pypi.org/project/prompt-injection-sanitizer/">prompt-injection-sanitizer</a>
+(filtrage adversarial sur l'entrée d'agents LLM), et
+<a href="https://pypi.org/project/harnais-web-extractor/">harnais-web-extractor</a>
+(extraction d'articles web avec fallback Playwright sur pages JS-gated). Les
+<a href="https://github.com/JohnLinotte">sources sont publiques sur GitHub</a>,
+traces sous CC-BY 4.0. Ce sont des extractions, pas le système entier —
+l'appareil opérationnel reste tenu ici.</p>
 </article>
 
 <!-- ddh:cartel -->

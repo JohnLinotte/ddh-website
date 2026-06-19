@@ -567,6 +567,36 @@ def inject_canonical(pages):
     return touched
 
 
+FAVICON_MARKER = "ddh:favicon"
+FAVICON_BLOCK = (
+    f'  <!-- {FAVICON_MARKER} -->\n'
+    '  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">\n'
+    '  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">\n'
+    '  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">\n'
+    '  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">\n'
+    '  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">\n'
+)
+
+
+def inject_favicon(pages):
+    """Ajoute le bloc favicon dans le <head> si absent. Idempotent (marqueur)."""
+    touched = 0
+    for _url_path, full in pages:
+        txt = read(full)
+        if not txt or "</head>" not in txt:
+            continue
+        if FAVICON_MARKER in txt:
+            continue
+        new_txt = txt.replace("</head>", FAVICON_BLOCK + "</head>", 1)
+        try:
+            with open(full, "w", encoding="utf-8") as f:
+                f.write(new_txt)
+            touched += 1
+        except OSError as e:
+            print(f"  ! favicon écriture impossible {full}: {e}")
+    return touched
+
+
 JSONLD_START = "<!-- ddh:jsonld-start -->"
 JSONLD_END = "<!-- ddh:jsonld-end -->"
 
@@ -1052,6 +1082,7 @@ def main():
 
     injected = inject_feed_links(pages)
     injected_canon = inject_canonical(pages)
+    injected_favicon = inject_favicon(pages)
     injected_jsonld = inject_jsonld(pages)
     # Bilingual GEO/SEO 2026-06-18 — chapeau injections
     injected_meta = inject_meta_description_with_chapeau(pages)
@@ -1072,6 +1103,7 @@ def main():
     print(f"  llms-en.txt  : {llms_en_path}  (bilingual GEO/SEO)")
     print(f"  balises découverte RSS/JSON injectées dans {injected} page(s)")
     print(f"  canonical ajoutés : {injected_canon} page(s)")
+    print(f"  favicon injecté   : {injected_favicon} page(s)")
     print(f"  JSON-LD injectés  : {injected_jsonld} page(s)")
     print(f"  meta description (chapeau FR) : {injected_meta} page(s)")
     print(f"  og:description (chapeau EN)   : {injected_og} page(s)")

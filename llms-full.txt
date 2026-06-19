@@ -53,6 +53,20 @@ ils le rendent exerçable à la vitesse de la machine. La validation finale,
 sur la pièce comme sur la façon dont elle a été faite, est humaine, et elle
 est ici.
 
+**Le code public.** Ce harnais commence à essaimer. Quatre
+paquets Python publiés sur PyPI extraient des morceaux du système opérationnel
+ici : [atomic-json-io](https://pypi.org/project/atomic-json-io/)
+(écriture JSON atomique temp+rename, garantie d'intégrité des fichiers d'état),
+[hybrid-retrieval-scoring](https://pypi.org/project/hybrid-retrieval-scoring/)
+(rerank hybride BM25 + dense pour RAG),
+[prompt-injection-sanitizer](https://pypi.org/project/prompt-injection-sanitizer/)
+(filtrage adversarial sur l'entrée d'agents LLM), et
+[harnais-web-extractor](https://pypi.org/project/harnais-web-extractor/)
+(extraction d'articles web avec fallback Playwright sur pages JS-gated). Les
+[sources sont publiques sur GitHub](https://github.com/JohnLinotte),
+traces sous CC-BY 4.0. Ce sont des extractions, pas le système entier —
+l'appareil opérationnel reste tenu ici.
+
 
 ---
 
